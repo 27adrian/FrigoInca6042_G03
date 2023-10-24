@@ -41,7 +41,12 @@
             this.txt_Documento_identidad = new System.Windows.Forms.TextBox();
             this.txt_Correo = new System.Windows.Forms.TextBox();
             this.gb_Cliente = new System.Windows.Forms.GroupBox();
+            this.btn_Agregar = new System.Windows.Forms.Button();
+            this.btn_Modificar = new System.Windows.Forms.Button();
+            this.btn_Eliminar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gb_Cliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -142,6 +147,9 @@
             // 
             // gb_Cliente
             // 
+            this.gb_Cliente.Controls.Add(this.btn_Eliminar);
+            this.gb_Cliente.Controls.Add(this.btn_Modificar);
+            this.gb_Cliente.Controls.Add(this.btn_Agregar);
             this.gb_Cliente.Controls.Add(this.label4);
             this.gb_Cliente.Controls.Add(this.txt_Correo);
             this.gb_Cliente.Controls.Add(this.label1);
@@ -156,22 +164,60 @@
             this.gb_Cliente.Controls.Add(this.txt_Id_cliente);
             this.gb_Cliente.Location = new System.Drawing.Point(24, 25);
             this.gb_Cliente.Name = "gb_Cliente";
-            this.gb_Cliente.Size = new System.Drawing.Size(529, 224);
+            this.gb_Cliente.Size = new System.Drawing.Size(598, 224);
             this.gb_Cliente.TabIndex = 11;
             this.gb_Cliente.TabStop = false;
             this.gb_Cliente.Text = "Informacion cliente";
+            // 
+            // btn_Agregar
+            // 
+            this.btn_Agregar.Location = new System.Drawing.Point(450, 30);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(125, 49);
+            this.btn_Agregar.TabIndex = 11;
+            this.btn_Agregar.Text = "Agregar";
+            this.btn_Agregar.UseVisualStyleBackColor = true;
+            // 
+            // btn_Modificar
+            // 
+            this.btn_Modificar.Location = new System.Drawing.Point(450, 97);
+            this.btn_Modificar.Name = "btn_Modificar";
+            this.btn_Modificar.Size = new System.Drawing.Size(125, 44);
+            this.btn_Modificar.TabIndex = 12;
+            this.btn_Modificar.Text = "Modificar";
+            this.btn_Modificar.UseVisualStyleBackColor = true;
+            // 
+            // btn_Eliminar
+            // 
+            this.btn_Eliminar.Location = new System.Drawing.Point(450, 159);
+            this.btn_Eliminar.Name = "btn_Eliminar";
+            this.btn_Eliminar.Size = new System.Drawing.Size(125, 49);
+            this.btn_Eliminar.TabIndex = 13;
+            this.btn_Eliminar.Text = "Eliminar";
+            this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(24, 280);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(598, 215);
+            this.dataGridView1.TabIndex = 12;
             // 
             // MantenedorCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(659, 520);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gb_Cliente);
             this.Name = "MantenedorCliente";
             this.Text = "MantenedorCliente";
             this.Load += new System.EventHandler(this.MantenedorCliente_Load);
             this.gb_Cliente.ResumeLayout(false);
             this.gb_Cliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -191,5 +237,9 @@
         private System.Windows.Forms.TextBox txt_Documento_identidad;
         private System.Windows.Forms.TextBox txt_Correo;
         private System.Windows.Forms.GroupBox gb_Cliente;
+        private System.Windows.Forms.Button btn_Eliminar;
+        private System.Windows.Forms.Button btn_Modificar;
+        private System.Windows.Forms.Button btn_Agregar;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

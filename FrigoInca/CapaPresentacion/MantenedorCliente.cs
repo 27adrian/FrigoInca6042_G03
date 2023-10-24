@@ -21,5 +21,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
