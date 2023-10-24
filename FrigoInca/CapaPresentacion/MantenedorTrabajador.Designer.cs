@@ -1,6 +1,6 @@
-﻿namespace CapaPresentacion
+﻿namespace FrigoInca
 {
-    partial class MantenedorProveedor
+    partial class MantenedorTrabajador
     {
         /// <summary>
         /// Required designer variable.
@@ -29,93 +29,68 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gb_Proveedor = new System.Windows.Forms.GroupBox();
-            this.cbxTipoDoc = new System.Windows.Forms.ComboBox();
-            this.lblTipoDoc = new System.Windows.Forms.Label();
-            this.cbxTipoProveedor = new System.Windows.Forms.ComboBox();
+            this.gb_Trabajador = new System.Windows.Forms.GroupBox();
+            this.cbxTipoTrabajador = new System.Windows.Forms.ComboBox();
             this.btn_Eliminar = new System.Windows.Forms.Button();
             this.btn_Modificar = new System.Windows.Forms.Button();
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_Correo = new System.Windows.Forms.TextBox();
-            this.txt_Documento_identidad = new System.Windows.Forms.TextBox();
-            this.lblTipoProveedor = new System.Windows.Forms.Label();
+            this.txt_DNI = new System.Windows.Forms.TextBox();
+            this.lblTipoTrabajador = new System.Windows.Forms.Label();
             this.txt_Telefono_contacto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_N_proveedor = new System.Windows.Forms.TextBox();
+            this.txt_N_trabajador = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.gb_Proveedor.SuspendLayout();
+            this.gb_Trabajador.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 347);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 345);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(797, 265);
             this.dataGridView1.TabIndex = 14;
             // 
-            // gb_Proveedor
+            // gb_Trabajador
             // 
-            this.gb_Proveedor.Controls.Add(this.cbxTipoDoc);
-            this.gb_Proveedor.Controls.Add(this.lblTipoDoc);
-            this.gb_Proveedor.Controls.Add(this.cbxTipoProveedor);
-            this.gb_Proveedor.Controls.Add(this.btn_Eliminar);
-            this.gb_Proveedor.Controls.Add(this.btn_Modificar);
-            this.gb_Proveedor.Controls.Add(this.btn_Agregar);
-            this.gb_Proveedor.Controls.Add(this.label4);
-            this.gb_Proveedor.Controls.Add(this.txt_Correo);
-            this.gb_Proveedor.Controls.Add(this.txt_Documento_identidad);
-            this.gb_Proveedor.Controls.Add(this.lblTipoProveedor);
-            this.gb_Proveedor.Controls.Add(this.txt_Telefono_contacto);
-            this.gb_Proveedor.Controls.Add(this.label3);
-            this.gb_Proveedor.Controls.Add(this.txt_N_proveedor);
-            this.gb_Proveedor.Controls.Add(this.label5);
-            this.gb_Proveedor.Controls.Add(this.label6);
-            this.gb_Proveedor.Location = new System.Drawing.Point(28, 33);
-            this.gb_Proveedor.Margin = new System.Windows.Forms.Padding(4);
-            this.gb_Proveedor.Name = "gb_Proveedor";
-            this.gb_Proveedor.Padding = new System.Windows.Forms.Padding(4);
-            this.gb_Proveedor.Size = new System.Drawing.Size(797, 276);
-            this.gb_Proveedor.TabIndex = 13;
-            this.gb_Proveedor.TabStop = false;
-            this.gb_Proveedor.Text = "Informacion Proveedor";
+            this.gb_Trabajador.Controls.Add(this.cbxTipoTrabajador);
+            this.gb_Trabajador.Controls.Add(this.btn_Eliminar);
+            this.gb_Trabajador.Controls.Add(this.btn_Modificar);
+            this.gb_Trabajador.Controls.Add(this.btn_Agregar);
+            this.gb_Trabajador.Controls.Add(this.label4);
+            this.gb_Trabajador.Controls.Add(this.txt_Correo);
+            this.gb_Trabajador.Controls.Add(this.txt_DNI);
+            this.gb_Trabajador.Controls.Add(this.lblTipoTrabajador);
+            this.gb_Trabajador.Controls.Add(this.txt_Telefono_contacto);
+            this.gb_Trabajador.Controls.Add(this.label3);
+            this.gb_Trabajador.Controls.Add(this.txt_N_trabajador);
+            this.gb_Trabajador.Controls.Add(this.label5);
+            this.gb_Trabajador.Controls.Add(this.label6);
+            this.gb_Trabajador.Location = new System.Drawing.Point(41, 31);
+            this.gb_Trabajador.Margin = new System.Windows.Forms.Padding(4);
+            this.gb_Trabajador.Name = "gb_Trabajador";
+            this.gb_Trabajador.Padding = new System.Windows.Forms.Padding(4);
+            this.gb_Trabajador.Size = new System.Drawing.Size(797, 276);
+            this.gb_Trabajador.TabIndex = 13;
+            this.gb_Trabajador.TabStop = false;
+            this.gb_Trabajador.Text = "Informacion Trabajador";
             // 
-            // cbxTipoDoc
+            // cbxTipoTrabajador
             // 
-            this.cbxTipoDoc.Items.AddRange(new object[] {
-            "DNI",
-            "RUC"});
-            this.cbxTipoDoc.Location = new System.Drawing.Point(239, 119);
-            this.cbxTipoDoc.Name = "cbxTipoDoc";
-            this.cbxTipoDoc.Size = new System.Drawing.Size(264, 24);
-            this.cbxTipoDoc.TabIndex = 17;
-            this.cbxTipoDoc.Text = "--Seleccionar tipo de documento--";
-            // 
-            // lblTipoDoc
-            // 
-            this.lblTipoDoc.AutoSize = true;
-            this.lblTipoDoc.Location = new System.Drawing.Point(25, 122);
-            this.lblTipoDoc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTipoDoc.Name = "lblTipoDoc";
-            this.lblTipoDoc.Size = new System.Drawing.Size(127, 16);
-            this.lblTipoDoc.TabIndex = 16;
-            this.lblTipoDoc.Text = "Tipo de documento:";
-            // 
-            // cbxTipoProveedor
-            // 
-            this.cbxTipoProveedor.Items.AddRange(new object[] {
-            "Empresa",
-            "Independiente"});
-            this.cbxTipoProveedor.Location = new System.Drawing.Point(239, 34);
-            this.cbxTipoProveedor.Name = "cbxTipoProveedor";
-            this.cbxTipoProveedor.Size = new System.Drawing.Size(264, 24);
-            this.cbxTipoProveedor.TabIndex = 15;
-            this.cbxTipoProveedor.Text = "--Seleccionar tipo de proveedor--";
+            this.cbxTipoTrabajador.Items.AddRange(new object[] {
+            "Trabajador",
+            "Administrador"});
+            this.cbxTipoTrabajador.Location = new System.Drawing.Point(240, 56);
+            this.cbxTipoTrabajador.Name = "cbxTipoTrabajador";
+            this.cbxTipoTrabajador.Size = new System.Drawing.Size(264, 24);
+            this.cbxTipoTrabajador.TabIndex = 15;
+            this.cbxTipoTrabajador.Text = "--Seleccionar tipo de trabajador--";
             // 
             // btn_Eliminar
             // 
@@ -150,42 +125,42 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 158);
+            this.label4.Location = new System.Drawing.Point(26, 136);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 16);
+            this.label4.Size = new System.Drawing.Size(69, 16);
             this.label4.TabIndex = 3;
-            this.label4.Text = "N° de documento:";
+            this.label4.Text = "N° de DNI:";
             // 
             // txt_Correo
             // 
-            this.txt_Correo.Location = new System.Drawing.Point(239, 193);
+            this.txt_Correo.Location = new System.Drawing.Point(240, 171);
             this.txt_Correo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Correo.Name = "txt_Correo";
             this.txt_Correo.Size = new System.Drawing.Size(264, 22);
             this.txt_Correo.TabIndex = 10;
             // 
-            // txt_Documento_identidad
+            // txt_DNI
             // 
-            this.txt_Documento_identidad.Location = new System.Drawing.Point(239, 158);
-            this.txt_Documento_identidad.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Documento_identidad.Name = "txt_Documento_identidad";
-            this.txt_Documento_identidad.Size = new System.Drawing.Size(264, 22);
-            this.txt_Documento_identidad.TabIndex = 9;
+            this.txt_DNI.Location = new System.Drawing.Point(240, 136);
+            this.txt_DNI.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_DNI.Name = "txt_DNI";
+            this.txt_DNI.Size = new System.Drawing.Size(264, 22);
+            this.txt_DNI.TabIndex = 9;
             // 
-            // lblTipoProveedor
+            // lblTipoTrabajador
             // 
-            this.lblTipoProveedor.AutoSize = true;
-            this.lblTipoProveedor.Location = new System.Drawing.Point(25, 37);
-            this.lblTipoProveedor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTipoProveedor.Name = "lblTipoProveedor";
-            this.lblTipoProveedor.Size = new System.Drawing.Size(124, 16);
-            this.lblTipoProveedor.TabIndex = 1;
-            this.lblTipoProveedor.Text = "Tipo de Proveedor:";
+            this.lblTipoTrabajador.AutoSize = true;
+            this.lblTipoTrabajador.Location = new System.Drawing.Point(26, 59);
+            this.lblTipoTrabajador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTipoTrabajador.Name = "lblTipoTrabajador";
+            this.lblTipoTrabajador.Size = new System.Drawing.Size(128, 16);
+            this.lblTipoTrabajador.TabIndex = 1;
+            this.lblTipoTrabajador.Text = "Tipo de Trabajador:";
             // 
             // txt_Telefono_contacto
             // 
-            this.txt_Telefono_contacto.Location = new System.Drawing.Point(239, 231);
+            this.txt_Telefono_contacto.Location = new System.Drawing.Point(240, 209);
             this.txt_Telefono_contacto.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Telefono_contacto.Name = "txt_Telefono_contacto";
             this.txt_Telefono_contacto.Size = new System.Drawing.Size(264, 22);
@@ -194,25 +169,25 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 75);
+            this.label3.Location = new System.Drawing.Point(26, 97);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nombre Completo:";
             // 
-            // txt_N_proveedor
+            // txt_N_trabajador
             // 
-            this.txt_N_proveedor.Location = new System.Drawing.Point(239, 75);
-            this.txt_N_proveedor.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_N_proveedor.Name = "txt_N_proveedor";
-            this.txt_N_proveedor.Size = new System.Drawing.Size(264, 22);
-            this.txt_N_proveedor.TabIndex = 8;
+            this.txt_N_trabajador.Location = new System.Drawing.Point(240, 97);
+            this.txt_N_trabajador.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_N_trabajador.Name = "txt_N_trabajador";
+            this.txt_N_trabajador.Size = new System.Drawing.Size(264, 22);
+            this.txt_N_trabajador.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 193);
+            this.label5.Location = new System.Drawing.Point(26, 171);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 16);
@@ -222,25 +197,25 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 231);
+            this.label6.Location = new System.Drawing.Point(26, 209);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 16);
             this.label6.TabIndex = 5;
             this.label6.Text = "Telefono de contacto:";
             // 
-            // MantenedorProveedor
+            // MantenedorTrabajador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 635);
+            this.ClientSize = new System.Drawing.Size(901, 657);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.gb_Proveedor);
-            this.Name = "MantenedorProveedor";
-            this.Text = "MantenedorProveedor";
+            this.Controls.Add(this.gb_Trabajador);
+            this.Name = "MantenedorTrabajador";
+            this.Text = "MantenedorTrabajador";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.gb_Proveedor.ResumeLayout(false);
-            this.gb_Proveedor.PerformLayout();
+            this.gb_Trabajador.ResumeLayout(false);
+            this.gb_Trabajador.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -248,20 +223,18 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox gb_Proveedor;
-        private System.Windows.Forms.ComboBox cbxTipoDoc;
-        private System.Windows.Forms.Label lblTipoDoc;
-        private System.Windows.Forms.ComboBox cbxTipoProveedor;
+        private System.Windows.Forms.GroupBox gb_Trabajador;
+        private System.Windows.Forms.ComboBox cbxTipoTrabajador;
         private System.Windows.Forms.Button btn_Eliminar;
         private System.Windows.Forms.Button btn_Modificar;
         private System.Windows.Forms.Button btn_Agregar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_Correo;
-        private System.Windows.Forms.TextBox txt_Documento_identidad;
-        private System.Windows.Forms.Label lblTipoProveedor;
+        private System.Windows.Forms.TextBox txt_DNI;
+        private System.Windows.Forms.Label lblTipoTrabajador;
         private System.Windows.Forms.TextBox txt_Telefono_contacto;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_N_proveedor;
+        private System.Windows.Forms.TextBox txt_N_trabajador;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
     }
