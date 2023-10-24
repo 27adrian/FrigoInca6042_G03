@@ -16,5 +16,10 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void MantenedorCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
