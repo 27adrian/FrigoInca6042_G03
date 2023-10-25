@@ -42,7 +42,7 @@ namespace CapaPresentacion
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-
+            gb_Cliente.Enabled = false;
         }
 
         private void btn_Nuevo_Click(object sender, EventArgs e)
@@ -64,12 +64,15 @@ namespace CapaPresentacion
             try
             {
                 entCliente c = new entCliente();
-                c.razonSocial = txtRazonSocial.Text.Trim();
-                c.idTipoCliente = int.Parse(txtidTipoCliente.Text.Trim());
-                c.fecRegCliente = dtPickerRegCliente.Value;
-                c.idCiudad = int.Parse(txtidCiudad.Text.Trim());
-                c.estCliente = cbkEstadoCliente.Checked;
-                logCliente.Instancia.InsertaCliente(c);
+                c.Tipocliente = cb_Tipocliente.Text.Trim();
+                c.Nombrecompleto = txt_NombreCompleto.Text.Trim();
+                c.Tipodocumento = cb_Tipodocumento.Text.Trim();
+                c.Numerodocumento = int.Parse(cb_Tipocliente.Text.Trim());
+                c.Correo = txt_Correo.Text.Trim();
+                c.Telefonocontacto = int.Parse(txt_Telefonocontacto.Text.Trim());
+                c.Estadocliente = cb_Estadodelcliente.Checked;
+                c.Fecharegistrocliente = dt_Fecharegistro.Value;
+                logCliente.Instancia.InsertarCliente(c);
             }
             catch (Exception ex)
             {
@@ -92,9 +95,9 @@ namespace CapaPresentacion
             try
             {
                 entCliente c = new entCliente();
-                c.idCliente = int.Parse(txt_Idcliente.Text.Trim());
+                c.Idcliente = int.Parse(txt_Idcliente.Text.Trim());
                 cb_Estadodelcliente.Checked = false;
-                c.estCliente = cb_Estadodelcliente.Checked;
+                c.Estadocliente = cb_Estadodelcliente.Checked;
                 logCliente.Instancia.DeshabilitarCliente(c);
             }
             catch (Exception ex)
@@ -109,6 +112,31 @@ namespace CapaPresentacion
         private void btn_Salir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btn_Modificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entCliente c = new entCliente();
+                c.Idcliente = int.Parse(txt_Idcliente.Text.Trim());
+                c.Tipocliente = cb_Tipocliente.Text.Trim();
+                c.Nombrecompleto = txt_NombreCompleto.Text.Trim();
+                c.Tipodocumento = cb_Tipodocumento.Text.Trim();
+                c.Numerodocumento = int.Parse(cb_Tipocliente.Text.Trim());
+                c.Correo = txt_Correo.Text.Trim();
+                c.Telefonocontacto = int.Parse(txt_Telefonocontacto.Text.Trim());
+                c.Estadocliente = cb_Estadodelcliente.Checked;
+                c.Fecharegistrocliente = dt_Fecharegistro.Value;
+                logCliente.Instancia.EditarCliente(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            gb_Cliente.Enabled = false;
+            Listarcliente();
         }
     }
 }

@@ -50,7 +50,7 @@
             this.btn_Deshabilitar = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
             this.cb_Estadodelcliente = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dt_Fecharegistro = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Idcliente = new System.Windows.Forms.TextBox();
@@ -136,7 +136,7 @@
             this.gb_Cliente.Controls.Add(this.txt_Idcliente);
             this.gb_Cliente.Controls.Add(this.label2);
             this.gb_Cliente.Controls.Add(this.label1);
-            this.gb_Cliente.Controls.Add(this.dateTimePicker1);
+            this.gb_Cliente.Controls.Add(this.dt_Fecharegistro);
             this.gb_Cliente.Controls.Add(this.cb_Estadodelcliente);
             this.gb_Cliente.Controls.Add(this.cb_Tipodocumento);
             this.gb_Cliente.Controls.Add(this.lblTipoDoc);
@@ -212,6 +212,7 @@
             this.btn_Modificar.TabIndex = 12;
             this.btn_Modificar.Text = "Modificar";
             this.btn_Modificar.UseVisualStyleBackColor = true;
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // btn_Agregar
             // 
@@ -282,12 +283,12 @@
             this.cb_Estadodelcliente.Text = "Estado del cliente";
             this.cb_Estadodelcliente.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dt_Fecharegistro
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(429, 195);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 19;
+            this.dt_Fecharegistro.Location = new System.Drawing.Point(429, 195);
+            this.dt_Fecharegistro.Name = "dt_Fecharegistro";
+            this.dt_Fecharegistro.Size = new System.Drawing.Size(200, 20);
+            this.dt_Fecharegistro.TabIndex = 19;
             // 
             // label1
             // 
@@ -358,7 +359,7 @@
         private System.Windows.Forms.Button btn_Deshabilitar;
         private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dt_Fecharegistro;
         private System.Windows.Forms.CheckBox cb_Estadodelcliente;
         private System.Windows.Forms.TextBox txt_Idcliente;
         private System.Windows.Forms.Label label2;
