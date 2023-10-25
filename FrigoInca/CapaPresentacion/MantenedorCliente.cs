@@ -17,31 +17,30 @@ namespace CapaPresentacion
         public MantenedorCliente()
         {
             InitializeComponent();
-            dgv_Cliente.CellClick += Dgv_Cliente_CellClick;
+            dgv_Cliente.CellClick += new DataGridViewCellEventHandler(dgv_Cliente_CellClick);
             Listarcliente();
             gb_Cliente.Enabled = false;
             txt_Idcliente.Enabled = false;
         }
 
-        private void Dgv_Cliente_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgv_Cliente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // asegura que el usuario haya hecho clic en una fila y no en el encabezado
+            if (e.RowIndex >= 0) 
             {
                 DataGridViewRow row = dgv_Cliente.Rows[e.RowIndex];
 
-                // Establece los datos en los controles de texto
-                txt_Idcliente.Text = row.Cells["Idcliente"].Value.ToString();
-                cb_Tipocliente.Text = row.Cells["Tipocliente"].Value.ToString();
-                txt_NombreCompleto.Text = row.Cells["Nombrecompletocliente"].Value.ToString();
-                cb_Tipodocumento.Text = row.Cells["Tipodocumentocliente"].Value.ToString();
-                txt_Numerodocumento.Text = row.Cells["Numerodocumentocliente"].Value.ToString();
-                txt_Correo.Text = row.Cells["Correocliente"].Value.ToString();
-                txt_Telefonocontacto.Text = row.Cells["Telefonocontactocliente"].Value.ToString();
-                // Para el checkbox, necesitas convertir el valor a booleano.
-                cb_Estadodelcliente.Checked = Convert.ToBoolean(row.Cells["Estadocliente"].Value);
-                dt_Fecharegistro.Value = Convert.ToDateTime(row.Cells["Fecharegistrocliente"].Value);
+                txt_Idcliente.Text = row.Cells[0].Value?.ToString();
+                cb_Tipocliente.Text = row.Cells[1].Value?.ToString();
+                txt_NombreCompleto.Text = row.Cells[2].Value?.ToString();
+                cb_Tipodocumento.Text = row.Cells[3].Value?.ToString();
+                txt_Numerodocumento.Text = row.Cells[4].Value?.ToString();
+                txt_Correo.Text = row.Cells[5].Value?.ToString();
+                txt_Telefonocontacto.Text = row.Cells[6].Value?.ToString();
+                cb_Estadodelcliente.Checked = Convert.ToBoolean(row.Cells[7].Value);
+                dt_Fecharegistro.Value = Convert.ToDateTime(row.Cells[8].Value);
             }
         }
+
 
 
         public void Listarcliente()

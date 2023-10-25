@@ -17,30 +17,29 @@ namespace CapaPresentacion
         public MantenedorProveedor()
         {
             InitializeComponent();
-            dgv_Proveedor.CellClick += Dgv_Proveedor_CellClick;
+            dgv_Proveedor.CellClick += new DataGridViewCellEventHandler(dgv_Proveedor_CellClick);
             Listarproveedor();
             gb_Proveedor.Enabled = false;
             txt_Idproveedor.Enabled = false;
         }
-        private void Dgv_Proveedor_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgv_Proveedor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // asegura que el usuario haya hecho clic en una fila y no en el encabezado
+            if (e.RowIndex >= 0) 
             {
                 DataGridViewRow row = dgv_Proveedor.Rows[e.RowIndex];
 
-                // Establece los datos en los controles de texto
-                txt_Idproveedor.Text = row.Cells["Idproveedor"].Value.ToString();
-                cb_Tipoproveedor.Text = row.Cells["Tipoproveedor"].Value.ToString();
-                txt_Nombrecompleto.Text = row.Cells["Nombrecompletoproveedor"].Value.ToString();
-                cb_Tipodocumento.Text = row.Cells["Tipodocumentoproveedor"].Value.ToString();
-                txt_Numerodocumento.Text = row.Cells["Numerodocumentoproveedor"].Value.ToString();
-                txt_Correo.Text = row.Cells["Correoproveedor"].Value.ToString();
-                txt_Telefonocontacto.Text = row.Cells["Telefonocontactoproveedor"].Value.ToString();
-                // Para el checkbox, necesitas convertir el valor a booleano.
-                cb_Estadodelproveedor.Checked = Convert.ToBoolean(row.Cells["Estadoproveedor"].Value);
-                dt_Fechaderegistroproveedor.Value = Convert.ToDateTime(row.Cells["Fecharegistroproveedor"].Value);
+                txt_Idproveedor.Text = row.Cells[0].Value?.ToString();
+                cb_Tipoproveedor.Text = row.Cells[1].Value?.ToString();
+                txt_Nombrecompleto.Text = row.Cells[2].Value?.ToString();
+                cb_Tipodocumento.Text = row.Cells[3].Value?.ToString();
+                txt_Numerodocumento.Text = row.Cells[4].Value?.ToString();
+                txt_Correo.Text = row.Cells[5].Value?.ToString();
+                txt_Telefonocontacto.Text = row.Cells[6].Value?.ToString();
+                cb_Estadodelproveedor.Checked = Convert.ToBoolean(row.Cells[7].Value);
+                dt_Fechaderegistroproveedor.Value = Convert.ToDateTime(row.Cells[8].Value);
             }
         }
+
         public void Listarproveedor()
         {
             dgv_Proveedor.DataSource = logProveedor.Instancia.Listarproveedor();
