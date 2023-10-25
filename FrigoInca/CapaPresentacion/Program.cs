@@ -1,4 +1,5 @@
 ﻿using CapaPresentacion;
+using FrigoInca;
 using System;
 using System.Windows.Forms;
 using Menu = CapaPresentacion.Menu;
@@ -15,7 +16,7 @@ namespace SistemaVentasUPN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+            Application.Run(new Login());
         }
     }
 }
