@@ -34,19 +34,22 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("spListarCliente", cn);
+                cmd = new SqlCommand("Listarcliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     entCliente Cli = new entCliente();
-                    Cli.idCliente = Convert.ToInt32(dr["idCliente"]);
-                    Cli.razonSocial = dr["razonSocial"].ToString();
-                    Cli.idTipoCliente = Convert.ToInt32(dr["idTipoCliente"]);
-                    Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
-                    Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);
-                    Cli.estCliente = Convert.ToBoolean(dr["estCliente"]);
+                    Cli.Idcliente = Convert.ToInt32(dr["Idcliente"]);
+                    Cli.Tipocliente = dr["Tipocliente"].ToString();
+                    Cli.Nombrecompleto = dr["Nombrecompleto"].ToString();
+                    Cli.Tipodocumento = dr["Tipodocumento"].ToString();
+                    Cli.Numerodocumento = Convert.ToInt32(dr["Numerodocumento"]);
+                    Cli.Correo = dr["Correo"].ToString();
+                    Cli.Telefonocontacto = Convert.ToInt32(dr["Telefonocontacto"]);
+                    Cli.Estadocliente = Convert.ToBoolean(dr["Estadocliente"]);
+                    Cli.Fecharegistrocliente = Convert.ToDateTime(dr["Fecharegistrocliente"]);
                     lista.Add(Cli);
                 }
             }
@@ -68,13 +71,16 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarCliente", cn);
+                cmd = new SqlCommand("Insertarcliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@razonSocial", Cli.razonSocial);
-                cmd.Parameters.AddWithValue("@idTipoCliente", Cli.idTipoCliente);
-                cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
-                cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
-                cmd.Parameters.AddWithValue("@estCliente", Cli.estCliente);
+                cmd.Parameters.AddWithValue("@Tipocliente", Cli.Tipocliente);
+                cmd.Parameters.AddWithValue("@Nombrecompleto", Cli.Nombrecompleto);
+                cmd.Parameters.AddWithValue("@Tipodocumento", Cli.Tipodocumento);
+                cmd.Parameters.AddWithValue("@Numerodocumento", Cli.Numerodocumento);
+                cmd.Parameters.AddWithValue("@Correo", Cli.Correo);
+                cmd.Parameters.AddWithValue("@Telefonocontacto", Cli.Telefonocontacto);
+                cmd.Parameters.AddWithValue("@Estadocliente", Cli.Estadocliente);
+                cmd.Parameters.AddWithValue("@Fecharegistrocliente", Cli.Fecharegistrocliente);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -99,12 +105,15 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spEditarCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idCliente", Cli.idCliente);
-                cmd.Parameters.AddWithValue("@razonSocial", Cli.razonSocial);
-                cmd.Parameters.AddWithValue("@idTipoCliente", Cli.idTipoCliente);
-                cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
-                cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
-                cmd.Parameters.AddWithValue("@estCliente", Cli.estCliente);
+                cmd.Parameters.AddWithValue("@Idcliente", Cli.Idcliente);
+                cmd.Parameters.AddWithValue("@Tipocliente", Cli.Tipocliente);
+                cmd.Parameters.AddWithValue("@Nombrecompleto", Cli.Nombrecompleto);
+                cmd.Parameters.AddWithValue("@Tipodocumento", Cli.Tipodocumento);
+                cmd.Parameters.AddWithValue("@Numerodocumento", Cli.Numerodocumento);
+                cmd.Parameters.AddWithValue("@Correo", Cli.Correo);
+                cmd.Parameters.AddWithValue("@Telefonocontacto", Cli.Telefonocontacto);
+                cmd.Parameters.AddWithValue("@Estadocliente", Cli.Estadocliente);
+                cmd.Parameters.AddWithValue("@Fecharegistrocliente", Cli.Fecharegistrocliente);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -129,8 +138,8 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spDesabilitarCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idCliente", Cli.idCliente);
-                cmd.Parameters.AddWithValue("@estCliente", Cli.estCliente);
+                cmd.Parameters.AddWithValue("@Idcliente", Cli.Idcliente);
+                cmd.Parameters.AddWithValue("@Estadocliente", Cli.Estadocliente);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

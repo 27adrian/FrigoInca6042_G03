@@ -125,5 +125,15 @@
   <ItemGroup>
     <None Include="Resources\Frigoinca_LogoBueno1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{34f67758-41c8-4c69-bb0f-fae73bf469c4}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaLogicaNegocio\CapaLogicaNegocio.csproj">
+      <Project>{6f8705d1-82ff-4e9f-9af1-939e4e03135f}</Project>
+      <Name>CapaLogicaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

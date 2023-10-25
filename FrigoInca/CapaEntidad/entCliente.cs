@@ -8,11 +8,14 @@ namespace CapaEntidad
 {
     public class entCliente
     {
-        public int idCliente { get; set; }
-        public string razonSocial { get; set; }
-        public int idTipoCliente { get; set; }
-        public DateTime fecRegCliente { get; set; }
-        public int idCiudad { get; set; } /// public entCiudad Ciudad{ get; set; }
-        public Boolean estCliente { get; set; }
+        public int Idcliente { get; set; }
+        public string Tipocliente { get; set; }
+        public string Nombrecompleto { get; set; }
+        public string Tipodocumento { get; set; }
+        public int Numerodocumento { get; set; }
+        public string Correo { get; set; }
+        public int Telefonocontacto { get; set; }
+        public Boolean Estadocliente { get; set; }
+        public DateTime Fecharegistrocliente { get; set; }
     }
 }
