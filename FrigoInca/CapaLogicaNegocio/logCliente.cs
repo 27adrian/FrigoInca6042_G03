@@ -32,13 +32,13 @@ namespace CapaLogicaNegocio
             datCliente.Instancia.Insertarcliente(Cli);
         }
         //edita
-        public void EditarCliente(entCliente Cli)
+        public void Editarcliente(entCliente Cli)
         {
-            datCliente.Instancia.EditarCliente(Cli);
+            datCliente.Instancia.Editarcliente(Cli);
         }
-        public void DeshabilitarCliente(entCliente Cli)
+        public void Deshabilitarcliente(entCliente Cli)
         {
-            datCliente.Instancia.DeshabilitarCliente(Cli);
+            datCliente.Instancia.Deshabilitarcliente(Cli);
         }
         #endregion metodos
     }

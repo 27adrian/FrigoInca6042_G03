@@ -155,7 +155,7 @@
             this.gb_Cliente.Controls.Add(this.label6);
             this.gb_Cliente.Location = new System.Drawing.Point(12, 298);
             this.gb_Cliente.Name = "gb_Cliente";
-            this.gb_Cliente.Size = new System.Drawing.Size(800, 268);
+            this.gb_Cliente.Size = new System.Drawing.Size(1142, 268);
             this.gb_Cliente.TabIndex = 11;
             this.gb_Cliente.TabStop = false;
             this.gb_Cliente.Text = "Informacion cliente";
@@ -196,7 +196,7 @@
             // 
             // btn_Cancelar
             // 
-            this.btn_Cancelar.Location = new System.Drawing.Point(651, 183);
+            this.btn_Cancelar.Location = new System.Drawing.Point(995, 189);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(125, 49);
             this.btn_Cancelar.TabIndex = 13;
@@ -206,7 +206,7 @@
             // 
             // btn_Modificar
             // 
-            this.btn_Modificar.Location = new System.Drawing.Point(651, 121);
+            this.btn_Modificar.Location = new System.Drawing.Point(995, 127);
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(125, 44);
             this.btn_Modificar.TabIndex = 12;
@@ -216,7 +216,7 @@
             // 
             // btn_Agregar
             // 
-            this.btn_Agregar.Location = new System.Drawing.Point(651, 43);
+            this.btn_Agregar.Location = new System.Drawing.Point(995, 49);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(125, 49);
             this.btn_Agregar.TabIndex = 11;
@@ -230,12 +230,12 @@
             this.dgv_Cliente.Location = new System.Drawing.Point(12, 12);
             this.dgv_Cliente.Name = "dgv_Cliente";
             this.dgv_Cliente.RowHeadersWidth = 51;
-            this.dgv_Cliente.Size = new System.Drawing.Size(632, 256);
+            this.dgv_Cliente.Size = new System.Drawing.Size(989, 256);
             this.dgv_Cliente.TabIndex = 12;
             // 
             // btn_Nuevo
             // 
-            this.btn_Nuevo.Location = new System.Drawing.Point(666, 12);
+            this.btn_Nuevo.Location = new System.Drawing.Point(1007, 12);
             this.btn_Nuevo.Name = "btn_Nuevo";
             this.btn_Nuevo.Size = new System.Drawing.Size(125, 49);
             this.btn_Nuevo.TabIndex = 18;
@@ -245,7 +245,7 @@
             // 
             // btn_Editar
             // 
-            this.btn_Editar.Location = new System.Drawing.Point(666, 80);
+            this.btn_Editar.Location = new System.Drawing.Point(1007, 80);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(125, 49);
             this.btn_Editar.TabIndex = 19;
@@ -255,7 +255,7 @@
             // 
             // btn_Deshabilitar
             // 
-            this.btn_Deshabilitar.Location = new System.Drawing.Point(666, 153);
+            this.btn_Deshabilitar.Location = new System.Drawing.Point(1007, 153);
             this.btn_Deshabilitar.Name = "btn_Deshabilitar";
             this.btn_Deshabilitar.Size = new System.Drawing.Size(125, 49);
             this.btn_Deshabilitar.TabIndex = 20;
@@ -265,7 +265,7 @@
             // 
             // btn_Salir
             // 
-            this.btn_Salir.Location = new System.Drawing.Point(666, 219);
+            this.btn_Salir.Location = new System.Drawing.Point(1007, 219);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(125, 49);
             this.btn_Salir.TabIndex = 21;
@@ -319,7 +319,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 578);
+            this.ClientSize = new System.Drawing.Size(1166, 578);
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.btn_Deshabilitar);
             this.Controls.Add(this.btn_Editar);

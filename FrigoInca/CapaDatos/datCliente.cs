@@ -96,14 +96,14 @@ namespace CapaDatos
             return inserta;
         }
         //////////////////////////////////EditaCliente
-        public Boolean EditarCliente(entCliente Cli)
+        public Boolean Editarcliente(entCliente Cli)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarCliente", cn);
+                cmd = new SqlCommand("Editarcliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Idcliente", Cli.Idcliente);
                 cmd.Parameters.AddWithValue("@Tipocliente", Cli.Tipocliente);
@@ -129,14 +129,14 @@ namespace CapaDatos
             return edita;
         }
         //deshabilitaCliente
-        public Boolean DeshabilitarCliente(entCliente Cli)
+        public Boolean Deshabilitarcliente(entCliente Cli)
         {
             SqlCommand cmd = null;
             Boolean delete = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDesabilitarCliente", cn);
+                cmd = new SqlCommand("Desabilitarcliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Idcliente", Cli.Idcliente);
                 cmd.Parameters.AddWithValue("@Estadocliente", Cli.Estadocliente);
