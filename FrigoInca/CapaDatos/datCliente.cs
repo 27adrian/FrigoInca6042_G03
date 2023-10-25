@@ -45,7 +45,7 @@ namespace CapaDatos
                     Cli.Tipocliente = dr["Tipocliente"].ToString();
                     Cli.Nombrecompleto = dr["Nombrecompleto"].ToString();
                     Cli.Tipodocumento = dr["Tipodocumento"].ToString();
-                    Cli.Numerodocumento = Convert.ToInt32(dr["Numerodocumento"]);
+                    Cli.Numerodocumento = Convert.ToInt64(dr["Numerodocumento"]);
                     Cli.Correo = dr["Correo"].ToString();
                     Cli.Telefonocontacto = Convert.ToInt32(dr["Telefonocontacto"]);
                     Cli.Estadocliente = Convert.ToBoolean(dr["Estadocliente"]);

@@ -90,7 +90,7 @@ namespace CapaPresentacion
                 c.Tipocliente = cb_Tipocliente.Text.Trim();
                 c.Nombrecompleto = txt_NombreCompleto.Text.Trim();
                 c.Tipodocumento = cb_Tipodocumento.Text.Trim();
-                c.Numerodocumento = int.Parse(txt_Numerodocumento.Text.Trim());
+                c.Numerodocumento = long.Parse(txt_Numerodocumento.Text.Trim());
                 c.Correo = txt_Correo.Text.Trim();
                 c.Telefonocontacto = int.Parse(txt_Telefonocontacto.Text.Trim());
                 c.Estadocliente = cb_Estadodelcliente.Checked;
@@ -146,7 +146,7 @@ namespace CapaPresentacion
                 c.Tipocliente = cb_Tipocliente.Text.Trim();
                 c.Nombrecompleto = txt_NombreCompleto.Text.Trim();
                 c.Tipodocumento = cb_Tipodocumento.Text.Trim();
-                c.Numerodocumento = int.Parse(txt_Numerodocumento.Text.Trim());
+                c.Numerodocumento = long.Parse(txt_Numerodocumento.Text.Trim());
                 c.Correo = txt_Correo.Text.Trim();
                 c.Telefonocontacto = int.Parse(txt_Telefonocontacto.Text.Trim());
                 c.Estadocliente = cb_Estadodelcliente.Checked;

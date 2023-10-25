@@ -12,7 +12,7 @@ namespace CapaEntidad
         public string Tipocliente { get; set; }
         public string Nombrecompleto { get; set; }
         public string Tipodocumento { get; set; }
-        public int Numerodocumento { get; set; }
+        public long Numerodocumento { get; set; }
         public string Correo { get; set; }
         public int Telefonocontacto { get; set; }
         public Boolean Estadocliente { get; set; }
