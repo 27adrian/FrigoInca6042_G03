@@ -10,7 +10,7 @@ using CapaEntidad;
 
 namespace CapaDatos
 {
-    internal class datCliente
+    public class datCliente
     {
         #region sigleton
         //Patron Singleton

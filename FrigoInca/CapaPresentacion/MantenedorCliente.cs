@@ -26,5 +26,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void btn_Nuevo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
