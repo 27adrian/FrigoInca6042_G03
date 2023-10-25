@@ -27,7 +27,7 @@ namespace CapaDatos
         #endregion singleton
         #region metodos
         ////////////////////listado de Clientes
-        public List<entCliente> ListarCliente()
+        public List<entCliente> Listarcliente()
         {
             SqlCommand cmd = null;
             List<entCliente> lista = new List<entCliente>();
@@ -64,7 +64,7 @@ namespace CapaDatos
             return lista;
         }
         /////////////////////////InsertaCliente
-        public Boolean InsertarCliente(entCliente Cli)
+        public Boolean Insertarcliente(entCliente Cli)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;

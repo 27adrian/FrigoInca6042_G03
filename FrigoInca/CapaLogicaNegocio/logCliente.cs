@@ -22,14 +22,14 @@ namespace CapaLogicaNegocio
         #region metodos
         ///listado
 
-        public List<entCliente> ListarCliente()
+        public List<entCliente> Listarcliente()
         {
-            return datCliente.Instancia.ListarCliente();
+            return datCliente.Instancia.Listarcliente();
         }
         ///inserta
-        public void InsertarCliente(entCliente Cli)
+        public void Insertarcliente(entCliente Cli)
         {
-            datCliente.Instancia.InsertarCliente(Cli);
+            datCliente.Instancia.Insertarcliente(Cli);
         }
         //edita
         public void EditarCliente(entCliente Cli)
