@@ -88,11 +88,11 @@ namespace CapaPresentacion
             {
                 entCliente c = new entCliente();
                 c.Tipocliente = cb_Tipocliente.Text.Trim();
-                c.Nombrecompleto = txt_NombreCompleto.Text.Trim();
-                c.Tipodocumento = cb_Tipodocumento.Text.Trim();
-                c.Numerodocumento = long.Parse(txt_Numerodocumento.Text.Trim());
-                c.Correo = txt_Correo.Text.Trim();
-                c.Telefonocontacto = int.Parse(txt_Telefonocontacto.Text.Trim());
+                c.Nombrecompletocliente = txt_NombreCompleto.Text.Trim();
+                c.Tipodocumentocliente = cb_Tipodocumento.Text.Trim();
+                c.Numerodocumentocliente = long.Parse(txt_Numerodocumento.Text.Trim());
+                c.Correocliente = txt_Correo.Text.Trim();
+                c.Telefonocontactocliente = int.Parse(txt_Telefonocontacto.Text.Trim());
                 c.Estadocliente = cb_Estadodelcliente.Checked;
                 c.Fecharegistrocliente = dt_Fecharegistro.Value;
                 logCliente.Instancia.Insertarcliente(c);
@@ -144,11 +144,11 @@ namespace CapaPresentacion
                 entCliente c = new entCliente();
                 c.Idcliente = int.Parse(txt_Idcliente.Text.Trim());
                 c.Tipocliente = cb_Tipocliente.Text.Trim();
-                c.Nombrecompleto = txt_NombreCompleto.Text.Trim();
-                c.Tipodocumento = cb_Tipodocumento.Text.Trim();
-                c.Numerodocumento = long.Parse(txt_Numerodocumento.Text.Trim());
-                c.Correo = txt_Correo.Text.Trim();
-                c.Telefonocontacto = int.Parse(txt_Telefonocontacto.Text.Trim());
+                c.Nombrecompletocliente = txt_NombreCompleto.Text.Trim();
+                c.Tipodocumentocliente = cb_Tipodocumento.Text.Trim();
+                c.Numerodocumentocliente = long.Parse(txt_Numerodocumento.Text.Trim());
+                c.Correocliente = txt_Correo.Text.Trim();
+                c.Telefonocontactocliente = int.Parse(txt_Telefonocontacto.Text.Trim());
                 c.Estadocliente = cb_Estadodelcliente.Checked;
                 c.Fecharegistrocliente = dt_Fecharegistro.Value;
                 logCliente.Instancia.Editarcliente(c);
