@@ -32,11 +32,11 @@ namespace CapaPresentacion
                 // Establece los datos en los controles de texto
                 txt_Idcliente.Text = row.Cells["Idcliente"].Value.ToString();
                 cb_Tipocliente.Text = row.Cells["Tipocliente"].Value.ToString();
-                txt_NombreCompleto.Text = row.Cells["Nombrecompleto"].Value.ToString();
-                cb_Tipodocumento.Text = row.Cells["Tipodocumento"].Value.ToString();
-                txt_Numerodocumento.Text = row.Cells["Numerodocumento"].Value.ToString();
-                txt_Correo.Text = row.Cells["Correo"].Value.ToString();
-                txt_Telefonocontacto.Text = row.Cells["Telefonocontacto"].Value.ToString();
+                txt_NombreCompleto.Text = row.Cells["Nombrecompletocliente"].Value.ToString();
+                cb_Tipodocumento.Text = row.Cells["Tipodocumentocliente"].Value.ToString();
+                txt_Numerodocumento.Text = row.Cells["Numerodocumentocliente"].Value.ToString();
+                txt_Correo.Text = row.Cells["Correocliente"].Value.ToString();
+                txt_Telefonocontacto.Text = row.Cells["Telefonocontactocliente"].Value.ToString();
                 // Para el checkbox, necesitas convertir el valor a booleano.
                 cb_Estadodelcliente.Checked = Convert.ToBoolean(row.Cells["Estadocliente"].Value);
                 dt_Fecharegistro.Value = Convert.ToDateTime(row.Cells["Fecharegistrocliente"].Value);
@@ -119,8 +119,6 @@ namespace CapaPresentacion
             {
                 entCliente c = new entCliente();
                 c.Idcliente = int.Parse(txt_Idcliente.Text.Trim());
-                cb_Estadodelcliente.Checked = false;
-                c.Estadocliente = cb_Estadodelcliente.Checked;
                 logCliente.Instancia.Deshabilitarcliente(c);
             }
             catch (Exception ex)

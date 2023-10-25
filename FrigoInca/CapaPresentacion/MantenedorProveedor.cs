@@ -31,14 +31,14 @@ namespace CapaPresentacion
                 // Establece los datos en los controles de texto
                 txt_Idproveedor.Text = row.Cells["Idproveedor"].Value.ToString();
                 cb_Tipoproveedor.Text = row.Cells["Tipoproveedor"].Value.ToString();
-                txt_Nombrecompleto.Text = row.Cells["Nombrecompleto"].Value.ToString();
-                cb_Tipodocumento.Text = row.Cells["Tipodocumento"].Value.ToString();
-                txt_Numerodocumento.Text = row.Cells["Numerodocumento"].Value.ToString();
-                txt_Correo.Text = row.Cells["Correo"].Value.ToString();
-                txt_Telefonocontacto.Text = row.Cells["Telefonocontacto"].Value.ToString();
+                txt_Nombrecompleto.Text = row.Cells["Nombrecompletoproveedor"].Value.ToString();
+                cb_Tipodocumento.Text = row.Cells["Tipodocumentoproveedor"].Value.ToString();
+                txt_Numerodocumento.Text = row.Cells["Numerodocumentoproveedor"].Value.ToString();
+                txt_Correo.Text = row.Cells["Correoproveedor"].Value.ToString();
+                txt_Telefonocontacto.Text = row.Cells["Telefonocontactoproveedor"].Value.ToString();
                 // Para el checkbox, necesitas convertir el valor a booleano.
-                cb_Estadodelproveedor.Checked = Convert.ToBoolean(row.Cells["Estadodelproveedor"].Value);
-                dt_Fechaderegistroproveedor.Value = Convert.ToDateTime(row.Cells["Fechaderegistroproveedor"].Value);
+                cb_Estadodelproveedor.Checked = Convert.ToBoolean(row.Cells["Estadoproveedor"].Value);
+                dt_Fechaderegistroproveedor.Value = Convert.ToDateTime(row.Cells["Fecharegistroproveedor"].Value);
             }
         }
         public void Listarproveedor()
@@ -76,8 +76,6 @@ namespace CapaPresentacion
             {
                 entProveedor c = new entProveedor();
                 c.Idproveedor = int.Parse(txt_Idproveedor.Text.Trim());
-                cb_Estadodelproveedor.Checked = false;
-                c.Estadoproveedor = cb_Estadodelproveedor.Checked;
                 logProveedor.Instancia.Deshabilitarproveedor(c);
             }
             catch (Exception ex)
@@ -91,7 +89,7 @@ namespace CapaPresentacion
 
         private void btn_Salir_Click(object sender, EventArgs e)
         {
-            gb_Proveedor.Enabled = false;
+            Close();
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
@@ -145,7 +143,7 @@ namespace CapaPresentacion
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
-            Close();
+            gb_Proveedor.Enabled = false;
         }
     }
 }

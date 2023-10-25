@@ -107,11 +107,11 @@ namespace CapaDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Idproveedor", Prov.Idproveedor);
                 cmd.Parameters.AddWithValue("@Tipoproveedor", Prov.Tipoproveedor);
-                cmd.Parameters.AddWithValue("@Nombrecompletoproveedor", Prov.Nombrecompletoproveedor);
-                cmd.Parameters.AddWithValue("@Tipodocumentoproveedor", Prov.Tipodocumentoproveedor);
-                cmd.Parameters.AddWithValue("@Numerodocumentoproveedor", Prov.Numerodocumentoproveedor);
-                cmd.Parameters.AddWithValue("@Correoproveedor", Prov.Correoproveedor);
-                cmd.Parameters.AddWithValue("@Telefonocontactoproveedor", Prov.Telefonocontactoproveedor);
+                cmd.Parameters.AddWithValue("@Nombrecompleto", Prov.Nombrecompletoproveedor);
+                cmd.Parameters.AddWithValue("@Tipodocumento", Prov.Tipodocumentoproveedor);
+                cmd.Parameters.AddWithValue("@Numerodocumento", Prov.Numerodocumentoproveedor);
+                cmd.Parameters.AddWithValue("@Correo", Prov.Correoproveedor);
+                cmd.Parameters.AddWithValue("@Telefonocontacto", Prov.Telefonocontactoproveedor);
                 cmd.Parameters.AddWithValue("@Estadoproveedor", Prov.Estadoproveedor);
                 cmd.Parameters.AddWithValue("@Fecharegistroproveedor", Prov .Fecharegistroproveedor);
                 cn.Open();
@@ -136,10 +136,9 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("Desabilitarproveedor", cn);
+                cmd = new SqlCommand("Deshabilitarproveedor", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Idproveedor", Prov.Idproveedor);
-                cmd.Parameters.AddWithValue("@Estadoproveedor", Prov.Estadoproveedor);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
