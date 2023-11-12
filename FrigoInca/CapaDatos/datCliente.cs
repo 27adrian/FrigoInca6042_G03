@@ -154,33 +154,32 @@ namespace CapaDatos
             return delete;
         }
 
-        public List<entProveedor> BuscarProveedor(entProveedor Prov)
+        public List<entCliente> BuscarCliente(entCliente Cli)
         {
             SqlCommand cmd = null;
-            List<entProveedor> lista = new List<entProveedor>();
+            List<entCliente> lista = new List<entCliente>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("BuscarProveedor", cn);
+                cmd = new SqlCommand("BuscarCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@numDoc", Prov.Numerodocumentoproveedor);
+                cmd.Parameters.AddWithValue("@numDoc", Cli.Numerodocumentocliente);
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entProveedor proveedor = new entProveedor(); // Crea un nuevo objeto en cada iteración
+                    entCliente Cliente = new entCliente(); // Crea un nuevo objeto en cada iteración
 
-                    proveedor.Idproveedor = Convert.ToInt32(dr["Idproveedor"]);
-                    proveedor.Tipoproveedor = dr["Tipoproveedor"].ToString();
-                    proveedor.Nombrecompletoproveedor = dr["Nombrecompleto"].ToString();
-                    proveedor.Tipodocumentoproveedor = dr["Tipodocumento"].ToString();
-                    proveedor.Numerodocumentoproveedor = Convert.ToInt64(dr["Numerodocumento"]);
-                    proveedor.Correoproveedor = dr["Correo"].ToString();
-                    proveedor.Telefonocontactoproveedor = Convert.ToInt32(dr["Telefonocontacto"]);
-                    proveedor.Estadoproveedor = Convert.ToBoolean(dr["Estadoproveedor"]);
-                    proveedor.Fecharegistroproveedor = Convert.ToDateTime(dr["Fecharegistroproveedor"]);
-
-                    lista.Add(proveedor);
+                    Cliente.Idcliente = Convert.ToInt32(dr["Idcliente"]);
+                    Cliente.Tipocliente = dr["Tipocliente"].ToString();
+                    Cliente.Nombrecompletocliente = dr["Nombrecompleto"].ToString();
+                    Cliente.Tipodocumentocliente = dr["Tipodocumento"].ToString();
+                    Cliente.Numerodocumentocliente = Convert.ToInt64(dr["Numerodocumento"]);
+                    Cliente.Correocliente = dr["Correo"].ToString();
+                    Cliente.Telefonocontactocliente = Convert.ToInt32(dr["Telefonocontacto"]);
+                    Cliente.Estadocliente = Convert.ToBoolean(dr["Estadocliente"]);
+                    Cliente.Fecharegistrocliente = Convert.ToDateTime(dr["Fecharegistrocliente"]);
+                    lista.Add(Cliente);
                 }
             }
             catch (Exception e)

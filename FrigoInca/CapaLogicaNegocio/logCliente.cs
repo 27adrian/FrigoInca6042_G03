@@ -41,9 +41,9 @@ namespace CapaLogicaNegocio
             datCliente.Instancia.Deshabilitarcliente(Cli);
         }
 
-        public List<entProveedor> BuscarProveedor(entProveedor Prov)
+        public List<entCliente> BuscarCliente(entCliente Cli)
         {
-            return datProveedor.Instancia.BuscarProveedor(Prov);
+            return datCliente.Instancia.BuscarCliente(Cli);
 
         }
         #endregion metodos
