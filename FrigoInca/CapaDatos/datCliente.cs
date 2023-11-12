@@ -153,6 +153,48 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return delete;
         }
-        #endregion metodos
+
+        public List<entProveedor> BuscarProveedor(entProveedor Prov)
+        {
+            SqlCommand cmd = null;
+            List<entProveedor> lista = new List<entProveedor>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                cmd = new SqlCommand("BuscarProveedor", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@numDoc", Prov.Numerodocumentoproveedor);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entProveedor proveedor = new entProveedor(); // Crea un nuevo objeto en cada iteración
+
+                    proveedor.Idproveedor = Convert.ToInt32(dr["Idproveedor"]);
+                    proveedor.Tipoproveedor = dr["Tipoproveedor"].ToString();
+                    proveedor.Nombrecompletoproveedor = dr["Nombrecompleto"].ToString();
+                    proveedor.Tipodocumentoproveedor = dr["Tipodocumento"].ToString();
+                    proveedor.Numerodocumentoproveedor = Convert.ToInt64(dr["Numerodocumento"]);
+                    proveedor.Correoproveedor = dr["Correo"].ToString();
+                    proveedor.Telefonocontactoproveedor = Convert.ToInt32(dr["Telefonocontacto"]);
+                    proveedor.Estadoproveedor = Convert.ToBoolean(dr["Estadoproveedor"]);
+                    proveedor.Fecharegistroproveedor = Convert.ToDateTime(dr["Fecharegistroproveedor"]);
+
+                    lista.Add(proveedor);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null && cmd.Connection.State != ConnectionState.Closed)
+                    cmd.Connection.Close();
+            }
+            return lista;
+
+            #endregion metodos
+        }
     }
 }

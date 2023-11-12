@@ -144,5 +144,79 @@ namespace CapaPresentacion
         {
             gb_Proveedor.Enabled = false;
         }
+
+        private void btnHabilBusque_Click(object sender, EventArgs e)
+        {
+            gb_Proveedor.Enabled = true;
+            txt_Correo.Enabled = false;
+            txt_Idproveedor.Enabled = false;
+            txt_Nombrecompleto.Enabled = false;
+            txt_Telefonocontacto.Enabled = false;
+            cb_Estadodelproveedor.Enabled = false;
+            cb_Tipoproveedor.Enabled = false;
+            cb_Tipodocumento.Enabled = false;
+            dt_Fechaderegistroproveedor.Enabled = false;
+            btnBuscar.Enabled = true;
+            btn_Agregar.Enabled = false;
+            btn_Cancelar.Enabled = false;
+            btn_Modificar.Enabled = false;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entProveedor c = new entProveedor();
+                c.Numerodocumentoproveedor = int.Parse(txt_Numerodocumento.Text.Trim());
+                List<entProveedor> listaProveedores = logProveedor.Instancia.BuscarProveedor(c);
+
+                if (listaProveedores.Count > 0)
+                {
+                    MostrarInformacionProveedor(listaProveedores[0]);
+
+                    DataGridViewRow row = BuscarFilaPorNumeroDocumento(txt_Numerodocumento.Text.Trim());
+
+                    if (row != null)
+                    {
+                        dgv_Proveedor.CurrentCell = row.Cells[0];
+                        dgv_Proveedor.Rows[row.Index].Selected = true;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró ningún proveedor con el número de documento proporcionado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex.Message);
+            }
+        }
+
+        private void MostrarInformacionProveedor(entProveedor proveedor)
+        {
+            txt_Idproveedor.Text = proveedor.Idproveedor.ToString();
+            cb_Tipoproveedor.Text = proveedor.Tipoproveedor;
+            txt_Nombrecompleto.Text = proveedor.Nombrecompletoproveedor;
+            cb_Tipodocumento.Text = proveedor.Tipodocumentoproveedor;
+            txt_Numerodocumento.Text = proveedor.Numerodocumentoproveedor.ToString();
+            txt_Correo.Text = proveedor.Correoproveedor;
+            txt_Telefonocontacto.Text = proveedor.Telefonocontactoproveedor.ToString();
+            cb_Estadodelproveedor.Checked = proveedor.Estadoproveedor;
+            dt_Fechaderegistroproveedor.Value = proveedor.Fecharegistroproveedor;
+        }
+
+        private DataGridViewRow BuscarFilaPorNumeroDocumento(string numeroDocumento)
+        {
+            foreach (DataGridViewRow row in dgv_Proveedor.Rows)
+            {
+                if (row.Cells["Numerodocumentoproveedor"].Value.ToString() == numeroDocumento)
+                {
+                    return row;
+                }
+            }
+
+            return null;
+        }
     }
 }

@@ -40,6 +40,12 @@ namespace CapaLogicaNegocio
         {
             datProveedor.Instancia.Deshabilitarproveedor(Prov);
         }
+
+        public List<entProveedor> BuscarProveedor(entProveedor Prov)
+        {
+            return datProveedor.Instancia.BuscarProveedor(Prov);
+
+        }
         #endregion metodos
     }
 }

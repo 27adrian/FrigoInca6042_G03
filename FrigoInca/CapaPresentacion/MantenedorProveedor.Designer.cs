@@ -30,6 +30,7 @@
         {
             this.dgv_Proveedor = new System.Windows.Forms.DataGridView();
             this.gb_Proveedor = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dt_Fechaderegistroproveedor = new System.Windows.Forms.DateTimePicker();
             this.cb_Estadodelproveedor = new System.Windows.Forms.CheckBox();
@@ -55,7 +56,6 @@
             this.btn_Deshabilitar = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
             this.btnHabilBusque = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedor)).BeginInit();
             this.gb_Proveedor.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +99,16 @@
             this.gb_Proveedor.TabIndex = 13;
             this.gb_Proveedor.TabStop = false;
             this.gb_Proveedor.Text = "Informacion Proveedor";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(843, 59);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(141, 47);
+            this.btnBuscar.TabIndex = 27;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label2
             // 
@@ -168,7 +178,7 @@
             "DNI",
             "RUC"});
             this.cb_Tipodocumento.Location = new System.Drawing.Point(172, 129);
-            this.cb_Tipodocumento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_Tipodocumento.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Tipodocumento.Name = "cb_Tipodocumento";
             this.cb_Tipodocumento.Size = new System.Drawing.Size(199, 21);
             this.cb_Tipodocumento.TabIndex = 17;
@@ -189,7 +199,7 @@
             "Empresa",
             "Independiente"});
             this.cb_Tipoproveedor.Location = new System.Drawing.Point(172, 60);
-            this.cb_Tipoproveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_Tipoproveedor.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Tipoproveedor.Name = "cb_Tipoproveedor";
             this.cb_Tipoproveedor.Size = new System.Drawing.Size(199, 21);
             this.cb_Tipoproveedor.TabIndex = 15;
@@ -326,15 +336,7 @@
             this.btnHabilBusque.TabIndex = 22;
             this.btnHabilBusque.Text = "Habilitar Busqueda";
             this.btnHabilBusque.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(861, 28);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(141, 47);
-            this.btnBuscar.TabIndex = 27;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnHabilBusque.Click += new System.EventHandler(this.btnHabilBusque_Click);
             // 
             // MantenedorProveedor
             // 
@@ -348,7 +350,7 @@
             this.Controls.Add(this.btn_Nuevo);
             this.Controls.Add(this.dgv_Proveedor);
             this.Controls.Add(this.gb_Proveedor);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MantenedorProveedor";
             this.Text = "MantenedorProveedor";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedor)).EndInit();
