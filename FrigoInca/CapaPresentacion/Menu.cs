@@ -70,5 +70,39 @@ namespace CapaPresentacion
             rLotes.ShowDialog();
             this.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MantenedorEnvios mEnv = new MantenedorEnvios();
+            this.Hide();
+            mEnv.ShowDialog();
+            this.Show();
+        }
+
+        private void btnROrdenVent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClienteArriba_Click(object sender, EventArgs e)
+        {
+            MantenedorCliente mc = new MantenedorCliente();
+            this.Hide();
+            mc.ShowDialog();
+            this.Show();
+        }
+
+        private void btnProveeArriba_Click(object sender, EventArgs e)
+        {
+            MantenedorProveedor mprov = new MantenedorProveedor();
+            this.Hide();
+            mprov.ShowDialog();
+            this.Show();
+        }
     }
 }

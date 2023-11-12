@@ -30,7 +30,6 @@
         {
             this.dgv_Proveedor = new System.Windows.Forms.DataGridView();
             this.gb_Proveedor = new System.Windows.Forms.GroupBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dt_Fechaderegistroproveedor = new System.Windows.Forms.DateTimePicker();
             this.cb_Estadodelproveedor = new System.Windows.Forms.CheckBox();
@@ -51,11 +50,14 @@
             this.txt_Nombrecompleto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.btn_Nuevo = new System.Windows.Forms.Button();
             this.Btn_Editar = new System.Windows.Forms.Button();
             this.btn_Deshabilitar = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
-            this.btnHabilBusque = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNumDoc = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedor)).BeginInit();
             this.gb_Proveedor.SuspendLayout();
             this.SuspendLayout();
@@ -67,12 +69,11 @@
             this.dgv_Proveedor.Name = "dgv_Proveedor";
             this.dgv_Proveedor.ReadOnly = true;
             this.dgv_Proveedor.RowHeadersWidth = 51;
-            this.dgv_Proveedor.Size = new System.Drawing.Size(1002, 252);
+            this.dgv_Proveedor.Size = new System.Drawing.Size(987, 252);
             this.dgv_Proveedor.TabIndex = 14;
             // 
             // gb_Proveedor
             // 
-            this.gb_Proveedor.Controls.Add(this.btnBuscar);
             this.gb_Proveedor.Controls.Add(this.label2);
             this.gb_Proveedor.Controls.Add(this.dt_Fechaderegistroproveedor);
             this.gb_Proveedor.Controls.Add(this.cb_Estadodelproveedor);
@@ -95,20 +96,10 @@
             this.gb_Proveedor.Controls.Add(this.label6);
             this.gb_Proveedor.Location = new System.Drawing.Point(12, 284);
             this.gb_Proveedor.Name = "gb_Proveedor";
-            this.gb_Proveedor.Size = new System.Drawing.Size(1150, 255);
+            this.gb_Proveedor.Size = new System.Drawing.Size(787, 255);
             this.gb_Proveedor.TabIndex = 13;
             this.gb_Proveedor.TabStop = false;
             this.gb_Proveedor.Text = "Informacion Proveedor";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(843, 59);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(141, 47);
-            this.btnBuscar.TabIndex = 27;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label2
             // 
@@ -154,9 +145,9 @@
             // 
             // btn_Cancelar
             // 
-            this.btn_Cancelar.Location = new System.Drawing.Point(1008, 180);
+            this.btn_Cancelar.Location = new System.Drawing.Point(683, 110);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(125, 49);
+            this.btn_Cancelar.Size = new System.Drawing.Size(90, 34);
             this.btn_Cancelar.TabIndex = 21;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
@@ -164,9 +155,9 @@
             // 
             // btn_Modificar
             // 
-            this.btn_Modificar.Location = new System.Drawing.Point(1008, 109);
+            this.btn_Modificar.Location = new System.Drawing.Point(683, 62);
             this.btn_Modificar.Name = "btn_Modificar";
-            this.btn_Modificar.Size = new System.Drawing.Size(125, 49);
+            this.btn_Modificar.Size = new System.Drawing.Size(90, 34);
             this.btn_Modificar.TabIndex = 20;
             this.btn_Modificar.Text = "Modificar";
             this.btn_Modificar.UseVisualStyleBackColor = true;
@@ -207,9 +198,9 @@
             // 
             // btn_Agregar
             // 
-            this.btn_Agregar.Location = new System.Drawing.Point(1008, 28);
+            this.btn_Agregar.Location = new System.Drawing.Point(683, 20);
             this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(125, 49);
+            this.btn_Agregar.Size = new System.Drawing.Size(90, 34);
             this.btn_Agregar.TabIndex = 11;
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.UseVisualStyleBackColor = true;
@@ -234,6 +225,7 @@
             // txt_Numerodocumento
             // 
             this.txt_Numerodocumento.Location = new System.Drawing.Point(172, 160);
+            this.txt_Numerodocumento.MaxLength = 8;
             this.txt_Numerodocumento.Name = "txt_Numerodocumento";
             this.txt_Numerodocumento.Size = new System.Drawing.Size(199, 20);
             this.txt_Numerodocumento.TabIndex = 9;
@@ -288,11 +280,21 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Telefono de contacto:";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(872, 394);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(93, 32);
+            this.btnBuscar.TabIndex = 27;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // btn_Nuevo
             // 
-            this.btn_Nuevo.Location = new System.Drawing.Point(1020, 12);
+            this.btn_Nuevo.Location = new System.Drawing.Point(1005, 55);
             this.btn_Nuevo.Name = "btn_Nuevo";
-            this.btn_Nuevo.Size = new System.Drawing.Size(125, 49);
+            this.btn_Nuevo.Size = new System.Drawing.Size(93, 49);
             this.btn_Nuevo.TabIndex = 18;
             this.btn_Nuevo.Text = "Nuevo";
             this.btn_Nuevo.UseVisualStyleBackColor = true;
@@ -300,9 +302,9 @@
             // 
             // Btn_Editar
             // 
-            this.Btn_Editar.Location = new System.Drawing.Point(1020, 67);
+            this.Btn_Editar.Location = new System.Drawing.Point(1005, 122);
             this.Btn_Editar.Name = "Btn_Editar";
-            this.Btn_Editar.Size = new System.Drawing.Size(125, 49);
+            this.Btn_Editar.Size = new System.Drawing.Size(93, 47);
             this.Btn_Editar.TabIndex = 19;
             this.Btn_Editar.Text = "Editar";
             this.Btn_Editar.UseVisualStyleBackColor = true;
@@ -310,9 +312,9 @@
             // 
             // btn_Deshabilitar
             // 
-            this.btn_Deshabilitar.Location = new System.Drawing.Point(1020, 122);
+            this.btn_Deshabilitar.Location = new System.Drawing.Point(1005, 188);
             this.btn_Deshabilitar.Name = "btn_Deshabilitar";
-            this.btn_Deshabilitar.Size = new System.Drawing.Size(125, 49);
+            this.btn_Deshabilitar.Size = new System.Drawing.Size(93, 41);
             this.btn_Deshabilitar.TabIndex = 20;
             this.btn_Deshabilitar.Text = "Deshabilitar";
             this.btn_Deshabilitar.UseVisualStyleBackColor = true;
@@ -320,36 +322,55 @@
             // 
             // btn_Salir
             // 
-            this.btn_Salir.Location = new System.Drawing.Point(1020, 229);
+            this.btn_Salir.Location = new System.Drawing.Point(875, 497);
             this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(125, 49);
+            this.btn_Salir.Size = new System.Drawing.Size(93, 35);
             this.btn_Salir.TabIndex = 21;
             this.btn_Salir.Text = "Salir";
             this.btn_Salir.UseVisualStyleBackColor = true;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
-            // btnHabilBusque
+            // label7
             // 
-            this.btnHabilBusque.Location = new System.Drawing.Point(1021, 178);
-            this.btnHabilBusque.Name = "btnHabilBusque";
-            this.btnHabilBusque.Size = new System.Drawing.Size(124, 45);
-            this.btnHabilBusque.TabIndex = 22;
-            this.btnHabilBusque.Text = "Habilitar Busqueda";
-            this.btnHabilBusque.UseVisualStyleBackColor = true;
-            this.btnHabilBusque.Click += new System.EventHandler(this.btnHabilBusque_Click);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(872, 325);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 13);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "N° de documento:";
+            // 
+            // txtNumDoc
+            // 
+            this.txtNumDoc.Location = new System.Drawing.Point(834, 354);
+            this.txtNumDoc.MaxLength = 8;
+            this.txtNumDoc.Name = "txtNumDoc";
+            this.txtNumDoc.Size = new System.Drawing.Size(180, 20);
+            this.txtNumDoc.TabIndex = 29;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(823, 291);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(202, 173);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Busqueda";
             // 
             // MantenedorProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1210, 551);
-            this.Controls.Add(this.btnHabilBusque);
+            this.ClientSize = new System.Drawing.Size(1134, 551);
+            this.Controls.Add(this.txtNumDoc);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.btn_Deshabilitar);
             this.Controls.Add(this.Btn_Editar);
             this.Controls.Add(this.btn_Nuevo);
             this.Controls.Add(this.dgv_Proveedor);
             this.Controls.Add(this.gb_Proveedor);
+            this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MantenedorProveedor";
             this.Text = "MantenedorProveedor";
@@ -357,6 +378,7 @@
             this.gb_Proveedor.ResumeLayout(false);
             this.gb_Proveedor.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -389,6 +411,8 @@
         private System.Windows.Forms.DateTimePicker dt_Fechaderegistroproveedor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnHabilBusque;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtNumDoc;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

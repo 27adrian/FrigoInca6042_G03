@@ -59,7 +59,7 @@ namespace CapaPresentacion
 
         private void MantenedorCliente_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
@@ -159,36 +159,20 @@ namespace CapaPresentacion
             Listarcliente();
         }
 
-        private void btnHabilBusque_Click(object sender, EventArgs e)
-        {
-            gb_Cliente.Enabled = true;
-            txt_Correo.Enabled = false;
-            txt_Idcliente.Enabled = false;
-            txt_NombreCompleto.Enabled = false;
-            txt_Telefonocontacto.Enabled = false;
-            cb_Estadodelcliente.Enabled = false;
-            cb_Tipocliente.Enabled = false;
-            cb_Tipodocumento.Enabled = false;
-            dt_Fecharegistro.Enabled = false;
-            btnBuscar.Enabled = true;
-            btn_Agregar.Enabled = false;
-            btn_Cancelar.Enabled = false;
-            btn_Modificar.Enabled = false;
-        }
-
+        
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             try
             {
                 entCliente c = new entCliente();
-                c.Numerodocumentocliente = int.Parse(txt_Numerodocumento.Text.Trim());
+                c.Numerodocumentocliente = int.Parse(txtNumDoc1.Text.Trim());
                 List<entCliente> listaCliente = logCliente.Instancia.BuscarCliente(c);
 
                 if (listaCliente.Count > 0)
                 {
-                    MostrarInformacionProveedor(listaCliente[0]);
+                    MostrarInformacionCliente(listaCliente[0]);
 
-                    DataGridViewRow row = BuscarFilaPorNumeroDocumento(txt_Numerodocumento.Text.Trim());
+                    DataGridViewRow row = BuscarFilaPorNumeroDocumento(txtNumDoc1.Text.Trim());
 
                     if (row != null)
                     {
@@ -198,7 +182,7 @@ namespace CapaPresentacion
                 }
                 else
                 {
-                    MessageBox.Show("No se encontró ningún proveedor con el número de documento proporcionado.");
+                    MessageBox.Show("No se encontró ningún Cliente con el número de documento proporcionado.");
                 }
             }
             catch (Exception ex)
@@ -207,7 +191,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void MostrarInformacionProveedor(entCliente Cli)
+        private void MostrarInformacionCliente(entCliente Cli)
         {
             txt_Idcliente.Text = Cli.Idcliente.ToString();
             cb_Tipocliente.Text = Cli.Tipocliente;
@@ -218,6 +202,7 @@ namespace CapaPresentacion
             txt_Telefonocontacto.Text = Cli.Telefonocontactocliente.ToString();
             cb_Estadodelcliente.Checked = Cli.Estadocliente;
             dt_Fecharegistro.Value = Cli.Fecharegistrocliente;
+            txtNumDoc1.Text = Cli.Numerodocumentocliente.ToString();
         }
 
         private DataGridViewRow BuscarFilaPorNumeroDocumento(string numeroDocumento)

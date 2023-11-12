@@ -145,36 +145,21 @@ namespace CapaPresentacion
             gb_Proveedor.Enabled = false;
         }
 
-        private void btnHabilBusque_Click(object sender, EventArgs e)
-        {
-            gb_Proveedor.Enabled = true;
-            txt_Correo.Enabled = false;
-            txt_Idproveedor.Enabled = false;
-            txt_Nombrecompleto.Enabled = false;
-            txt_Telefonocontacto.Enabled = false;
-            cb_Estadodelproveedor.Enabled = false;
-            cb_Tipoproveedor.Enabled = false;
-            cb_Tipodocumento.Enabled = false;
-            dt_Fechaderegistroproveedor.Enabled = false;
-            btnBuscar.Enabled = true;
-            btn_Agregar.Enabled = false;
-            btn_Cancelar.Enabled = false;
-            btn_Modificar.Enabled = false;
-        }
+       
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             try
             {
                 entProveedor c = new entProveedor();
-                c.Numerodocumentoproveedor = int.Parse(txt_Numerodocumento.Text.Trim());
+                c.Numerodocumentoproveedor = int.Parse(txtNumDoc.Text.Trim());
                 List<entProveedor> listaProveedores = logProveedor.Instancia.BuscarProveedor(c);
 
                 if (listaProveedores.Count > 0)
                 {
                     MostrarInformacionProveedor(listaProveedores[0]);
 
-                    DataGridViewRow row = BuscarFilaPorNumeroDocumento(txt_Numerodocumento.Text.Trim());
+                    DataGridViewRow row = BuscarFilaPorNumeroDocumento(txtNumDoc.Text.Trim());
 
                     if (row != null)
                     {
@@ -189,7 +174,7 @@ namespace CapaPresentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error.." + ex.Message);
+                MessageBox.Show("Error.. " + ex.Message);
             }
         }
 
@@ -204,6 +189,8 @@ namespace CapaPresentacion
             txt_Telefonocontacto.Text = proveedor.Telefonocontactoproveedor.ToString();
             cb_Estadodelproveedor.Checked = proveedor.Estadoproveedor;
             dt_Fechaderegistroproveedor.Value = proveedor.Fecharegistroproveedor;
+            txtNumDoc.Text = proveedor.Numerodocumentoproveedor.ToString();
+
         }
 
         private DataGridViewRow BuscarFilaPorNumeroDocumento(string numeroDocumento)

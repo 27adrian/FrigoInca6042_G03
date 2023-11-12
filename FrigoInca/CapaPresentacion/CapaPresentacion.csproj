@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="MantenedorEnvios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenedorEnvios.Designer.cs">
+      <DependentUpon>MantenedorEnvios.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenedorTrabajador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     <EmbeddedResource Include="MantenedorCliente.resx">
       <DependentUpon>MantenedorCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenedorEnvios.resx">
+      <DependentUpon>MantenedorEnvios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenedorProveedor.resx">
       <DependentUpon>MantenedorProveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +143,27 @@
       <Project>{6f8705d1-82ff-4e9f-9af1-939e4e03135f}</Project>
       <Name>CapaLogicaNegocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor2 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carro %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporte %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

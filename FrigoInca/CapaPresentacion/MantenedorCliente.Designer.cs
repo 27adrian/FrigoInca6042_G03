@@ -49,15 +49,18 @@
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.btn_Modificar = new System.Windows.Forms.Button();
             this.btn_Agregar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.dgv_Cliente = new System.Windows.Forms.DataGridView();
             this.btn_Nuevo = new System.Windows.Forms.Button();
             this.btn_Editar = new System.Windows.Forms.Button();
             this.btn_Deshabilitar = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
-            this.btnHabilBusque = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNumDoc1 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gb_Cliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Cliente)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTipoCliente
@@ -135,7 +138,6 @@
             // 
             // gb_Cliente
             // 
-            this.gb_Cliente.Controls.Add(this.btnBuscar);
             this.gb_Cliente.Controls.Add(this.txt_Idcliente);
             this.gb_Cliente.Controls.Add(this.label2);
             this.gb_Cliente.Controls.Add(this.label1);
@@ -158,7 +160,7 @@
             this.gb_Cliente.Controls.Add(this.label6);
             this.gb_Cliente.Location = new System.Drawing.Point(12, 298);
             this.gb_Cliente.Name = "gb_Cliente";
-            this.gb_Cliente.Size = new System.Drawing.Size(1142, 268);
+            this.gb_Cliente.Size = new System.Drawing.Size(797, 268);
             this.gb_Cliente.TabIndex = 11;
             this.gb_Cliente.TabStop = false;
             this.gb_Cliente.Text = "Informacion cliente";
@@ -212,7 +214,7 @@
             "DNI",
             "RUC"});
             this.cb_Tipodocumento.Location = new System.Drawing.Point(176, 121);
-            this.cb_Tipodocumento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_Tipodocumento.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Tipodocumento.Name = "cb_Tipodocumento";
             this.cb_Tipodocumento.Size = new System.Drawing.Size(199, 21);
             this.cb_Tipodocumento.TabIndex = 17;
@@ -233,7 +235,7 @@
             "Empresa",
             "Independiente"});
             this.cb_Tipocliente.Location = new System.Drawing.Point(176, 52);
-            this.cb_Tipocliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_Tipocliente.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Tipocliente.Name = "cb_Tipocliente";
             this.cb_Tipocliente.Size = new System.Drawing.Size(199, 21);
             this.cb_Tipocliente.TabIndex = 15;
@@ -241,9 +243,9 @@
             // 
             // btn_Cancelar
             // 
-            this.btn_Cancelar.Location = new System.Drawing.Point(995, 189);
+            this.btn_Cancelar.Location = new System.Drawing.Point(681, 123);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(125, 49);
+            this.btn_Cancelar.Size = new System.Drawing.Size(94, 34);
             this.btn_Cancelar.TabIndex = 13;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
@@ -251,9 +253,9 @@
             // 
             // btn_Modificar
             // 
-            this.btn_Modificar.Location = new System.Drawing.Point(995, 127);
+            this.btn_Modificar.Location = new System.Drawing.Point(681, 70);
             this.btn_Modificar.Name = "btn_Modificar";
-            this.btn_Modificar.Size = new System.Drawing.Size(125, 44);
+            this.btn_Modificar.Size = new System.Drawing.Size(94, 35);
             this.btn_Modificar.TabIndex = 12;
             this.btn_Modificar.Text = "Modificar";
             this.btn_Modificar.UseVisualStyleBackColor = true;
@@ -261,13 +263,23 @@
             // 
             // btn_Agregar
             // 
-            this.btn_Agregar.Location = new System.Drawing.Point(995, 49);
+            this.btn_Agregar.Location = new System.Drawing.Point(681, 23);
             this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(125, 49);
+            this.btn_Agregar.Size = new System.Drawing.Size(94, 38);
             this.btn_Agregar.TabIndex = 11;
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.UseVisualStyleBackColor = true;
             this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(55, 99);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(94, 38);
+            this.btnBuscar.TabIndex = 23;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dgv_Cliente
             // 
@@ -276,14 +288,14 @@
             this.dgv_Cliente.Name = "dgv_Cliente";
             this.dgv_Cliente.ReadOnly = true;
             this.dgv_Cliente.RowHeadersWidth = 51;
-            this.dgv_Cliente.Size = new System.Drawing.Size(989, 256);
+            this.dgv_Cliente.Size = new System.Drawing.Size(966, 256);
             this.dgv_Cliente.TabIndex = 12;
             // 
             // btn_Nuevo
             // 
-            this.btn_Nuevo.Location = new System.Drawing.Point(1007, 12);
+            this.btn_Nuevo.Location = new System.Drawing.Point(993, 18);
             this.btn_Nuevo.Name = "btn_Nuevo";
-            this.btn_Nuevo.Size = new System.Drawing.Size(125, 49);
+            this.btn_Nuevo.Size = new System.Drawing.Size(91, 31);
             this.btn_Nuevo.TabIndex = 18;
             this.btn_Nuevo.Text = "Nuevo";
             this.btn_Nuevo.UseVisualStyleBackColor = true;
@@ -291,9 +303,9 @@
             // 
             // btn_Editar
             // 
-            this.btn_Editar.Location = new System.Drawing.Point(1007, 67);
+            this.btn_Editar.Location = new System.Drawing.Point(993, 66);
             this.btn_Editar.Name = "btn_Editar";
-            this.btn_Editar.Size = new System.Drawing.Size(125, 49);
+            this.btn_Editar.Size = new System.Drawing.Size(91, 31);
             this.btn_Editar.TabIndex = 19;
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.UseVisualStyleBackColor = true;
@@ -301,9 +313,9 @@
             // 
             // btn_Deshabilitar
             // 
-            this.btn_Deshabilitar.Location = new System.Drawing.Point(1007, 122);
+            this.btn_Deshabilitar.Location = new System.Drawing.Point(993, 115);
             this.btn_Deshabilitar.Name = "btn_Deshabilitar";
-            this.btn_Deshabilitar.Size = new System.Drawing.Size(125, 49);
+            this.btn_Deshabilitar.Size = new System.Drawing.Size(91, 31);
             this.btn_Deshabilitar.TabIndex = 20;
             this.btn_Deshabilitar.Text = "Deshabilitar";
             this.btn_Deshabilitar.UseVisualStyleBackColor = true;
@@ -311,52 +323,67 @@
             // 
             // btn_Salir
             // 
-            this.btn_Salir.Location = new System.Drawing.Point(1007, 226);
+            this.btn_Salir.BackColor = System.Drawing.Color.Red;
+            this.btn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Salir.Location = new System.Drawing.Point(887, 510);
             this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(125, 49);
+            this.btn_Salir.Size = new System.Drawing.Size(91, 36);
             this.btn_Salir.TabIndex = 21;
             this.btn_Salir.Text = "Salir";
-            this.btn_Salir.UseVisualStyleBackColor = true;
+            this.btn_Salir.UseVisualStyleBackColor = false;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
-            // btnHabilBusque
+            // label7
             // 
-            this.btnHabilBusque.Location = new System.Drawing.Point(1007, 177);
-            this.btnHabilBusque.Name = "btnHabilBusque";
-            this.btnHabilBusque.Size = new System.Drawing.Size(125, 43);
-            this.btnHabilBusque.TabIndex = 22;
-            this.btnHabilBusque.Text = "Habilitar Busqueda";
-            this.btnHabilBusque.UseVisualStyleBackColor = true;
-            this.btnHabilBusque.Click += new System.EventHandler(this.btnHabilBusque_Click);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "N° de documento:";
             // 
-            // btnBuscar
+            // txtNumDoc1
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(850, 49);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(121, 49);
-            this.btnBuscar.TabIndex = 23;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.txtNumDoc1.Location = new System.Drawing.Point(27, 51);
+            this.txtNumDoc1.MaxLength = 8;
+            this.txtNumDoc1.Name = "txtNumDoc1";
+            this.txtNumDoc1.Size = new System.Drawing.Size(154, 20);
+            this.txtNumDoc1.TabIndex = 23;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtNumDoc1);
+            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Location = new System.Drawing.Point(829, 303);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 167);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Busqueda";
             // 
             // MantenedorCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1163, 578);
-            this.Controls.Add(this.btnHabilBusque);
+            this.ClientSize = new System.Drawing.Size(1107, 578);
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.btn_Deshabilitar);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Nuevo);
             this.Controls.Add(this.dgv_Cliente);
             this.Controls.Add(this.gb_Cliente);
+            this.Controls.Add(this.groupBox1);
             this.Name = "MantenedorCliente";
             this.Text = "MantenedorCliente";
             this.Load += new System.EventHandler(this.MantenedorCliente_Load);
             this.gb_Cliente.ResumeLayout(false);
             this.gb_Cliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Cliente)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -388,7 +415,9 @@
         private System.Windows.Forms.CheckBox cb_Estadodelcliente;
         private System.Windows.Forms.TextBox txt_Idcliente;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnHabilBusque;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtNumDoc1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
