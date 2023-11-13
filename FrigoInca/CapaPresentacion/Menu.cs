@@ -55,13 +55,7 @@ namespace CapaPresentacion
             this.Show();
         }
 
-        private void btnMTrabajador_Click(object sender, EventArgs e)
-        {
-            MantenedorTrabajador mtrab = new MantenedorTrabajador();
-            this.Hide();
-            mtrab.ShowDialog();
-            this.Show();
-        }
+    
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -103,6 +97,11 @@ namespace CapaPresentacion
             this.Hide();
             mprov.ShowDialog();
             this.Show();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -54,12 +54,6 @@
     <Compile Include="MantenedorEnvios.Designer.cs">
       <DependentUpon>MantenedorEnvios.cs</DependentUpon>
     </Compile>
-    <Compile Include="MantenedorTrabajador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MantenedorTrabajador.Designer.cs">
-      <DependentUpon>MantenedorTrabajador.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,9 +111,6 @@
     <EmbeddedResource Include="MantenedorProveedor.resx">
       <DependentUpon>MantenedorProveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MantenedorTrabajador.resx">
-      <DependentUpon>MantenedorTrabajador.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +155,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reporte %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
