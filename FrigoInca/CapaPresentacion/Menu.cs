@@ -59,7 +59,7 @@ namespace CapaPresentacion
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            RegistrarLotes rLotes = new RegistrarLotes();
+            MantenedorLotes rLotes = new MantenedorLotes();
             this.Hide();
             rLotes.ShowDialog();
             this.Show();
@@ -67,10 +67,7 @@ namespace CapaPresentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MantenedorEnvios mEnv = new MantenedorEnvios();
-            this.Hide();
-            mEnv.ShowDialog();
-            this.Show();
+
         }
 
         private void btnROrdenVent_Click(object sender, EventArgs e)
@@ -121,15 +118,12 @@ namespace CapaPresentacion
 
         private void button5_Click(object sender, EventArgs e)
         {
-            FormReportes mprov = new FormReportes();
-            this.Hide();
-            mprov.ShowDialog();
-            this.Show();
+
         }
 
         private void btnRPedidoCarne_Click(object sender, EventArgs e)
         {
-            FormPedidoDeCarne mprov = new FormPedidoDeCarne();
+            FormCompras mprov = new FormCompras();
             this.Hide();
             mprov.ShowDialog();
             this.Show();
@@ -154,6 +148,22 @@ namespace CapaPresentacion
         private void button4_Click_1(object sender, EventArgs e)
         {
             MantenedorRequerimientos mprov = new MantenedorRequerimientos();
+            this.Hide();
+            mprov.ShowDialog();
+            this.Show();
+        }
+
+        private void btnRIngresoMP_Click(object sender, EventArgs e)
+        {
+            FormIngresoMateriaPrima mprov = new FormIngresoMateriaPrima();
+            this.Hide();
+            mprov.ShowDialog();
+            this.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FormPedidoDeCarne mprov = new FormPedidoDeCarne();
             this.Hide();
             mprov.ShowDialog();
             this.Show();

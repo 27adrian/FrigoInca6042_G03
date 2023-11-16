@@ -72,18 +72,6 @@
     <Compile Include="FormCompras.Designer.cs">
       <DependentUpon>FormCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormReportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormReportes.Designer.cs">
-      <DependentUpon>FormReportes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MantenedorEnvios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MantenedorEnvios.Designer.cs">
-      <DependentUpon>MantenedorEnvios.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,14 +115,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="RegistrarLotes.cs">
+    <Compile Include="MantenedorLotes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrarLotes.Designer.cs">
-      <DependentUpon>RegistrarLotes.cs</DependentUpon>
+    <Compile Include="MantenedorLotes.Designer.cs">
+      <DependentUpon>MantenedorLotes.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormIngresoMateriaPrima.resx">
+      <DependentUpon>FormIngresoMateriaPrima.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormOrdenDeVenta.resx">
       <DependentUpon>FormOrdenDeVenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,9 +135,6 @@
     <EmbeddedResource Include="FormCompras.resx">
       <DependentUpon>FormCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormReportes.resx">
-      <DependentUpon>FormReportes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,9 +143,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MantenedorDescuento.resx">
       <DependentUpon>MantenedorDescuento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MantenedorEnvios.resx">
-      <DependentUpon>MantenedorEnvios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenedorProveedor.resx">
       <DependentUpon>MantenedorProveedor.cs</DependentUpon>
@@ -172,8 +157,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistrarLotes.resx">
-      <DependentUpon>RegistrarLotes.cs</DependentUpon>
+    <EmbeddedResource Include="MantenedorLotes.resx">
+      <DependentUpon>MantenedorLotes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
