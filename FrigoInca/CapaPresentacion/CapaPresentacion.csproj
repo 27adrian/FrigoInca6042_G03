@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="FormPedidoDeCarne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPedidoDeCarne.Designer.cs">
+      <DependentUpon>FormPedidoDeCarne.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormPedidoDeCarne.resx">
+      <DependentUpon>FormPedidoDeCarne.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCompras.resx">
       <DependentUpon>FormCompras.cs</DependentUpon>
     </EmbeddedResource>

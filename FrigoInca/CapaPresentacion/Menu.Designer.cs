@@ -74,6 +74,7 @@
             this.btnRPedidoCarne.TabIndex = 4;
             this.btnRPedidoCarne.Text = "Realiza Pedido De Carne";
             this.btnRPedidoCarne.UseVisualStyleBackColor = true;
+            this.btnRPedidoCarne.Click += new System.EventHandler(this.btnRPedidoCarne_Click);
             // 
             // btnROrdenVent
             // 
@@ -209,7 +210,7 @@
             this.pictureBox1.BackgroundImage = global::FrigoInca.Properties.Resources.fondo1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = global::FrigoInca.Properties.Resources.fondo1;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 93);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 101);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(505, 256);
             this.pictureBox1.TabIndex = 14;

@@ -123,5 +123,13 @@ namespace CapaPresentacion
             mprov.ShowDialog();
             this.Show();
         }
+
+        private void btnRPedidoCarne_Click(object sender, EventArgs e)
+        {
+            FormPedidoDeCarne mprov = new FormPedidoDeCarne();
+            this.Hide();
+            mprov.ShowDialog();
+            this.Show();
+        }
     }
 }
