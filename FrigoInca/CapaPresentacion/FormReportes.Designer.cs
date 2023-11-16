@@ -1,6 +1,6 @@
 ﻿namespace FrigoInca
 {
-    partial class FormVentas
+    partial class FormReportes
     {
         /// <summary>
         /// Required designer variable.
@@ -60,6 +60,7 @@
             this.btn_Ganancia.TabIndex = 3;
             this.btn_Ganancia.Text = "Ganancia";
             this.btn_Ganancia.UseVisualStyleBackColor = true;
+            this.btn_Ganancia.Click += new System.EventHandler(this.btn_Ganancia_Click);
             // 
             // btn_Gastos
             // 
@@ -70,7 +71,7 @@
             this.btn_Gastos.Text = "Gastos";
             this.btn_Gastos.UseVisualStyleBackColor = true;
             // 
-            // FormVentas
+            // FormReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,7 +80,7 @@
             this.Controls.Add(this.btn_Ganancia);
             this.Controls.Add(this.btn_Utilidad);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FormVentas";
+            this.Name = "FormReportes";
             this.Text = "FormVentas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

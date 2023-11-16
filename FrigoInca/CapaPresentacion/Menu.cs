@@ -111,5 +111,17 @@ namespace CapaPresentacion
             mprov.ShowDialog();
             this.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormReportes mprov = new FormReportes();
+            this.Hide();
+            mprov.ShowDialog();
+            this.Show();
+        }
     }
 }

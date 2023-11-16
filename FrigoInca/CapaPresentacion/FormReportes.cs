@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace FrigoInca
 {
-    public partial class FormVentas : Form
+    public partial class FormReportes : Form
     {
-        public FormVentas()
+        public FormReportes()
         {
             InitializeComponent();
+        }
+
+        private void btn_Ganancia_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
