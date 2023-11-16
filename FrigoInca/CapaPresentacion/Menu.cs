@@ -75,7 +75,10 @@ namespace CapaPresentacion
 
         private void btnROrdenVent_Click(object sender, EventArgs e)
         {
-
+            FormOrdenDeVenta mEnv = new FormOrdenDeVenta();
+            this.Hide();
+            mEnv.ShowDialog();
+            this.Show();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -127,6 +130,30 @@ namespace CapaPresentacion
         private void btnRPedidoCarne_Click(object sender, EventArgs e)
         {
             FormPedidoDeCarne mprov = new FormPedidoDeCarne();
+            this.Hide();
+            mprov.ShowDialog();
+            this.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            MantenedorCliente mprov = new MantenedorCliente();
+            this.Hide();
+            mprov.ShowDialog();
+            this.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MantenedorProveedor mprov = new MantenedorProveedor();
+            this.Hide();
+            mprov.ShowDialog();
+            this.Show();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            MantenedorRequerimientos mprov = new MantenedorRequerimientos();
             this.Hide();
             mprov.ShowDialog();
             this.Show();

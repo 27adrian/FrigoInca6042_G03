@@ -44,8 +44,6 @@
             this.txt_MetododePago = new System.Windows.Forms.TextBox();
             this.dgv_PedidodeCarne = new System.Windows.Forms.DataGridView();
             this.btn_Agregar = new System.Windows.Forms.Button();
-            this.btn_Eliminar = new System.Windows.Forms.Button();
-            this.btn_Modificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PedidodeCarne)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,31 +176,11 @@
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.UseVisualStyleBackColor = true;
             // 
-            // btn_Eliminar
-            // 
-            this.btn_Eliminar.Location = new System.Drawing.Point(181, 270);
-            this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Eliminar.TabIndex = 18;
-            this.btn_Eliminar.Text = "Eliminar";
-            this.btn_Eliminar.UseVisualStyleBackColor = true;
-            // 
-            // btn_Modificar
-            // 
-            this.btn_Modificar.Location = new System.Drawing.Point(104, 270);
-            this.btn_Modificar.Name = "btn_Modificar";
-            this.btn_Modificar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Modificar.TabIndex = 19;
-            this.btn_Modificar.Text = "Modificar";
-            this.btn_Modificar.UseVisualStyleBackColor = true;
-            // 
             // FormPedidoDeCarne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 345);
-            this.Controls.Add(this.btn_Modificar);
-            this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.dgv_PedidodeCarne);
             this.Controls.Add(this.txt_MetododePago);
@@ -245,7 +223,5 @@
         private System.Windows.Forms.TextBox txt_MetododePago;
         private System.Windows.Forms.DataGridView dgv_PedidodeCarne;
         private System.Windows.Forms.Button btn_Agregar;
-        private System.Windows.Forms.Button btn_Eliminar;
-        private System.Windows.Forms.Button btn_Modificar;
     }
 }
