@@ -98,9 +98,9 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(10, 289);
+            this.btnSalir.Location = new System.Drawing.Point(10, 302);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(129, 48);
+            this.btnSalir.Size = new System.Drawing.Size(123, 35);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 48);
             this.button1.TabIndex = 10;
-            this.button1.Text = "Registrar Lotes";
+            this.button1.Text = "Mantenedor Lotes";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -126,7 +126,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox1.Location = new System.Drawing.Point(-2, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(505, 98);
+            this.groupBox1.Size = new System.Drawing.Size(505, 95);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "SISTEMA";
@@ -157,7 +157,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(106, 48);
             this.button4.TabIndex = 17;
-            this.button4.Text = "Requerimientos";
+            this.button4.Text = "Mantenedor Requerimientos";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
@@ -167,7 +167,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 48);
             this.button2.TabIndex = 18;
-            this.button2.Text = "Cliente";
+            this.button2.Text = "Mantendor Cliente";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
@@ -177,7 +177,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(76, 48);
             this.button6.TabIndex = 19;
-            this.button6.Text = "Proveedor";
+            this.button6.Text = "Mantenedor Proveedor";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -186,7 +186,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = global::FrigoInca.Properties.Resources.reporte__1_;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(106, 21);
+            this.button5.Location = new System.Drawing.Point(106, 17);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(86, 74);
             this.button5.TabIndex = 16;
@@ -201,7 +201,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = global::FrigoInca.Properties.Resources.carro__1_;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(12, 21);
+            this.button3.Location = new System.Drawing.Point(12, 18);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 74);
             this.button3.TabIndex = 14;
@@ -218,9 +218,9 @@
             this.pictureBox1.BackgroundImage = global::FrigoInca.Properties.Resources.fondo1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = global::FrigoInca.Properties.Resources.fondo1;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 101);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 91);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(505, 256);
+            this.pictureBox1.Size = new System.Drawing.Size(505, 266);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
