@@ -42,13 +42,15 @@
             this.btnProveeArriba = new System.Windows.Forms.Button();
             this.btnClienteArriba = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMNotaReclamo
             // 
-            this.btnMNotaReclamo.Location = new System.Drawing.Point(407, 211);
+            this.btnMNotaReclamo.Location = new System.Drawing.Point(265, 128);
             this.btnMNotaReclamo.Name = "btnMNotaReclamo";
             this.btnMNotaReclamo.Size = new System.Drawing.Size(76, 48);
             this.btnMNotaReclamo.TabIndex = 0;
@@ -57,7 +59,7 @@
             // 
             // btnRIngresoMP
             // 
-            this.btnRIngresoMP.Location = new System.Drawing.Point(175, 157);
+            this.btnRIngresoMP.Location = new System.Drawing.Point(177, 128);
             this.btnRIngresoMP.Name = "btnRIngresoMP";
             this.btnRIngresoMP.Size = new System.Drawing.Size(82, 48);
             this.btnRIngresoMP.TabIndex = 2;
@@ -66,7 +68,7 @@
             // 
             // btnRPedidoCarne
             // 
-            this.btnRPedidoCarne.Location = new System.Drawing.Point(175, 104);
+            this.btnRPedidoCarne.Location = new System.Drawing.Point(10, 128);
             this.btnRPedidoCarne.Name = "btnRPedidoCarne";
             this.btnRPedidoCarne.Size = new System.Drawing.Size(82, 48);
             this.btnRPedidoCarne.TabIndex = 4;
@@ -75,7 +77,7 @@
             // 
             // btnROrdenVent
             // 
-            this.btnROrdenVent.Location = new System.Drawing.Point(256, 104);
+            this.btnROrdenVent.Location = new System.Drawing.Point(96, 128);
             this.btnROrdenVent.Name = "btnROrdenVent";
             this.btnROrdenVent.Size = new System.Drawing.Size(75, 48);
             this.btnROrdenVent.TabIndex = 5;
@@ -85,7 +87,7 @@
             // 
             // btnMDesct
             // 
-            this.btnMDesct.Location = new System.Drawing.Point(263, 211);
+            this.btnMDesct.Location = new System.Drawing.Point(84, 226);
             this.btnMDesct.Name = "btnMDesct";
             this.btnMDesct.Size = new System.Drawing.Size(76, 48);
             this.btnMDesct.TabIndex = 6;
@@ -95,7 +97,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(84, 279);
+            this.btnSalir.Location = new System.Drawing.Point(10, 289);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(129, 48);
             this.btnSalir.TabIndex = 7;
@@ -105,7 +107,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(175, 211);
+            this.button1.Location = new System.Drawing.Point(166, 226);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 48);
             this.button1.TabIndex = 10;
@@ -115,7 +117,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(263, 157);
+            this.button2.Location = new System.Drawing.Point(10, 226);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(68, 48);
             this.button2.TabIndex = 11;
@@ -207,17 +209,39 @@
             this.pictureBox1.BackgroundImage = global::FrigoInca.Properties.Resources.fondo1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = global::FrigoInca.Properties.Resources.fondo1;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 98);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 93);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(505, 256);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 24);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "CORE:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(10, 199);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 24);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "CRUD:";
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 349);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSalir);
@@ -234,6 +258,7 @@
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -253,5 +278,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
