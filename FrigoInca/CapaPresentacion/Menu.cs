@@ -103,5 +103,13 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormCompras mprov = new FormCompras();
+            this.Hide();
+            mprov.ShowDialog();
+            this.Show();
+        }
     }
 }
