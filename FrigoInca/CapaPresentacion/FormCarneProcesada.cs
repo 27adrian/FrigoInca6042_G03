@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FrigoInca
 {
-    public partial class FormPedidoDeCarne : Form
+    public partial class FormCarneProcesada : Form
     {
-        public FormPedidoDeCarne()
+        public FormCarneProcesada()
         {
             InitializeComponent();
         }

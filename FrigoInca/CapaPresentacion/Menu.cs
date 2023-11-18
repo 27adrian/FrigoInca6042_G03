@@ -161,12 +161,20 @@ namespace CapaPresentacion
             this.Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnCP_Click(object sender, EventArgs e)
         {
-            FormPedidoDeCarne mprov = new FormPedidoDeCarne();
+            FormCarneProcesada fcp = new FormCarneProcesada();
             this.Hide();
-            mprov.ShowDialog();
+            fcp.ShowDialog();
             this.Show();
         }
+
+        //private void button7_Click(object sender, EventArgs e)
+        //{
+        //    FormPedidoDeCarne mprov = new FormPedidoDeCarne();
+        //    this.Hide();
+        //    mprov.ShowDialog();
+        //    this.Show();
+        //}
     }
 }
