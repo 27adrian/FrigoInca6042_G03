@@ -1,6 +1,6 @@
 ﻿namespace FrigoInca
 {
-    partial class FormCarneProcesada
+    partial class Form_CarneProcesada
     {
         /// <summary>
         /// Required designer variable.

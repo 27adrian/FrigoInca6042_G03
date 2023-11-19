@@ -1,6 +1,6 @@
 ﻿namespace FrigoInca
 {
-    partial class MantenedorLotes
+    partial class Form_Lotes
     {
         /// <summary>
         /// Required designer variable.

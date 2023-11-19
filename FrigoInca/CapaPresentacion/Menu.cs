@@ -59,7 +59,7 @@ namespace CapaPresentacion
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            MantenedorLotes rLotes = new MantenedorLotes();
+            Form_Lotes rLotes = new Form_Lotes();
             this.Hide();
             rLotes.ShowDialog();
             this.Show();
@@ -163,7 +163,7 @@ namespace CapaPresentacion
 
         private void btnCP_Click(object sender, EventArgs e)
         {
-            FormCarneProcesada fcp = new FormCarneProcesada();
+            Form_CarneProcesada fcp = new Form_CarneProcesada();
             this.Hide();
             fcp.ShowDialog();
             this.Show();
