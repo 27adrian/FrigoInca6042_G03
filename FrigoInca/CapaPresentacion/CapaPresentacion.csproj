@@ -48,29 +48,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Core_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core_Producto.Designer.cs">
+      <DependentUpon>Core_Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCarneProcesada.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCarneProcesada.Designer.cs">
       <DependentUpon>FormCarneProcesada.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormIngresoMateriaPrima.cs">
+    <Compile Include="Core_IngresaMateriaPrima.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormIngresoMateriaPrima.Designer.cs">
-      <DependentUpon>FormIngresoMateriaPrima.cs</DependentUpon>
+    <Compile Include="Core_IngresaMateriaPrima.Designer.cs">
+      <DependentUpon>Core_IngresaMateriaPrima.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOrdenDeVenta.cs">
+    <Compile Include="Core_OrdendeVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOrdenDeVenta.Designer.cs">
-      <DependentUpon>FormOrdenDeVenta.cs</DependentUpon>
+    <Compile Include="Core_OrdendeVenta.Designer.cs">
+      <DependentUpon>Core_OrdendeVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCompras.cs">
+    <Compile Include="Core_OrdendeCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCompras.Designer.cs">
-      <DependentUpon>FormCompras.cs</DependentUpon>
+    <Compile Include="Core_OrdendeCompra.Designer.cs">
+      <DependentUpon>Core_OrdendeCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -123,17 +129,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Core_Producto.resx">
+      <DependentUpon>Core_Producto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCarneProcesada.resx">
       <DependentUpon>FormCarneProcesada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormIngresoMateriaPrima.resx">
-      <DependentUpon>FormIngresoMateriaPrima.cs</DependentUpon>
+    <EmbeddedResource Include="Core_IngresaMateriaPrima.resx">
+      <DependentUpon>Core_IngresaMateriaPrima.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOrdenDeVenta.resx">
-      <DependentUpon>FormOrdenDeVenta.cs</DependentUpon>
+    <EmbeddedResource Include="Core_OrdendeVenta.resx">
+      <DependentUpon>Core_OrdendeVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCompras.resx">
-      <DependentUpon>FormCompras.cs</DependentUpon>
+    <EmbeddedResource Include="Core_OrdendeCompra.resx">
+      <DependentUpon>Core_OrdendeCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

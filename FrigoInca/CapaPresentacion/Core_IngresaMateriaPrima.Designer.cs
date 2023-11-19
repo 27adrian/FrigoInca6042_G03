@@ -1,6 +1,6 @@
 ﻿namespace FrigoInca
 {
-    partial class FormIngresoMateriaPrima
+    partial class Core_IngresaMateriaPrima
     {
         /// <summary>
         /// Required designer variable.
@@ -145,7 +145,7 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 19;
             // 
-            // FormIngresoMateriaPrima
+            // Core_IngresaMateriaPrima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -162,8 +162,8 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePicker1);
-            this.Name = "FormIngresoMateriaPrima";
-            this.Text = "FormIngresoMateriaPrima";
+            this.Name = "Core_IngresaMateriaPrima";
+            this.Text = "FormCore_IngresaMateriaPrima";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

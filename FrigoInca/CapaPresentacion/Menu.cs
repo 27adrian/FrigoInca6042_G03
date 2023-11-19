@@ -72,7 +72,7 @@ namespace CapaPresentacion
 
         private void btnROrdenVent_Click(object sender, EventArgs e)
         {
-            FormOrdenDeVenta mEnv = new FormOrdenDeVenta();
+            Core_OrdendeVenta mEnv = new Core_OrdendeVenta();
             this.Hide();
             mEnv.ShowDialog();
             this.Show();
@@ -106,7 +106,7 @@ namespace CapaPresentacion
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FormCompras mprov = new FormCompras();
+            Core_OrdendeCompra mprov = new Core_OrdendeCompra();
             this.Hide();
             mprov.ShowDialog();
             this.Show();
@@ -123,7 +123,7 @@ namespace CapaPresentacion
 
         private void btnRPedidoCarne_Click(object sender, EventArgs e)
         {
-            FormCompras mprov = new FormCompras();
+            Core_OrdendeCompra mprov = new Core_OrdendeCompra();
             this.Hide();
             mprov.ShowDialog();
             this.Show();
@@ -155,7 +155,7 @@ namespace CapaPresentacion
 
         private void btnRIngresoMP_Click(object sender, EventArgs e)
         {
-            FormIngresoMateriaPrima mprov = new FormIngresoMateriaPrima();
+            Core_IngresaMateriaPrima mprov = new Core_IngresaMateriaPrima();
             this.Hide();
             mprov.ShowDialog();
             this.Show();
@@ -164,6 +164,14 @@ namespace CapaPresentacion
         private void btnCP_Click(object sender, EventArgs e)
         {
             FormCarneProcesada fcp = new FormCarneProcesada();
+            this.Hide();
+            fcp.ShowDialog();
+            this.Show();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Core_Producto fcp = new Core_Producto();
             this.Hide();
             fcp.ShowDialog();
             this.Show();

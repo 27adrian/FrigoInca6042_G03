@@ -1,6 +1,6 @@
 ﻿namespace FrigoInca
 {
-    partial class FormOrdenDeVenta
+    partial class Core_OrdendeVenta
     {
         /// <summary>
         /// Required designer variable.
@@ -125,7 +125,7 @@
             this.label3.TabIndex = 43;
             this.label3.Text = "Producto Procesado";
             // 
-            // FormOrdenDeVenta
+            // Core_OrdendeVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -140,8 +140,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnVenta);
             this.Controls.Add(this.dgv_PedidodeCarne);
-            this.Name = "FormOrdenDeVenta";
-            this.Text = "FormOrdenDeVenta";
+            this.Name = "Core_OrdendeVenta";
+            this.Text = "FormCore_OrdenDeVenta";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PedidodeCarne)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

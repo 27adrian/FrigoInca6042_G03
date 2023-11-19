@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FrigoInca
 {
-    public partial class FormCompras : Form
+    public partial class Core_Producto : Form
     {
-        public FormCompras()
+        public Core_Producto()
         {
             InitializeComponent();
         }

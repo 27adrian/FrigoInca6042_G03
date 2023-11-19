@@ -1,6 +1,6 @@
 ﻿namespace FrigoInca
 {
-    partial class FormCompras
+    partial class Core_OrdendeCompra
     {
         /// <summary>
         /// Required designer variable.
@@ -211,7 +211,7 @@
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 43;
             // 
-            // FormCompras
+            // Core_OrdendeCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -235,8 +235,8 @@
             this.Controls.Add(this.txt_DirecciondeEntrega);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FormCompras";
-            this.Text = "FormCompras";
+            this.Name = "Core_OrdendeCompra";
+            this.Text = "FormCore_OrdendeCompra";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Compras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);

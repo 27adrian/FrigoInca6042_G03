@@ -42,6 +42,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCP = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +69,7 @@
             // 
             // btnROrdenVent
             // 
-            this.btnROrdenVent.Location = new System.Drawing.Point(194, 137);
+            this.btnROrdenVent.Location = new System.Drawing.Point(186, 137);
             this.btnROrdenVent.Name = "btnROrdenVent";
             this.btnROrdenVent.Size = new System.Drawing.Size(75, 48);
             this.btnROrdenVent.TabIndex = 5;
@@ -193,11 +194,22 @@
             this.btnCP.UseVisualStyleBackColor = true;
             this.btnCP.Click += new System.EventHandler(this.btnCP_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(267, 137);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 48);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "Realiza Producto";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(494, 349);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.btnCP);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button2);
@@ -237,5 +249,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCP;
+        private System.Windows.Forms.Button button3;
     }
 }
