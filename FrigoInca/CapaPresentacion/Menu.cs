@@ -177,6 +177,11 @@ namespace CapaPresentacion
             this.Show();
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         //private void button7_Click(object sender, EventArgs e)
         //{
         //    FormPedidoDeCarne mprov = new FormPedidoDeCarne();

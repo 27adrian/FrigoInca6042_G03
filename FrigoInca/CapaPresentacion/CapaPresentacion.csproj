@@ -47,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Core_Producto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +208,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\banner2.png" />
+    <None Include="Resources\banner5.png" />
+    <None Include="Resources\banner4.png" />
+    <None Include="Resources\banner3copia2.png" />
+    <None Include="Resources\banner3copia1.png" />
+    <None Include="Resources\banner3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
