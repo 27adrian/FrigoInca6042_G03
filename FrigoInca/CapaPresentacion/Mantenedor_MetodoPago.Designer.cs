@@ -28,33 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dgvMetodoPago = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Descripcion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txt_Metodo = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMetodoPago)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvMetodoPago
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 80);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(286, 212);
-            this.dataGridView1.TabIndex = 16;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(91, 11);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 58;
+            this.dgvMetodoPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMetodoPago.Location = new System.Drawing.Point(15, 80);
+            this.dgvMetodoPago.Name = "dgvMetodoPago";
+            this.dgvMetodoPago.RowHeadersWidth = 51;
+            this.dgvMetodoPago.Size = new System.Drawing.Size(441, 212);
+            this.dgvMetodoPago.TabIndex = 16;
             // 
             // label1
             // 
@@ -65,12 +57,12 @@
             this.label1.TabIndex = 44;
             this.label1.Text = "Metodo:";
             // 
-            // textBox1
+            // txt_Descripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 59;
+            this.txt_Descripcion.Location = new System.Drawing.Point(91, 45);
+            this.txt_Descripcion.Name = "txt_Descripcion";
+            this.txt_Descripcion.Size = new System.Drawing.Size(121, 20);
+            this.txt_Descripcion.TabIndex = 59;
             // 
             // label2
             // 
@@ -81,18 +73,19 @@
             this.label2.TabIndex = 60;
             this.label2.Text = "Descripcion:";
             // 
-            // button1
+            // btnAgregar
             // 
-            this.button1.Location = new System.Drawing.Point(321, 80);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAgregar.Location = new System.Drawing.Point(478, 80);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 61;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(321, 130);
+            this.button2.Location = new System.Drawing.Point(478, 130);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 62;
@@ -101,29 +94,36 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(321, 180);
+            this.button3.Location = new System.Drawing.Point(478, 180);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 63;
             this.button3.Text = "Deshabilitar";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // Mantenedor_MetodosPago
+            // txt_Metodo
+            // 
+            this.txt_Metodo.Location = new System.Drawing.Point(91, 12);
+            this.txt_Metodo.Name = "txt_Metodo";
+            this.txt_Metodo.Size = new System.Drawing.Size(121, 20);
+            this.txt_Metodo.TabIndex = 64;
+            // 
+            // Mantenedor_MetodoPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(408, 313);
+            this.ClientSize = new System.Drawing.Size(577, 313);
+            this.Controls.Add(this.txt_Metodo);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.txt_Descripcion);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "Mantenedor_MetodosPago";
+            this.Controls.Add(this.dgvMetodoPago);
+            this.Name = "Mantenedor_MetodoPago";
             this.Text = "Mantenedor_MetodoPago";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMetodoPago)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,13 +131,13 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DataGridView dgvMetodoPago;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Descripcion;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txt_Metodo;
     }
 }

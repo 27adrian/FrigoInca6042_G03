@@ -44,6 +44,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="datCliente.cs" />
     <Compile Include="datIngresaMateriaPrima.cs" />
+    <Compile Include="datMetodoPago.cs" />
     <Compile Include="datProveedor.cs" />
     <Compile Include="datUbigeo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
