@@ -176,6 +176,9 @@
     <EmbeddedResource Include="Mantenedor_Descuento.resx">
       <DependentUpon>Mantenedor_Descuento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedor_MetodosPago.resx">
+      <DependentUpon>Mantenedor_MetodosPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenedor_Proveedor.resx">
       <DependentUpon>Mantenedor_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
