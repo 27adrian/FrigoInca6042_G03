@@ -16,5 +16,10 @@ namespace FrigoInca
         {
             InitializeComponent();
         }
+
+        private void dgv_Compras_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

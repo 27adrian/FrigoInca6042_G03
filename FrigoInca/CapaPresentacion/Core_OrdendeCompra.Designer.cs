@@ -42,18 +42,19 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.txt_DirecciondeEntrega = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.txt_DirecciondeEntrega = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Compras)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Agregar
             // 
-            this.btn_Agregar.Location = new System.Drawing.Point(383, 296);
+            this.btn_Agregar.Location = new System.Drawing.Point(858, 10);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(75, 23);
             this.btn_Agregar.TabIndex = 37;
@@ -63,15 +64,16 @@
             // dgv_Compras
             // 
             this.dgv_Compras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Compras.Location = new System.Drawing.Point(260, 15);
+            this.dgv_Compras.Location = new System.Drawing.Point(343, 12);
             this.dgv_Compras.Name = "dgv_Compras";
-            this.dgv_Compras.Size = new System.Drawing.Size(509, 261);
+            this.dgv_Compras.Size = new System.Drawing.Size(509, 231);
             this.dgv_Compras.TabIndex = 36;
+            this.dgv_Compras.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Compras_CellContentClick);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 210);
+            this.label8.Location = new System.Drawing.Point(11, 178);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 13);
             this.label8.TabIndex = 34;
@@ -80,16 +82,16 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 301);
+            this.label7.Location = new System.Drawing.Point(10, 230);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 13);
+            this.label7.Size = new System.Drawing.Size(79, 13);
             this.label7.TabIndex = 32;
-            this.label7.Text = "Fecha Compra";
+            this.label7.Text = "Fecha Compra:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 249);
+            this.label6.Location = new System.Drawing.Point(11, 204);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 30;
@@ -98,23 +100,23 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 173);
+            this.label5.Location = new System.Drawing.Point(11, 151);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 28;
-            this.label5.Text = "Animal";
+            this.label5.Text = "Tipo de MP:";
             // 
             // txt_CorreoElectronico
             // 
-            this.txt_CorreoElectronico.Location = new System.Drawing.Point(127, 137);
+            this.txt_CorreoElectronico.Location = new System.Drawing.Point(127, 117);
             this.txt_CorreoElectronico.Name = "txt_CorreoElectronico";
-            this.txt_CorreoElectronico.Size = new System.Drawing.Size(100, 20);
+            this.txt_CorreoElectronico.Size = new System.Drawing.Size(200, 20);
             this.txt_CorreoElectronico.TabIndex = 27;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 140);
+            this.label4.Location = new System.Drawing.Point(11, 124);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 13);
             this.label4.TabIndex = 26;
@@ -123,7 +125,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 107);
+            this.label3.Location = new System.Drawing.Point(11, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 25;
@@ -131,23 +133,23 @@
             // 
             // txt_Telefono
             // 
-            this.txt_Telefono.Location = new System.Drawing.Point(127, 107);
+            this.txt_Telefono.Location = new System.Drawing.Point(127, 91);
             this.txt_Telefono.Name = "txt_Telefono";
-            this.txt_Telefono.Size = new System.Drawing.Size(100, 20);
+            this.txt_Telefono.Size = new System.Drawing.Size(200, 20);
             this.txt_Telefono.TabIndex = 24;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 38);
+            this.label1.Location = new System.Drawing.Point(12, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 13);
+            this.label1.Size = new System.Drawing.Size(116, 13);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Nombre del Proveedor";
+            this.label1.Text = "Nombre del Proveedor:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(495, 296);
+            this.button1.Location = new System.Drawing.Point(858, 46);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 38;
@@ -156,7 +158,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(109, 301);
+            this.dateTimePicker1.Location = new System.Drawing.Point(127, 223);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 39;
@@ -167,58 +169,80 @@
             this.comboBox1.Items.AddRange(new object[] {
             "BOLETA",
             "FACTURA"});
-            this.comboBox1.Location = new System.Drawing.Point(122, 207);
+            this.comboBox1.Location = new System.Drawing.Point(127, 170);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(200, 21);
             this.comboBox1.TabIndex = 40;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(127, 247);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 41;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(122, 38);
+            this.comboBox2.Location = new System.Drawing.Point(127, 12);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.Size = new System.Drawing.Size(201, 21);
             this.comboBox2.TabIndex = 42;
-            // 
-            // txt_DirecciondeEntrega
-            // 
-            this.txt_DirecciondeEntrega.Location = new System.Drawing.Point(127, 74);
-            this.txt_DirecciondeEntrega.Name = "txt_DirecciondeEntrega";
-            this.txt_DirecciondeEntrega.Size = new System.Drawing.Size(100, 20);
-            this.txt_DirecciondeEntrega.TabIndex = 23;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 74);
+            this.label2.Location = new System.Drawing.Point(11, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 13);
+            this.label2.Size = new System.Drawing.Size(120, 13);
             this.label2.TabIndex = 22;
-            this.label2.Text = "Numero de Dcumento";
+            this.label2.Text = "Numero de Documento:";
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(122, 170);
+            this.comboBox3.Location = new System.Drawing.Point(126, 143);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.Size = new System.Drawing.Size(201, 21);
             this.comboBox3.TabIndex = 43;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "BOLETA",
+            "FACTURA"});
+            this.comboBox4.Location = new System.Drawing.Point(127, 196);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(200, 21);
+            this.comboBox4.TabIndex = 44;
+            // 
+            // txt_DirecciondeEntrega
+            // 
+            this.txt_DirecciondeEntrega.Location = new System.Drawing.Point(127, 39);
+            this.txt_DirecciondeEntrega.Name = "txt_DirecciondeEntrega";
+            this.txt_DirecciondeEntrega.Size = new System.Drawing.Size(201, 20);
+            this.txt_DirecciondeEntrega.TabIndex = 23;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 72);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "Id Ubigeo:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(126, 65);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(201, 20);
+            this.textBox1.TabIndex = 47;
             // 
             // Core_OrdendeCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 368);
+            this.ClientSize = new System.Drawing.Size(943, 259);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
@@ -238,7 +262,6 @@
             this.Name = "Core_OrdendeCompra";
             this.Text = "Core_OrdendeCompra";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Compras)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,10 +282,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox txt_DirecciondeEntrega;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TextBox txt_DirecciondeEntrega;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
