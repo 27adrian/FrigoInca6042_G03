@@ -200,7 +200,7 @@ namespace CapaPresentacion
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Mantenedor_MetodosPago fcp = new Mantenedor_MetodosPago();
+            Mantenedor_MetodoPago fcp = new Mantenedor_MetodoPago();
             this.Hide();
             fcp.ShowDialog();
             this.Show();
@@ -216,7 +216,7 @@ namespace CapaPresentacion
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Form_Lotes fcp = new Form_Lotes();
+            Form_Lote fcp = new Form_Lote();
             this.Hide();
             fcp.ShowDialog();
             this.Show();

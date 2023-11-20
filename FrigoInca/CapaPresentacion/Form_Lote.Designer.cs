@@ -1,6 +1,6 @@
 ﻿namespace FrigoInca
 {
-    partial class Form_Lotes
+    partial class Form_Lote
     {
         /// <summary>
         /// Required designer variable.
@@ -210,7 +210,7 @@
             this.txt_KgCarne.Size = new System.Drawing.Size(75, 20);
             this.txt_KgCarne.TabIndex = 8;
             // 
-            // Form_Lotes
+            // Form_Lote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -218,8 +218,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gb_Lote);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form_Lotes";
-            this.Text = "Form_Lotes";
+            this.Name = "Form_Lote";
+            this.Text = "Form_Lote";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gb_Lote.ResumeLayout(false);
             this.gb_Lote.PerformLayout();

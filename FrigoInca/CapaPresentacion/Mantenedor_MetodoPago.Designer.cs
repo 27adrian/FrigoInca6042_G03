@@ -1,6 +1,6 @@
 ﻿namespace FrigoInca
 {
-    partial class Mantenedor_MetodosPago
+    partial class Mantenedor_MetodoPago
     {
         /// <summary>
         /// Required designer variable.
@@ -122,7 +122,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Mantenedor_MetodosPago";
-            this.Text = "Mantenedor_MetodosPago";
+            this.Text = "Mantenedor_MetodoPago";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

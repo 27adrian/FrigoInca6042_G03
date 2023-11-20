@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FrigoInca
 {
-    public partial class Mantenedor_MetodosPago : Form
+    public partial class Mantenedor_MetodoPago : Form
     {
-        public Mantenedor_MetodosPago()
+        public Mantenedor_MetodoPago()
         {
             InitializeComponent();
         }

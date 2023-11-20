@@ -107,11 +107,11 @@
     <Compile Include="Mantenedor_RequerimientoCompraMP.Designer.cs">
       <DependentUpon>Mantenedor_RequerimientoCompraMP.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenedor_MetodosPago.cs">
+    <Compile Include="Mantenedor_MetodoPago.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenedor_MetodosPago.Designer.cs">
-      <DependentUpon>Mantenedor_MetodosPago.cs</DependentUpon>
+    <Compile Include="Mantenedor_MetodoPago.Designer.cs">
+      <DependentUpon>Mantenedor_MetodoPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenedor_OrigenMP.cs">
       <SubType>Form</SubType>
@@ -144,11 +144,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Form_Lotes.cs">
+    <Compile Include="Form_Lote.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Lotes.Designer.cs">
-      <DependentUpon>Form_Lotes.cs</DependentUpon>
+    <Compile Include="Form_Lote.Designer.cs">
+      <DependentUpon>Form_Lote.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -176,8 +176,11 @@
     <EmbeddedResource Include="Mantenedor_Descuento.resx">
       <DependentUpon>Mantenedor_Descuento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenedor_MetodosPago.resx">
-      <DependentUpon>Mantenedor_MetodosPago.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenedor_MetodoPago.resx">
+      <DependentUpon>Mantenedor_MetodoPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedor_OrigenMP.resx">
+      <DependentUpon>Mantenedor_OrigenMP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenedor_Proveedor.resx">
       <DependentUpon>Mantenedor_Proveedor.cs</DependentUpon>
@@ -192,8 +195,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Lotes.resx">
-      <DependentUpon>Form_Lotes.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Lote.resx">
+      <DependentUpon>Form_Lote.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
