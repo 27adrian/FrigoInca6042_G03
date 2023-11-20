@@ -50,6 +50,7 @@ namespace CapaDatos
                     Cli.Telefonocontactocliente = Convert.ToInt32(dr["Telefonocontacto"]);
                     Cli.Estadocliente = Convert.ToBoolean(dr["Estadocliente"]);
                     Cli.Fecharegistrocliente = Convert.ToDateTime(dr["Fecharegistrocliente"]);
+                    Cli.IdUbigeo = Convert.ToInt32(dr["IdUbigeo"]);
                     lista.Add(Cli);
                 }
             }
@@ -81,6 +82,8 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@Telefonocontacto", Cli.Telefonocontactocliente);
                 cmd.Parameters.AddWithValue("@Estadocliente", Cli.Estadocliente);
                 cmd.Parameters.AddWithValue("@Fecharegistrocliente", Cli.Fecharegistrocliente);
+                cmd.Parameters.AddWithValue("@IdUbigeo", Cli.IdUbigeo);
+
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

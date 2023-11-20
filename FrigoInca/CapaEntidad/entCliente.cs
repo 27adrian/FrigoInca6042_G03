@@ -18,6 +18,7 @@ namespace CapaEntidad
         public int Telefonocontactocliente { get; set; }
         public Boolean Estadocliente { get; set; }
         public DateTime Fecharegistrocliente { get; set; }
+        public int IdUbigeo { get; set; }
 
     }
 }

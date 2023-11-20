@@ -19,11 +19,29 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             dgv_Cliente.CellClick += new DataGridViewCellEventHandler(dgv_Cliente_CellClick);
+            dgvUbigeo.CellClick += new DataGridViewCellEventHandler(dgvUbigeo_CellClick);
+            ListarUbigeo();
             Listarcliente();
+            txtIdUbigeo.Enabled = false;
             gb_Cliente.Enabled = false;
             txt_Idcliente.Enabled = false;
         }
+        private void dgvUbigeo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Check if the clicked row index is not the header and not -1 (no selection)
+            if (e.RowIndex >= 0)
+            {
+                // Assuming the ID is in the first column, index 0
+                string id = dgvUbigeo.Rows[e.RowIndex].Cells[0].Value.ToString();
 
+                // Set the ID to your TextBox
+                txtIdUbigeo.Text = id;
+            }
+        }
+        public void ListarUbigeo()
+        {
+            dgvUbigeo.DataSource = logUbigeo.Instancia.ListarUbigeo();
+        }
         private void dgv_Cliente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) 
@@ -102,6 +120,7 @@ namespace CapaPresentacion
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
+            txtIdUbigeo.Enabled = false;
             gb_Cliente.Enabled = false;
             Listarcliente();
         }
