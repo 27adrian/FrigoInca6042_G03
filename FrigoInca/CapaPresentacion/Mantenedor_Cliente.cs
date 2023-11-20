@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidad;
 using CapaLogicaNegocio;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace CapaPresentacion
 {
@@ -110,6 +111,7 @@ namespace CapaPresentacion
             gb_Cliente.Enabled = true;
             btn_Modificar.Visible = true;
             btn_Agregar.Visible = false;
+            cb_Estadodelcliente.Enabled = false;
         }
 
         private void btn_Deshabilitar_Click(object sender, EventArgs e)
