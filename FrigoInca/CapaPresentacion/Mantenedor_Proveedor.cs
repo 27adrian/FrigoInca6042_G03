@@ -67,6 +67,7 @@ namespace CapaPresentacion
             gb_Proveedor.Enabled = true;
             btn_Modificar.Visible = true;
             btn_Agregar.Visible = false;
+            cb_Estadodelproveedor.Enabled = false;
         }
 
         private void btn_Deshabilitar_Click(object sender, EventArgs e)
