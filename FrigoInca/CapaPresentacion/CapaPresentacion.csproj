@@ -188,6 +188,9 @@
     <EmbeddedResource Include="Mantenedor_RequerimientoCompraMP.resx">
       <DependentUpon>Mantenedor_RequerimientoCompraMP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedor_TipoProducto.resx">
+      <DependentUpon>Mantenedor_TipoProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
