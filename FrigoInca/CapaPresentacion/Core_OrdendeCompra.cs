@@ -22,6 +22,7 @@ namespace FrigoInca
             txtIdUbigeo.Enabled = false;
             txtTelefono.Enabled = false;
             txtCorreoElectronico.Enabled = false;   
+            txtMP.Enabled = false;
             dgvProveedor.CellClick += new DataGridViewCellEventHandler(dgvProveedor_CellClick);
         }
         private void dgvProveedor_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -32,9 +33,10 @@ namespace FrigoInca
                 // Assuming the ID is in the first column, index 0
                 string nombre = dgvProveedor.Rows[e.RowIndex].Cells[2].Value.ToString();
                 string numerodocumento = dgvProveedor.Rows[e.RowIndex].Cells[4].Value.ToString();
-                string idubigeo = dgvProveedor.Rows[e.RowIndex].Cells[9].Value.ToString();
-                string telefono = dgvProveedor.Rows[e.RowIndex].Cells[6].Value.ToString();
-                string correo = dgvProveedor.Rows[e.RowIndex].Cells[5].Value.ToString();
+                string idubigeo = dgvProveedor.Rows[e.RowIndex].Cells[10].Value.ToString();
+                string telefono = dgvProveedor.Rows[e.RowIndex].Cells[7].Value.ToString();
+                string correo = dgvProveedor.Rows[e.RowIndex].Cells[6].Value.ToString();
+                string mp = dgvProveedor.Rows[e.RowIndex].Cells[3].Value.ToString();
 
                 // Set the ID to your TextBox
                 txtNombre.Text = nombre;
@@ -42,6 +44,7 @@ namespace FrigoInca
                 txtIdUbigeo.Text = idubigeo;
                 txtTelefono.Text = telefono;
                 txtCorreoElectronico.Text = correo;
+                txtMP.Text = mp;
             }
         }
         public void ListarProveedor()

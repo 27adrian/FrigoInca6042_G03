@@ -120,6 +120,7 @@ namespace CapaPresentacion
                 entProveedor c = new entProveedor();
                 c.Tipoproveedor = cb_Tipoproveedor.Text.Trim();
                 c.Nombrecompletoproveedor = txt_Nombrecompleto.Text.Trim();
+                c.MP = txtMP.Text.Trim();
                 c.Tipodocumentoproveedor = cb_Tipodocumento.Text.Trim();
                 c.Numerodocumentoproveedor = long.Parse(txt_Numerodocumento.Text.Trim());
                 c.Correoproveedor = txt_Correo.Text.Trim();

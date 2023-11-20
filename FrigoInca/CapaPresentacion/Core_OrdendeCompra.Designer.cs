@@ -43,7 +43,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cbMetodoPago = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbMP = new System.Windows.Forms.ComboBox();
             this.cbCantidad = new System.Windows.Forms.ComboBox();
             this.txt_NumeroDocumento = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@
             this.dgvProveedor = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtMP = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Compras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).BeginInit();
             this.SuspendLayout();
@@ -117,7 +117,7 @@
             // 
             // txtCorreoElectronico
             // 
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(154, 117);
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(155, 117);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(200, 20);
             this.txtCorreoElectronico.TabIndex = 27;
@@ -191,14 +191,6 @@
             this.label2.Size = new System.Drawing.Size(120, 13);
             this.label2.TabIndex = 22;
             this.label2.Text = "Numero de Documento:";
-            // 
-            // cbMP
-            // 
-            this.cbMP.FormattingEnabled = true;
-            this.cbMP.Location = new System.Drawing.Point(153, 143);
-            this.cbMP.Name = "cbMP";
-            this.cbMP.Size = new System.Drawing.Size(201, 21);
-            this.cbMP.TabIndex = 43;
             // 
             // cbCantidad
             // 
@@ -292,9 +284,9 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(370, 12);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(74, 13);
+            this.label15.Size = new System.Drawing.Size(89, 13);
             this.label15.TabIndex = 54;
-            this.label15.Text = "Tabla Ubigeo:";
+            this.label15.Text = "Tabla Proveedor:";
             // 
             // txtNombre
             // 
@@ -303,11 +295,19 @@
             this.txtNombre.Size = new System.Drawing.Size(201, 20);
             this.txtNombre.TabIndex = 55;
             // 
+            // txtMP
+            // 
+            this.txtMP.Location = new System.Drawing.Point(155, 144);
+            this.txtMP.Name = "txtMP";
+            this.txtMP.Size = new System.Drawing.Size(200, 20);
+            this.txtMP.TabIndex = 56;
+            // 
             // Core_OrdendeCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 508);
+            this.Controls.Add(this.txtMP);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.dgvProveedor);
@@ -319,7 +319,6 @@
             this.Controls.Add(this.txtIdUbigeo);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cbCantidad);
-            this.Controls.Add(this.cbMP);
             this.Controls.Add(this.cbMetodoPago);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
@@ -361,7 +360,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox cbMetodoPago;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbMP;
         private System.Windows.Forms.ComboBox cbCantidad;
         private System.Windows.Forms.TextBox txt_NumeroDocumento;
         private System.Windows.Forms.Label label9;
@@ -374,5 +372,6 @@
         private System.Windows.Forms.DataGridView dgvProveedor;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtMP;
     }
 }
