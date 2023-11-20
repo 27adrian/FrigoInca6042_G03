@@ -12,9 +12,9 @@ using CapaLogicaNegocio;
 
 namespace CapaPresentacion
 {
-    public partial class MantenedorCliente : Form
+    public partial class Mantenedor_Cliente : Form
     {
-        public MantenedorCliente()
+        public Mantenedor_Cliente()
         {
             InitializeComponent();
             dgv_Cliente.CellClick += new DataGridViewCellEventHandler(dgv_Cliente_CellClick);

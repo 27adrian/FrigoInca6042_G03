@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class MantenedorProveedor : Form
+    public partial class Mantenedor_Proveedor : Form
     {
-        public MantenedorProveedor()
+        public Mantenedor_Proveedor()
         {
             InitializeComponent();
             dgv_Proveedor.CellClick += new DataGridViewCellEventHandler(dgv_Proveedor_CellClick);

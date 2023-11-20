@@ -30,6 +30,10 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gb_Lote = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxTipoProducto = new System.Windows.Forms.ComboBox();
@@ -40,10 +44,6 @@
             this.lblTipoCliente = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_KgCarne = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gb_Lote.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,44 @@
             this.gb_Lote.TabIndex = 13;
             this.gb_Lote.TabStop = false;
             this.gb_Lote.Text = "Informacion lote";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(179, 77);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(75, 20);
+            this.textBox1.TabIndex = 27;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 149);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Producto";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Items.AddRange(new object[] {
+            "Res",
+            "Cerdo",
+            "Pollo"});
+            this.comboBox1.Location = new System.Drawing.Point(179, 27);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(199, 21);
+            this.comboBox1.TabIndex = 25;
+            this.comboBox1.Text = "--Seleccionar tipo de MP--";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "IDMateria Prima";
             // 
             // dateTimePicker1
             // 
@@ -172,45 +210,7 @@
             this.txt_KgCarne.Size = new System.Drawing.Size(75, 20);
             this.txt_KgCarne.TabIndex = 8;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 13);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "IDMateria Prima";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Items.AddRange(new object[] {
-            "Res",
-            "Cerdo",
-            "Pollo"});
-            this.comboBox1.Location = new System.Drawing.Point(179, 27);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 21);
-            this.comboBox1.TabIndex = 25;
-            this.comboBox1.Text = "--Seleccionar tipo de MP--";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "Producto";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(179, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(75, 20);
-            this.textBox1.TabIndex = 27;
-            // 
-            // MantenedorLotes
+            // Form_Lotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -218,8 +218,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gb_Lote);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "MantenedorLotes";
-            this.Text = "RegistrarLotes";
+            this.Name = "Form_Lotes";
+            this.Text = "Form_Lotes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gb_Lote.ResumeLayout(false);
             this.gb_Lote.PerformLayout();

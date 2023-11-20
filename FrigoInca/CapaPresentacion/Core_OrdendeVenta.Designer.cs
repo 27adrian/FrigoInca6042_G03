@@ -141,7 +141,7 @@
             this.Controls.Add(this.btnVenta);
             this.Controls.Add(this.dgv_PedidodeCarne);
             this.Name = "Core_OrdendeVenta";
-            this.Text = "FormCore_OrdenDeVenta";
+            this.Text = "Core_OrdenDeVenta";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PedidodeCarne)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -236,7 +236,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Core_OrdendeCompra";
-            this.Text = "FormCore_OrdendeCompra";
+            this.Text = "Core_OrdendeCompra";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Compras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);

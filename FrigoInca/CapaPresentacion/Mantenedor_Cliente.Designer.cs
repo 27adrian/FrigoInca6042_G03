@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class MantenedorCliente
+    partial class Mantenedor_Cliente
     {
         /// <summary>
         /// Required designer variable.
@@ -364,7 +364,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
             // 
-            // MantenedorCliente
+            // Mantenedor_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -376,8 +376,8 @@
             this.Controls.Add(this.dgv_Cliente);
             this.Controls.Add(this.gb_Cliente);
             this.Controls.Add(this.groupBox1);
-            this.Name = "MantenedorCliente";
-            this.Text = "MantenedorCliente";
+            this.Name = "Mantenedor_Cliente";
+            this.Text = "Mantenedor_Cliente";
             this.Load += new System.EventHandler(this.MantenedorCliente_Load);
             this.gb_Cliente.ResumeLayout(false);
             this.gb_Cliente.PerformLayout();

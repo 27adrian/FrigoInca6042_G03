@@ -69,7 +69,7 @@
             // btnRIngresoMP
             // 
             this.btnRIngresoMP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnRIngresoMP.Location = new System.Drawing.Point(100, 228);
+            this.btnRIngresoMP.Location = new System.Drawing.Point(12, 293);
             this.btnRIngresoMP.Name = "btnRIngresoMP";
             this.btnRIngresoMP.Size = new System.Drawing.Size(82, 48);
             this.btnRIngresoMP.TabIndex = 2;
@@ -91,7 +91,7 @@
             // btnROrdenVent
             // 
             this.btnROrdenVent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnROrdenVent.Location = new System.Drawing.Point(12, 293);
+            this.btnROrdenVent.Location = new System.Drawing.Point(100, 228);
             this.btnROrdenVent.Name = "btnROrdenVent";
             this.btnROrdenVent.Size = new System.Drawing.Size(82, 48);
             this.btnROrdenVent.TabIndex = 5;
@@ -102,11 +102,11 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button1.Location = new System.Drawing.Point(204, 293);
+            this.button1.Location = new System.Drawing.Point(296, 293);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 48);
             this.button1.TabIndex = 10;
-            this.button1.Text = "Mantenedor Lotes";
+            this.button1.Text = "Mantenedor OrigenMP";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -117,9 +117,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 199);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 24);
+            this.label1.Size = new System.Drawing.Size(87, 24);
             this.label1.TabIndex = 15;
-            this.label1.Text = "CORE:";
+            this.label1.Text = "CORES:";
             // 
             // label2
             // 
@@ -128,25 +128,25 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(204, 199);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 24);
+            this.label2.Size = new System.Drawing.Size(85, 24);
             this.label2.TabIndex = 16;
-            this.label2.Text = "CRUD:";
+            this.label2.Text = "CRUDS:";
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button4.Location = new System.Drawing.Point(289, 293);
+            this.button4.Location = new System.Drawing.Point(202, 230);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(88, 48);
             this.button4.TabIndex = 17;
-            this.button4.Text = "Mantenedor Requerimientos";
+            this.button4.Text = "Mantenedor RequerimientosCompraMP";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button2.Location = new System.Drawing.Point(204, 228);
+            this.button2.Location = new System.Drawing.Point(296, 228);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 48);
             this.button2.TabIndex = 18;
@@ -157,7 +157,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button6.Location = new System.Drawing.Point(289, 228);
+            this.button6.Location = new System.Drawing.Point(203, 293);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(88, 48);
             this.button6.TabIndex = 19;
@@ -194,9 +194,9 @@
             this.pictureBox2.BackgroundImage = global::FrigoInca.Properties.Resources.fondo1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Image = global::FrigoInca.Properties.Resources.banner3copia2;
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 367);
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 351);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(690, 186);
+            this.pictureBox2.Size = new System.Drawing.Size(690, 202);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
@@ -316,42 +316,46 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button5.Location = new System.Drawing.Point(383, 228);
+            this.button5.Location = new System.Drawing.Point(381, 228);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(88, 48);
             this.button5.TabIndex = 32;
-            this.button5.Text = "Mantenedor Proveedor";
+            this.button5.Text = "Mantenedor TipoProducto";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button7.Location = new System.Drawing.Point(383, 293);
+            this.button7.Location = new System.Drawing.Point(381, 293);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(88, 48);
             this.button7.TabIndex = 33;
-            this.button7.Text = "Mantenedor Proveedor";
+            this.button7.Text = "Mantenedor Ubigeo";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button8.Location = new System.Drawing.Point(585, 293);
+            this.button8.Location = new System.Drawing.Point(581, 293);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(88, 48);
+            this.button8.Size = new System.Drawing.Size(96, 48);
             this.button8.TabIndex = 34;
-            this.button8.Text = "Mantenedor Proveedor";
+            this.button8.Text = "Form CarneProcesada";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button9.Location = new System.Drawing.Point(585, 230);
+            this.button9.Location = new System.Drawing.Point(581, 230);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(88, 48);
+            this.button9.Size = new System.Drawing.Size(96, 48);
             this.button9.TabIndex = 35;
-            this.button9.Text = "Mantenedor Proveedor";
+            this.button9.Text = "Form Lotes";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -360,8 +364,9 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(88, 48);
             this.button10.TabIndex = 36;
-            this.button10.Text = "Mantenedor Proveedor";
+            this.button10.Text = "Mantenedor MetodosPago";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -370,19 +375,20 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(88, 48);
             this.button11.TabIndex = 37;
-            this.button11.Text = "Mantenedor Proveedor";
+            this.button11.Text = "Mantenedor Descuentos";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(585, 201);
+            this.label4.Location = new System.Drawing.Point(582, 201);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 24);
+            this.label4.Size = new System.Drawing.Size(89, 24);
             this.label4.TabIndex = 38;
-            this.label4.Text = "CRUD:";
+            this.label4.Text = "FORMS:";
             // 
             // Menu
             // 
@@ -402,7 +408,6 @@
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button6);
@@ -416,6 +421,7 @@
             this.Controls.Add(this.btnRIngresoMP);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);

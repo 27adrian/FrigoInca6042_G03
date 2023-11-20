@@ -163,7 +163,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "Core_IngresaMateriaPrima";
-            this.Text = "FormCore_IngresaMateriaPrima";
+            this.Text = "Core_IngresaMateriaPrima";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

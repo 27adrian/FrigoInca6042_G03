@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrigoInca
+namespace CapaPresentacion
 {
-    public partial class MantenedorRequerimientos : Form
+    public partial class Mantenedor_Descuento : Form
     {
-        public MantenedorRequerimientos()
+        public Mantenedor_Descuento()
         {
             InitializeComponent();
         }

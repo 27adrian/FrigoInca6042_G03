@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class MantenedorDescuento
+    partial class Mantenedor_Descuento
     {
         /// <summary>
         /// Required designer variable.
@@ -99,7 +99,7 @@
             this.button3.Text = "Deshabilitar";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // MantenedorDescuento
+            // Mantenedor_Descuento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -111,8 +111,8 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
-            this.Name = "MantenedorDescuento";
-            this.Text = "MantenedorDescuento";
+            this.Name = "Mantenedor_Descuento";
+            this.Text = "Mantenedor_Descuento";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

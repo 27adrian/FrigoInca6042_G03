@@ -20,7 +20,7 @@ namespace CapaPresentacion
 
         private void btnMCliente_Click(object sender, EventArgs e)
         {
-            MantenedorCliente mc = new MantenedorCliente();
+            Mantenedor_Cliente mc = new Mantenedor_Cliente();
             this.Hide();
             mc.ShowDialog();
             this.Show();
@@ -33,7 +33,7 @@ namespace CapaPresentacion
 
         private void btnMDesct_Click(object sender, EventArgs e)
         {
-            MantenedorDescuento mdsc = new MantenedorDescuento();
+            Mantenedor_Descuento mdsc = new Mantenedor_Descuento();
             this.Hide();
             mdsc.ShowDialog();
             this.Show();
@@ -49,7 +49,7 @@ namespace CapaPresentacion
 
         private void btnMProveedor_Click(object sender, EventArgs e)
         {
-            MantenedorProveedor mprov = new MantenedorProveedor();
+            Mantenedor_Proveedor mprov = new Mantenedor_Proveedor();
             this.Hide();
             mprov.ShowDialog();
             this.Show();
@@ -59,7 +59,7 @@ namespace CapaPresentacion
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form_Lotes rLotes = new Form_Lotes();
+            Mantenedor_OrigenMP rLotes = new Mantenedor_OrigenMP();
             this.Hide();
             rLotes.ShowDialog();
             this.Show();
@@ -85,7 +85,7 @@ namespace CapaPresentacion
 
         private void btnClienteArriba_Click(object sender, EventArgs e)
         {
-            MantenedorCliente mc = new MantenedorCliente();
+            Mantenedor_Cliente mc = new Mantenedor_Cliente();
             this.Hide();
             mc.ShowDialog();
             this.Show();
@@ -93,7 +93,7 @@ namespace CapaPresentacion
 
         private void btnProveeArriba_Click(object sender, EventArgs e)
         {
-            MantenedorProveedor mprov = new MantenedorProveedor();
+            Mantenedor_Proveedor mprov = new Mantenedor_Proveedor();
             this.Hide();
             mprov.ShowDialog();
             this.Show();
@@ -131,7 +131,7 @@ namespace CapaPresentacion
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            MantenedorCliente mprov = new MantenedorCliente();
+            Mantenedor_Cliente mprov = new Mantenedor_Cliente();
             this.Hide();
             mprov.ShowDialog();
             this.Show();
@@ -139,7 +139,7 @@ namespace CapaPresentacion
 
         private void button6_Click(object sender, EventArgs e)
         {
-            MantenedorProveedor mprov = new MantenedorProveedor();
+            Mantenedor_Proveedor mprov = new Mantenedor_Proveedor();
             this.Hide();
             mprov.ShowDialog();
             this.Show();
@@ -147,7 +147,7 @@ namespace CapaPresentacion
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            MantenedorRequerimientos mprov = new MantenedorRequerimientos();
+            Mantenedor_RequerimientoCompraMP mprov = new Mantenedor_RequerimientoCompraMP();
             this.Hide();
             mprov.ShowDialog();
             this.Show();
@@ -180,6 +180,54 @@ namespace CapaPresentacion
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            Mantenedor_TipoProducto fcp = new Mantenedor_TipoProducto();
+            this.Hide();
+            fcp.ShowDialog();
+            this.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Mantenedor_Ubigeo fcp = new Mantenedor_Ubigeo();
+            this.Hide();
+            fcp.ShowDialog();
+            this.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Mantenedor_MetodosPago fcp = new Mantenedor_MetodosPago();
+            this.Hide();
+            fcp.ShowDialog();
+            this.Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Mantenedor_Descuento fcp = new Mantenedor_Descuento();
+            this.Hide();
+            fcp.ShowDialog();
+            this.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form_Lotes fcp = new Form_Lotes();
+            this.Hide();
+            fcp.ShowDialog();
+            this.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form_CarneProcesada fcp = new Form_CarneProcesada();
+            this.Hide();
+            fcp.ShowDialog();
+            this.Show();
         }
 
         //private void button7_Click(object sender, EventArgs e)

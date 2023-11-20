@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class MantenedorProveedor
+    partial class Mantenedor_Proveedor
     {
         /// <summary>
         /// Required designer variable.
@@ -356,7 +356,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
             // 
-            // MantenedorProveedor
+            // Mantenedor_Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -372,8 +372,8 @@
             this.Controls.Add(this.gb_Proveedor);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "MantenedorProveedor";
-            this.Text = "MantenedorProveedor";
+            this.Name = "Mantenedor_Proveedor";
+            this.Text = "Mantenedor_Proveedor";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedor)).EndInit();
             this.gb_Proveedor.ResumeLayout(false);
             this.gb_Proveedor.PerformLayout();

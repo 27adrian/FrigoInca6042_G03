@@ -1,6 +1,6 @@
 ﻿namespace FrigoInca
 {
-    partial class MantenedorRequerimientos
+    partial class Mantenedor_RequerimientoCompraMP
     {
         /// <summary>
         /// Required designer variable.
@@ -139,7 +139,7 @@
             this.button3.Text = "Deshabilitar";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // MantenedorRequerimientos
+            // Mantenedor_RequerimientoCompraMP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,8 +155,8 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Name = "MantenedorRequerimientos";
-            this.Text = "MantenedorRequerimientos";
+            this.Name = "Mantenedor_RequerimientoCompraMP";
+            this.Text = "Mantenedor_RequerimientosCompraMP";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

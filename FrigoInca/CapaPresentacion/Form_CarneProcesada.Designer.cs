@@ -80,7 +80,7 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Producto Procesado";
             // 
-            // FormCarneProcesada
+            // Form_CarneProcesada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,8 +90,8 @@
             this.Controls.Add(this.btnProcesar);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FormCarneProcesada";
-            this.Text = "FormCarneProcesada";
+            this.Name = "Form_CarneProcesada";
+            this.Text = "Form_CarneProcesada";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
