@@ -16,5 +16,10 @@ namespace FrigoInca
         {
             InitializeComponent();
         }
+
+        private void Mantenedor_Ubigeo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

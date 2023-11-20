@@ -191,6 +191,9 @@
     <EmbeddedResource Include="Mantenedor_TipoProducto.resx">
       <DependentUpon>Mantenedor_TipoProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedor_Ubigeo.resx">
+      <DependentUpon>Mantenedor_Ubigeo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
