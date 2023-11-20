@@ -34,47 +34,48 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_CorreoElectronico = new System.Windows.Forms.TextBox();
+            this.txtCorreoElectronico = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_Telefono = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbMetodoPago = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.txt_DirecciondeEntrega = new System.Windows.Forms.TextBox();
+            this.cbMP = new System.Windows.Forms.ComboBox();
+            this.cbCantidad = new System.Windows.Forms.ComboBox();
+            this.txt_NumeroDocumento = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIdUbigeo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dgvProveedor = new System.Windows.Forms.DataGridView();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Compras)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Agregar
             // 
-            this.btn_Agregar.Location = new System.Drawing.Point(791, 264);
+            this.btn_Agregar.Location = new System.Drawing.Point(1016, 264);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(75, 23);
             this.btn_Agregar.TabIndex = 37;
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // dgv_Compras
             // 
             this.dgv_Compras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Compras.Location = new System.Drawing.Point(15, 264);
             this.dgv_Compras.Name = "dgv_Compras";
-            this.dgv_Compras.Size = new System.Drawing.Size(762, 231);
+            this.dgv_Compras.Size = new System.Drawing.Size(987, 231);
             this.dgv_Compras.TabIndex = 36;
             this.dgv_Compras.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Compras_CellContentClick);
             // 
@@ -114,12 +115,12 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "MP:";
             // 
-            // txt_CorreoElectronico
+            // txtCorreoElectronico
             // 
-            this.txt_CorreoElectronico.Location = new System.Drawing.Point(154, 117);
-            this.txt_CorreoElectronico.Name = "txt_CorreoElectronico";
-            this.txt_CorreoElectronico.Size = new System.Drawing.Size(200, 20);
-            this.txt_CorreoElectronico.TabIndex = 27;
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(154, 117);
+            this.txtCorreoElectronico.Name = "txtCorreoElectronico";
+            this.txtCorreoElectronico.Size = new System.Drawing.Size(200, 20);
+            this.txtCorreoElectronico.TabIndex = 27;
             // 
             // label4
             // 
@@ -139,12 +140,12 @@
             this.label3.TabIndex = 25;
             this.label3.Text = "Telefono:";
             // 
-            // txt_Telefono
+            // txtTelefono
             // 
-            this.txt_Telefono.Location = new System.Drawing.Point(154, 91);
-            this.txt_Telefono.Name = "txt_Telefono";
-            this.txt_Telefono.Size = new System.Drawing.Size(200, 20);
-            this.txt_Telefono.TabIndex = 24;
+            this.txtTelefono.Location = new System.Drawing.Point(154, 91);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(200, 20);
+            this.txtTelefono.TabIndex = 24;
             // 
             // label1
             // 
@@ -157,7 +158,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(791, 299);
+            this.button1.Location = new System.Drawing.Point(1016, 299);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 38;
@@ -171,24 +172,16 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 39;
             // 
-            // comboBox1
+            // cbMetodoPago
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbMetodoPago.FormattingEnabled = true;
+            this.cbMetodoPago.Items.AddRange(new object[] {
             "BOLETA",
             "FACTURA"});
-            this.comboBox1.Location = new System.Drawing.Point(154, 170);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 40;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(154, 12);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(201, 21);
-            this.comboBox2.TabIndex = 42;
+            this.cbMetodoPago.Location = new System.Drawing.Point(154, 170);
+            this.cbMetodoPago.Name = "cbMetodoPago";
+            this.cbMetodoPago.Size = new System.Drawing.Size(200, 21);
+            this.cbMetodoPago.TabIndex = 40;
             // 
             // label2
             // 
@@ -199,31 +192,31 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Numero de Documento:";
             // 
-            // comboBox3
+            // cbMP
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(153, 143);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(201, 21);
-            this.comboBox3.TabIndex = 43;
+            this.cbMP.FormattingEnabled = true;
+            this.cbMP.Location = new System.Drawing.Point(153, 143);
+            this.cbMP.Name = "cbMP";
+            this.cbMP.Size = new System.Drawing.Size(201, 21);
+            this.cbMP.TabIndex = 43;
             // 
-            // comboBox4
+            // cbCantidad
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cbCantidad.FormattingEnabled = true;
+            this.cbCantidad.Items.AddRange(new object[] {
             "BOLETA",
             "FACTURA"});
-            this.comboBox4.Location = new System.Drawing.Point(154, 196);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(200, 21);
-            this.comboBox4.TabIndex = 44;
+            this.cbCantidad.Location = new System.Drawing.Point(154, 196);
+            this.cbCantidad.Name = "cbCantidad";
+            this.cbCantidad.Size = new System.Drawing.Size(200, 21);
+            this.cbCantidad.TabIndex = 44;
             // 
-            // txt_DirecciondeEntrega
+            // txt_NumeroDocumento
             // 
-            this.txt_DirecciondeEntrega.Location = new System.Drawing.Point(154, 39);
-            this.txt_DirecciondeEntrega.Name = "txt_DirecciondeEntrega";
-            this.txt_DirecciondeEntrega.Size = new System.Drawing.Size(201, 20);
-            this.txt_DirecciondeEntrega.TabIndex = 23;
+            this.txt_NumeroDocumento.Location = new System.Drawing.Point(154, 39);
+            this.txt_NumeroDocumento.Name = "txt_NumeroDocumento";
+            this.txt_NumeroDocumento.Size = new System.Drawing.Size(201, 20);
+            this.txt_NumeroDocumento.TabIndex = 23;
             // 
             // label9
             // 
@@ -234,12 +227,12 @@
             this.label9.TabIndex = 46;
             this.label9.Text = "Id Ubigeo:";
             // 
-            // textBox1
+            // txtIdUbigeo
             // 
-            this.textBox1.Location = new System.Drawing.Point(153, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 20);
-            this.textBox1.TabIndex = 47;
+            this.txtIdUbigeo.Location = new System.Drawing.Point(153, 65);
+            this.txtIdUbigeo.Name = "txtIdUbigeo";
+            this.txtIdUbigeo.Size = new System.Drawing.Size(201, 20);
+            this.txtIdUbigeo.TabIndex = 47;
             // 
             // label10
             // 
@@ -286,41 +279,48 @@
             this.label14.TabIndex = 52;
             this.label14.Text = "**";
             // 
-            // dataGridView1
+            // dgvProveedor
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(373, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(401, 204);
-            this.dataGridView1.TabIndex = 53;
+            this.dgvProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProveedor.Location = new System.Drawing.Point(373, 39);
+            this.dgvProveedor.Name = "dgvProveedor";
+            this.dgvProveedor.Size = new System.Drawing.Size(629, 204);
+            this.dgvProveedor.TabIndex = 53;
             // 
-            // button2
+            // label15
             // 
-            this.button2.Location = new System.Drawing.Point(373, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(174, 23);
-            this.button2.TabIndex = 55;
-            this.button2.Text = "Mostrar Tabla Ubigeo";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(370, 12);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(74, 13);
+            this.label15.TabIndex = 54;
+            this.label15.Text = "Tabla Ubigeo:";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(154, 17);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(201, 20);
+            this.txtNombre.TabIndex = 55;
             // 
             // Core_OrdendeCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 508);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1093, 508);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.dgvProveedor);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtIdUbigeo);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbCantidad);
+            this.Controls.Add(this.cbMP);
+            this.Controls.Add(this.cbMetodoPago);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Agregar);
@@ -329,17 +329,17 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txt_CorreoElectronico);
+            this.Controls.Add(this.txtCorreoElectronico);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_Telefono);
-            this.Controls.Add(this.txt_DirecciondeEntrega);
+            this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.txt_NumeroDocumento);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Core_OrdendeCompra";
             this.Text = "Core_OrdendeCompra";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Compras)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,27 +352,27 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_CorreoElectronico;
+        private System.Windows.Forms.TextBox txtCorreoElectronico;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_Telefono;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbMetodoPago;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox txt_DirecciondeEntrega;
+        private System.Windows.Forms.ComboBox cbMP;
+        private System.Windows.Forms.ComboBox cbCantidad;
+        private System.Windows.Forms.TextBox txt_NumeroDocumento;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIdUbigeo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dgvProveedor;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }

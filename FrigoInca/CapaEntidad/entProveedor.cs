@@ -18,5 +18,6 @@ namespace CapaEntidad
         public int Telefonocontactoproveedor { get; set; }
         public Boolean Estadoproveedor { get; set; }
         public DateTime Fecharegistroproveedor { get; set; }
+        public int IdUbigeo { get; set; }
     }
 }

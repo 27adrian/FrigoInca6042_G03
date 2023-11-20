@@ -58,10 +58,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtNumDoc = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtIdUbigeo = new System.Windows.Forms.TextBox();
+            this.dgvUbigeo = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedor)).BeginInit();
             this.gb_Proveedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUbigeo)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_Proveedor
@@ -77,7 +80,9 @@
             // gb_Proveedor
             // 
             this.gb_Proveedor.Controls.Add(this.label8);
-            this.gb_Proveedor.Controls.Add(this.textBox1);
+            this.gb_Proveedor.Controls.Add(this.dgvUbigeo);
+            this.gb_Proveedor.Controls.Add(this.txtIdUbigeo);
+            this.gb_Proveedor.Controls.Add(this.label9);
             this.gb_Proveedor.Controls.Add(this.label2);
             this.gb_Proveedor.Controls.Add(this.dt_Fechaderegistroproveedor);
             this.gb_Proveedor.Controls.Add(this.cb_Estadodelproveedor);
@@ -100,7 +105,7 @@
             this.gb_Proveedor.Controls.Add(this.label6);
             this.gb_Proveedor.Location = new System.Drawing.Point(12, 284);
             this.gb_Proveedor.Name = "gb_Proveedor";
-            this.gb_Proveedor.Size = new System.Drawing.Size(787, 282);
+            this.gb_Proveedor.Size = new System.Drawing.Size(787, 469);
             this.gb_Proveedor.TabIndex = 13;
             this.gb_Proveedor.TabStop = false;
             this.gb_Proveedor.Text = "Informacion Proveedor";
@@ -172,7 +177,7 @@
             this.cb_Tipodocumento.Items.AddRange(new object[] {
             "DNI",
             "RUC"});
-            this.cb_Tipodocumento.Location = new System.Drawing.Point(172, 150);
+            this.cb_Tipodocumento.Location = new System.Drawing.Point(172, 123);
             this.cb_Tipodocumento.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Tipodocumento.Name = "cb_Tipodocumento";
             this.cb_Tipodocumento.Size = new System.Drawing.Size(199, 21);
@@ -182,7 +187,7 @@
             // lblTipoDoc
             // 
             this.lblTipoDoc.AutoSize = true;
-            this.lblTipoDoc.Location = new System.Drawing.Point(12, 152);
+            this.lblTipoDoc.Location = new System.Drawing.Point(12, 125);
             this.lblTipoDoc.Name = "lblTipoDoc";
             this.lblTipoDoc.Size = new System.Drawing.Size(102, 13);
             this.lblTipoDoc.TabIndex = 16;
@@ -213,7 +218,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 181);
+            this.label4.Location = new System.Drawing.Point(12, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 13);
             this.label4.TabIndex = 3;
@@ -221,14 +226,14 @@
             // 
             // txt_Correo
             // 
-            this.txt_Correo.Location = new System.Drawing.Point(172, 210);
+            this.txt_Correo.Location = new System.Drawing.Point(172, 183);
             this.txt_Correo.Name = "txt_Correo";
             this.txt_Correo.Size = new System.Drawing.Size(199, 20);
             this.txt_Correo.TabIndex = 10;
             // 
             // txt_Numerodocumento
             // 
-            this.txt_Numerodocumento.Location = new System.Drawing.Point(172, 181);
+            this.txt_Numerodocumento.Location = new System.Drawing.Point(172, 154);
             this.txt_Numerodocumento.MaxLength = 8;
             this.txt_Numerodocumento.Name = "txt_Numerodocumento";
             this.txt_Numerodocumento.Size = new System.Drawing.Size(199, 20);
@@ -245,7 +250,7 @@
             // 
             // txt_Telefonocontacto
             // 
-            this.txt_Telefonocontacto.Location = new System.Drawing.Point(172, 241);
+            this.txt_Telefonocontacto.Location = new System.Drawing.Point(172, 214);
             this.txt_Telefonocontacto.Name = "txt_Telefonocontacto";
             this.txt_Telefonocontacto.Size = new System.Drawing.Size(199, 20);
             this.txt_Telefonocontacto.TabIndex = 9;
@@ -269,7 +274,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 210);
+            this.label5.Location = new System.Drawing.Point(12, 183);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 13);
             this.label5.TabIndex = 4;
@@ -278,7 +283,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 241);
+            this.label6.Location = new System.Drawing.Point(12, 214);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 13);
             this.label6.TabIndex = 5;
@@ -360,27 +365,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
             // 
-            // textBox1
+            // label9
             // 
-            this.textBox1.Location = new System.Drawing.Point(172, 122);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 20);
-            this.textBox1.TabIndex = 27;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 245);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Id Ubigeo:";
+            // 
+            // txtIdUbigeo
+            // 
+            this.txtIdUbigeo.Location = new System.Drawing.Point(172, 245);
+            this.txtIdUbigeo.Name = "txtIdUbigeo";
+            this.txtIdUbigeo.Size = new System.Drawing.Size(199, 20);
+            this.txtIdUbigeo.TabIndex = 30;
+            // 
+            // dgvUbigeo
+            // 
+            this.dgvUbigeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUbigeo.Location = new System.Drawing.Point(15, 311);
+            this.dgvUbigeo.Name = "dgvUbigeo";
+            this.dgvUbigeo.ReadOnly = true;
+            this.dgvUbigeo.RowHeadersWidth = 51;
+            this.dgvUbigeo.Size = new System.Drawing.Size(699, 132);
+            this.dgvUbigeo.TabIndex = 31;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 125);
+            this.label8.Location = new System.Drawing.Point(12, 286);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 13);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "Nombre Completo:";
+            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "UBIGEO:";
             // 
             // Mantenedor_Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 578);
+            this.ClientSize = new System.Drawing.Size(1134, 765);
             this.Controls.Add(this.txtNumDoc);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnBuscar);
@@ -397,6 +421,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedor)).EndInit();
             this.gb_Proveedor.ResumeLayout(false);
             this.gb_Proveedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUbigeo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,7 +459,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNumDoc;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtIdUbigeo;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dgvUbigeo;
     }
 }

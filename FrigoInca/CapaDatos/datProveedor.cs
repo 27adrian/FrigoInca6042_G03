@@ -50,6 +50,7 @@ namespace CapaDatos
                     Prov.Telefonocontactoproveedor = Convert.ToInt32(dr["Telefonocontacto"]);
                     Prov.Estadoproveedor = Convert.ToBoolean(dr["Estadoproveedor"]);
                     Prov.Fecharegistroproveedor = Convert.ToDateTime(dr["Fecharegistroproveedor"]);
+                    Prov.IdUbigeo = Convert.ToInt32(dr["IdUbigeo"]);
                     lista.Add(Prov);
                 }
             }
@@ -81,6 +82,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@Telefonocontacto", Prov.Telefonocontactoproveedor);
                 cmd.Parameters.AddWithValue("@Estadoproveedor", Prov.Estadoproveedor);
                 cmd.Parameters.AddWithValue("@Fecharegistroproveedor", Prov.Fecharegistroproveedor);
+                cmd.Parameters.AddWithValue("@IdUbigeo", Prov.IdUbigeo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

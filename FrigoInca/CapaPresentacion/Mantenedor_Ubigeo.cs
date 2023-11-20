@@ -17,7 +17,7 @@ namespace FrigoInca
         public Mantenedor_Ubigeo()
         {
             InitializeComponent();
-            Listarcliente();
+            ListarUbigeo();
 
         }
 
@@ -43,7 +43,7 @@ namespace FrigoInca
                 MessageBox.Show("Error.." + ex);
             }
 
-            Listarcliente();
+            ListarUbigeo();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace FrigoInca
         {
 
         }
-        public void Listarcliente()
+        public void ListarUbigeo()
         {
             dgvUbigeo.DataSource = logUbigeo.Instancia.ListarUbigeo();
         }

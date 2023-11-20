@@ -1,5 +1,6 @@
 ﻿using CapaEntidad;
 using CapaLogicaNegocio;
+using FrigoInca;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,10 +19,29 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             dgv_Proveedor.CellClick += new DataGridViewCellEventHandler(dgv_Proveedor_CellClick);
+            dgvUbigeo.CellClick += new DataGridViewCellEventHandler(dgvUbigeo_CellClick);
             Listarproveedor();
+            ListarUbigeo();
             gb_Proveedor.Enabled = false;
             txt_Idproveedor.Enabled = false;
         }
+        public void ListarUbigeo()
+        {
+            dgvUbigeo.DataSource = logUbigeo.Instancia.ListarUbigeo();
+        }
+        private void dgvUbigeo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Check if the clicked row index is not the header and not -1 (no selection)
+            if (e.RowIndex >= 0)
+            {
+                // Assuming the ID is in the first column, index 0
+                string id = dgvUbigeo.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                // Set the ID to your TextBox
+                txtIdUbigeo.Text = id;
+            }
+        }
+
         private void dgv_Proveedor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) 
@@ -37,6 +57,7 @@ namespace CapaPresentacion
                 txt_Telefonocontacto.Text = row.Cells[6].Value?.ToString();
                 cb_Estadodelproveedor.Checked = Convert.ToBoolean(row.Cells[7].Value);
                 dt_Fechaderegistroproveedor.Value = Convert.ToDateTime(row.Cells[8].Value);
+
             }
         }
 
@@ -56,7 +77,7 @@ namespace CapaPresentacion
         private void btn_Nuevo_Click(object sender, EventArgs e)
         {
             gb_Proveedor.Enabled = true;
-
+            txtIdUbigeo.Enabled = false;
             btn_Agregar.Visible = true;
             LimpiarVariables();
             btn_Modificar.Visible = false;
@@ -105,6 +126,7 @@ namespace CapaPresentacion
                 c.Telefonocontactoproveedor = int.Parse(txt_Telefonocontacto.Text.Trim());
                 c.Estadoproveedor = cb_Estadodelproveedor.Checked;
                 c.Fecharegistroproveedor = dt_Fechaderegistroproveedor.Value;
+                c.IdUbigeo = int.Parse(txtIdUbigeo.Text.Trim());
                 logProveedor.Instancia.Insertarproveedor(c);
             }
             catch (Exception ex)
@@ -205,6 +227,14 @@ namespace CapaPresentacion
             }
 
             return null;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Mantenedor_Ubigeo fcp = new Mantenedor_Ubigeo();
+            this.Hide();
+            fcp.ShowDialog();
+            this.Show();
         }
     }
 }
