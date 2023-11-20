@@ -16,5 +16,10 @@ namespace FrigoInca
         {
             InitializeComponent();
         }
+
+        private void Core_IngresaMateriaPrima_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

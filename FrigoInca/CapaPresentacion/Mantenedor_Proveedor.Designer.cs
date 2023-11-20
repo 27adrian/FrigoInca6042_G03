@@ -58,6 +58,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtNumDoc = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedor)).BeginInit();
             this.gb_Proveedor.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +76,8 @@
             // 
             // gb_Proveedor
             // 
+            this.gb_Proveedor.Controls.Add(this.label8);
+            this.gb_Proveedor.Controls.Add(this.textBox1);
             this.gb_Proveedor.Controls.Add(this.label2);
             this.gb_Proveedor.Controls.Add(this.dt_Fechaderegistroproveedor);
             this.gb_Proveedor.Controls.Add(this.cb_Estadodelproveedor);
@@ -96,7 +100,7 @@
             this.gb_Proveedor.Controls.Add(this.label6);
             this.gb_Proveedor.Location = new System.Drawing.Point(12, 284);
             this.gb_Proveedor.Name = "gb_Proveedor";
-            this.gb_Proveedor.Size = new System.Drawing.Size(787, 255);
+            this.gb_Proveedor.Size = new System.Drawing.Size(787, 282);
             this.gb_Proveedor.TabIndex = 13;
             this.gb_Proveedor.TabStop = false;
             this.gb_Proveedor.Text = "Informacion Proveedor";
@@ -168,7 +172,7 @@
             this.cb_Tipodocumento.Items.AddRange(new object[] {
             "DNI",
             "RUC"});
-            this.cb_Tipodocumento.Location = new System.Drawing.Point(172, 129);
+            this.cb_Tipodocumento.Location = new System.Drawing.Point(172, 150);
             this.cb_Tipodocumento.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Tipodocumento.Name = "cb_Tipodocumento";
             this.cb_Tipodocumento.Size = new System.Drawing.Size(199, 21);
@@ -178,7 +182,7 @@
             // lblTipoDoc
             // 
             this.lblTipoDoc.AutoSize = true;
-            this.lblTipoDoc.Location = new System.Drawing.Point(12, 131);
+            this.lblTipoDoc.Location = new System.Drawing.Point(12, 152);
             this.lblTipoDoc.Name = "lblTipoDoc";
             this.lblTipoDoc.Size = new System.Drawing.Size(102, 13);
             this.lblTipoDoc.TabIndex = 16;
@@ -209,7 +213,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 160);
+            this.label4.Location = new System.Drawing.Point(12, 181);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 13);
             this.label4.TabIndex = 3;
@@ -217,14 +221,14 @@
             // 
             // txt_Correo
             // 
-            this.txt_Correo.Location = new System.Drawing.Point(172, 189);
+            this.txt_Correo.Location = new System.Drawing.Point(172, 210);
             this.txt_Correo.Name = "txt_Correo";
             this.txt_Correo.Size = new System.Drawing.Size(199, 20);
             this.txt_Correo.TabIndex = 10;
             // 
             // txt_Numerodocumento
             // 
-            this.txt_Numerodocumento.Location = new System.Drawing.Point(172, 160);
+            this.txt_Numerodocumento.Location = new System.Drawing.Point(172, 181);
             this.txt_Numerodocumento.MaxLength = 8;
             this.txt_Numerodocumento.Name = "txt_Numerodocumento";
             this.txt_Numerodocumento.Size = new System.Drawing.Size(199, 20);
@@ -241,7 +245,7 @@
             // 
             // txt_Telefonocontacto
             // 
-            this.txt_Telefonocontacto.Location = new System.Drawing.Point(172, 220);
+            this.txt_Telefonocontacto.Location = new System.Drawing.Point(172, 241);
             this.txt_Telefonocontacto.Name = "txt_Telefonocontacto";
             this.txt_Telefonocontacto.Size = new System.Drawing.Size(199, 20);
             this.txt_Telefonocontacto.TabIndex = 9;
@@ -265,7 +269,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 189);
+            this.label5.Location = new System.Drawing.Point(12, 210);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 13);
             this.label5.TabIndex = 4;
@@ -274,7 +278,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 220);
+            this.label6.Location = new System.Drawing.Point(12, 241);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 13);
             this.label6.TabIndex = 5;
@@ -356,11 +360,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(172, 122);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(199, 20);
+            this.textBox1.TabIndex = 27;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(16, 125);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 13);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Nombre Completo:";
+            // 
             // Mantenedor_Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 551);
+            this.ClientSize = new System.Drawing.Size(1134, 578);
             this.Controls.Add(this.txtNumDoc);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnBuscar);
@@ -414,5 +434,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNumDoc;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
