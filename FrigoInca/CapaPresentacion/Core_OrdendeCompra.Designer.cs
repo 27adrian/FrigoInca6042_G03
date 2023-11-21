@@ -33,7 +33,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtCorreoElectronico = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,16 +52,14 @@
             this.dgvProveedor = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtMP = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.dgvMetodoPago = new System.Windows.Forms.DataGridView();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txt_MetodoPago = new System.Windows.Forms.TextBox();
             this.txt_Cantidad = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtAnimal = new System.Windows.Forms.TextBox();
+            this.cbMetodoPago = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Compras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMetodoPago)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Agregar
@@ -110,15 +107,6 @@
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 30;
             this.label6.Text = "Cantidad:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 151);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 13);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "MP:";
             // 
             // txtCorreoElectronico
             // 
@@ -278,17 +266,10 @@
             this.txtNombre.Size = new System.Drawing.Size(201, 20);
             this.txtNombre.TabIndex = 55;
             // 
-            // txtMP
-            // 
-            this.txtMP.Location = new System.Drawing.Point(155, 144);
-            this.txtMP.Name = "txtMP";
-            this.txtMP.Size = new System.Drawing.Size(200, 20);
-            this.txtMP.TabIndex = 56;
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(43, 151);
+            this.label16.Location = new System.Drawing.Point(57, 151);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(11, 13);
             this.label16.TabIndex = 57;
@@ -303,30 +284,6 @@
             this.label17.TabIndex = 58;
             this.label17.Text = "***";
             // 
-            // dgvMetodoPago
-            // 
-            this.dgvMetodoPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMetodoPago.Location = new System.Drawing.Point(1017, 39);
-            this.dgvMetodoPago.Name = "dgvMetodoPago";
-            this.dgvMetodoPago.Size = new System.Drawing.Size(268, 204);
-            this.dgvMetodoPago.TabIndex = 59;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(1014, 9);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(101, 13);
-            this.label18.TabIndex = 60;
-            this.label18.Text = "Tabla MetodoPago:";
-            // 
-            // txt_MetodoPago
-            // 
-            this.txt_MetodoPago.Location = new System.Drawing.Point(153, 170);
-            this.txt_MetodoPago.Name = "txt_MetodoPago";
-            this.txt_MetodoPago.Size = new System.Drawing.Size(200, 20);
-            this.txt_MetodoPago.TabIndex = 61;
-            // 
             // txt_Cantidad
             // 
             this.txt_Cantidad.Location = new System.Drawing.Point(153, 198);
@@ -334,18 +291,40 @@
             this.txt_Cantidad.Size = new System.Drawing.Size(200, 20);
             this.txt_Cantidad.TabIndex = 62;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 151);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Animal:";
+            // 
+            // txtAnimal
+            // 
+            this.txtAnimal.Location = new System.Drawing.Point(155, 144);
+            this.txtAnimal.Name = "txtAnimal";
+            this.txtAnimal.Size = new System.Drawing.Size(200, 20);
+            this.txtAnimal.TabIndex = 56;
+            // 
+            // cbMetodoPago
+            // 
+            this.cbMetodoPago.FormattingEnabled = true;
+            this.cbMetodoPago.Location = new System.Drawing.Point(153, 171);
+            this.cbMetodoPago.Name = "cbMetodoPago";
+            this.cbMetodoPago.Size = new System.Drawing.Size(200, 21);
+            this.cbMetodoPago.TabIndex = 63;
+            // 
             // Core_OrdendeCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1293, 508);
+            this.ClientSize = new System.Drawing.Size(1100, 508);
+            this.Controls.Add(this.cbMetodoPago);
             this.Controls.Add(this.txt_Cantidad);
-            this.Controls.Add(this.txt_MetodoPago);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.dgvMetodoPago);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.txtMP);
+            this.Controls.Add(this.txtAnimal);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.dgvProveedor);
@@ -375,7 +354,6 @@
             this.Text = "Core_OrdendeCompra";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Compras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMetodoPago)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,7 +365,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCorreoElectronico;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -407,12 +384,11 @@
         private System.Windows.Forms.DataGridView dgvProveedor;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtMP;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DataGridView dgvMetodoPago;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txt_MetodoPago;
         private System.Windows.Forms.TextBox txt_Cantidad;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtAnimal;
+        private System.Windows.Forms.ComboBox cbMetodoPago;
     }
 }

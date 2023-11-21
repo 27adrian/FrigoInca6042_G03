@@ -31,7 +31,6 @@ namespace FrigoInca
             try
             {
                 entUbigeo c = new entUbigeo();
-                c.Pais = txtPais.Text.Trim();
                 c.Departamento = txtDepartamento.Text.Trim();
                 c.Provincia = txtProvincia.Text.Trim();
                 c.Distrito = txtDistrito.Text.Trim();

@@ -12,7 +12,7 @@ namespace CapaEntidad
         public int Idproveedor { get; set; }
         public string Tipoproveedor { get; set; }
         public string Nombrecompletoproveedor { get; set; }
-        public string MP { get; set; }
+        public string Animal { get; set; }
         public string Tipodocumentoproveedor { get; set; }
         public long Numerodocumentoproveedor { get; set; }
         public string Correoproveedor { get; set; }

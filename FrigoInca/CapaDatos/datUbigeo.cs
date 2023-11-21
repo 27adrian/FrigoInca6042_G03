@@ -40,7 +40,6 @@ namespace CapaDatos
                 {
                     entUbigeo ubigeo = new entUbigeo();
                     ubigeo.IdUbigeo = Convert.ToInt32(dr["IdUbigeo"]);
-                    ubigeo.Pais = dr["Pais"].ToString();
                     ubigeo.Departamento = dr["Departamento"].ToString();
                     ubigeo.Provincia = dr["Provincia"].ToString();
                     ubigeo.Distrito = dr["Distrito"].ToString();
@@ -67,7 +66,6 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("InsertarUbigeo", cn); // Adjust with the correct stored procedure name
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Pais", ubigeo.Pais);
                 cmd.Parameters.AddWithValue("@Departamento", ubigeo.Departamento);
                 cmd.Parameters.AddWithValue("@Provincia", ubigeo.Provincia);
                 cmd.Parameters.AddWithValue("@Distrito", ubigeo.Distrito);
@@ -96,7 +94,6 @@ namespace CapaDatos
                 cmd = new SqlCommand("EditarUbigeo", cn); // Adjust with the correct stored procedure name
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IdUbigeo", ubigeo.IdUbigeo);
-                cmd.Parameters.AddWithValue("@Pais", ubigeo.Pais);
                 cmd.Parameters.AddWithValue("@Departamento", ubigeo.Departamento);
                 cmd.Parameters.AddWithValue("@Provincia", ubigeo.Provincia);
                 cmd.Parameters.AddWithValue("@Distrito", ubigeo.Distrito);

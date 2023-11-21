@@ -30,6 +30,11 @@
         {
             this.dgv_Proveedor = new System.Windows.Forms.DataGridView();
             this.gb_Proveedor = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dgvUbigeo = new System.Windows.Forms.DataGridView();
+            this.txtIdUbigeo = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dt_Fechaderegistroproveedor = new System.Windows.Forms.DateTimePicker();
             this.cb_Estadodelproveedor = new System.Windows.Forms.CheckBox();
@@ -58,12 +63,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtNumDoc = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtIdUbigeo = new System.Windows.Forms.TextBox();
-            this.dgvUbigeo = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtMP = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbAnimal = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedor)).BeginInit();
             this.gb_Proveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUbigeo)).BeginInit();
@@ -81,8 +83,10 @@
             // 
             // gb_Proveedor
             // 
+            this.gb_Proveedor.Controls.Add(this.cbAnimal);
+            this.gb_Proveedor.Controls.Add(this.label12);
+            this.gb_Proveedor.Controls.Add(this.label11);
             this.gb_Proveedor.Controls.Add(this.label10);
-            this.gb_Proveedor.Controls.Add(this.txtMP);
             this.gb_Proveedor.Controls.Add(this.label8);
             this.gb_Proveedor.Controls.Add(this.dgvUbigeo);
             this.gb_Proveedor.Controls.Add(this.txtIdUbigeo);
@@ -113,6 +117,50 @@
             this.gb_Proveedor.TabIndex = 13;
             this.gb_Proveedor.TabStop = false;
             this.gb_Proveedor.Text = "Informacion Proveedor";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(12, 131);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Animal:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 326);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "UBIGEO:";
+            // 
+            // dgvUbigeo
+            // 
+            this.dgvUbigeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUbigeo.Location = new System.Drawing.Point(15, 351);
+            this.dgvUbigeo.Name = "dgvUbigeo";
+            this.dgvUbigeo.ReadOnly = true;
+            this.dgvUbigeo.RowHeadersWidth = 51;
+            this.dgvUbigeo.Size = new System.Drawing.Size(699, 132);
+            this.dgvUbigeo.TabIndex = 31;
+            // 
+            // txtIdUbigeo
+            // 
+            this.txtIdUbigeo.Location = new System.Drawing.Point(172, 285);
+            this.txtIdUbigeo.Name = "txtIdUbigeo";
+            this.txtIdUbigeo.Size = new System.Drawing.Size(199, 20);
+            this.txtIdUbigeo.TabIndex = 30;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 285);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Id Ubigeo:";
             // 
             // label2
             // 
@@ -369,56 +417,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
             // 
-            // label9
+            // label11
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 285);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
-            this.label9.TabIndex = 29;
-            this.label9.Text = "Id Ubigeo:";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(87, 285);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(11, 13);
+            this.label11.TabIndex = 35;
+            this.label11.Text = "*";
             // 
-            // txtIdUbigeo
+            // label12
             // 
-            this.txtIdUbigeo.Location = new System.Drawing.Point(172, 285);
-            this.txtIdUbigeo.Name = "txtIdUbigeo";
-            this.txtIdUbigeo.Size = new System.Drawing.Size(199, 20);
-            this.txtIdUbigeo.TabIndex = 30;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(87, 131);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(11, 13);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "*";
             // 
-            // dgvUbigeo
+            // cbAnimal
             // 
-            this.dgvUbigeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUbigeo.Location = new System.Drawing.Point(15, 351);
-            this.dgvUbigeo.Name = "dgvUbigeo";
-            this.dgvUbigeo.ReadOnly = true;
-            this.dgvUbigeo.RowHeadersWidth = 51;
-            this.dgvUbigeo.Size = new System.Drawing.Size(699, 132);
-            this.dgvUbigeo.TabIndex = 31;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 326);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "UBIGEO:";
-            // 
-            // txtMP
-            // 
-            this.txtMP.Location = new System.Drawing.Point(172, 124);
-            this.txtMP.Name = "txtMP";
-            this.txtMP.Size = new System.Drawing.Size(199, 20);
-            this.txtMP.TabIndex = 33;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 131);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(26, 13);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "MP:";
+            this.cbAnimal.FormattingEnabled = true;
+            this.cbAnimal.Location = new System.Drawing.Point(172, 131);
+            this.cbAnimal.Name = "cbAnimal";
+            this.cbAnimal.Size = new System.Drawing.Size(199, 21);
+            this.cbAnimal.TabIndex = 37;
             // 
             // Mantenedor_Proveedor
             // 
@@ -484,6 +507,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvUbigeo;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtMP;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbAnimal;
     }
 }

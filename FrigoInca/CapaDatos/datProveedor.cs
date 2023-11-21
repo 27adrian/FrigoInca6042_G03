@@ -44,7 +44,7 @@ namespace CapaDatos
                     Prov.Idproveedor = Convert.ToInt32(dr["Idproveedor"]);
                     Prov.Tipoproveedor = dr["Tipoproveedor"].ToString();
                     Prov.Nombrecompletoproveedor = dr["Nombrecompleto"].ToString();
-                    Prov.MP = dr["MP"].ToString();
+                    Prov.Animal = dr["Animal"].ToString();
                     Prov.Tipodocumentoproveedor = dr["Tipodocumento"].ToString();
                     Prov.Numerodocumentoproveedor = Convert.ToInt64(dr["Numerodocumento"]);
                     Prov.Correoproveedor = dr["Correo"].ToString();
@@ -77,7 +77,7 @@ namespace CapaDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Tipoproveedor", Prov.Tipoproveedor);
                 cmd.Parameters.AddWithValue("@Nombrecompleto", Prov.Nombrecompletoproveedor);
-                cmd.Parameters.AddWithValue("@MP", Prov.Nombrecompletoproveedor);
+                cmd.Parameters.AddWithValue("@Animal", Prov.Nombrecompletoproveedor);
                 cmd.Parameters.AddWithValue("@Tipodocumento", Prov.Tipodocumentoproveedor);
                 cmd.Parameters.AddWithValue("@Numerodocumento", Prov.Numerodocumentoproveedor);
                 cmd.Parameters.AddWithValue("@Correo", Prov.Correoproveedor);

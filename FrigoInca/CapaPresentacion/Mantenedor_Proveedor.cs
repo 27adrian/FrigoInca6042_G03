@@ -21,6 +21,7 @@ namespace CapaPresentacion
             dgv_Proveedor.CellClick += new DataGridViewCellEventHandler(dgv_Proveedor_CellClick);
             dgvUbigeo.CellClick += new DataGridViewCellEventHandler(dgvUbigeo_CellClick);
             Listarproveedor();
+            CargarAnimalesEnComboBox();
             ListarUbigeo();
             gb_Proveedor.Enabled = false;
             txt_Idproveedor.Enabled = false;
@@ -59,6 +60,13 @@ namespace CapaPresentacion
                 dt_Fechaderegistroproveedor.Value = Convert.ToDateTime(row.Cells[8].Value);
 
             }
+        }
+        private void CargarAnimalesEnComboBox()
+        {
+            List<entAnimal> listaAnimales = logAnimal.Instancia.ListarAnimal();
+            cbAnimal.DataSource = listaAnimales;
+            cbAnimal.DisplayMember = "Animal"; // El nombre del animal para mostrar en el ComboBox
+            cbAnimal.ValueMember = "IdAnimal"; // El valor real que representa al animal (su ID)
         }
 
         public void Listarproveedor()
@@ -120,7 +128,7 @@ namespace CapaPresentacion
                 entProveedor c = new entProveedor();
                 c.Tipoproveedor = cb_Tipoproveedor.Text.Trim();
                 c.Nombrecompletoproveedor = txt_Nombrecompleto.Text.Trim();
-                c.MP = txtMP.Text.Trim();
+                c.Animal = cbAnimal.Text.Trim();
                 c.Tipodocumentoproveedor = cb_Tipodocumento.Text.Trim();
                 c.Numerodocumentoproveedor = long.Parse(txt_Numerodocumento.Text.Trim());
                 c.Correoproveedor = txt_Correo.Text.Trim();
