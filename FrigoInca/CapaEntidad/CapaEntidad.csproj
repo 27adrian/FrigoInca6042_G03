@@ -46,6 +46,7 @@
     <Compile Include="entCorte.cs" />
     <Compile Include="entDescuento.cs" />
     <Compile Include="entIngresaMateriaPrima.cs" />
+    <Compile Include="entNombreproducto.cs" />
     <Compile Include="entProveedor.cs" />
     <Compile Include="entRequerimientocompra.cs" />
     <Compile Include="entUbigeo.cs" />
