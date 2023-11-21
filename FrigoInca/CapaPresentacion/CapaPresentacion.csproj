@@ -107,11 +107,11 @@
     <Compile Include="Mantenedor_RequerimientoCompra.Designer.cs">
       <DependentUpon>Mantenedor_RequerimientoCompra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenedor_MetodoPago.cs">
+    <Compile Include="Mantenedor_FormaPago.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenedor_MetodoPago.Designer.cs">
-      <DependentUpon>Mantenedor_MetodoPago.cs</DependentUpon>
+    <Compile Include="Mantenedor_FormaPago.Designer.cs">
+      <DependentUpon>Mantenedor_FormaPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenedor_Animal.cs">
       <SubType>Form</SubType>
@@ -176,8 +176,8 @@
     <EmbeddedResource Include="Mantenedor_Descuento.resx">
       <DependentUpon>Mantenedor_Descuento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenedor_MetodoPago.resx">
-      <DependentUpon>Mantenedor_MetodoPago.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenedor_FormaPago.resx">
+      <DependentUpon>Mantenedor_FormaPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenedor_Animal.resx">
       <DependentUpon>Mantenedor_Animal.cs</DependentUpon>

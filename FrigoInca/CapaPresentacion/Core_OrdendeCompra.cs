@@ -61,7 +61,7 @@ namespace FrigoInca
         }
         private void CargarMetodoPagoEnComboBox()
         {
-            List<entMetodoPago> listaMetodoPago = logMetodoPago.Instancia.ListarMetodoPago();
+            List<entFormaPago> listaMetodoPago = logFormaPago.Instancia.ListarMetodoPago();
             cbMetodoPago.DataSource = listaMetodoPago;
             cbMetodoPago.DisplayMember = "Tipo"; // El nombre del animal para mostrar en el ComboBox
             cbMetodoPago.ValueMember = "IdMetodoPago"; // El valor real que representa al animal (su ID)

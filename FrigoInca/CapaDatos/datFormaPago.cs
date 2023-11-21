@@ -9,39 +9,38 @@ using System.Threading.Tasks;
 using CapaEntidad;
 namespace CapaDatos
 {
-    public class datMetodoPago
+    public class datFormaPago
     {
         #region sigleton
         //Patron Singleton
         // Variable estática para la instancia
-        private static readonly datMetodoPago _instancia = new datMetodoPago();
+        private static readonly datFormaPago _instancia = new datFormaPago();
         //privado para evitar la instanciación directa
-        public static datMetodoPago Instancia
+        public static datFormaPago Instancia
         {
             get
             {
-                return datMetodoPago._instancia;
+                return datFormaPago._instancia;
             }
         }
         #endregion singleton
-        public List<entMetodoPago> ListarMetodoPago()
+        public List<entFormaPago> ListarMetodoPago()
         {
             SqlCommand cmd = null;
-            List<entMetodoPago> lista = new List<entMetodoPago>();
+            List<entFormaPago> lista = new List<entFormaPago>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("ListarMetodoPago", cn); // Adjust the stored procedure name
+                cmd = new SqlCommand("ListarFormaPago", cn); // Adjust the stored procedure name
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entMetodoPago mp = new entMetodoPago();
-                    mp.IdMetodoPago = Convert.ToInt32(dr["IdMetodoPago"]);
-                    mp.Tipo = dr["Tipo"].ToString();
-                    mp.Descripcion = dr["Descripcion"].ToString();
-                    mp.EstadoMetodoPago = Convert.ToBoolean(dr["EstadoMetodoPago"]);
+                    entFormaPago mp = new entFormaPago();
+                    mp.IdFormapago = Convert.ToInt32(dr["IdFormapago"]);
+                    mp.NombreFp = dr["NombreFp"].ToString();
+
                     lista.Add(mp);
                 }
             }
@@ -55,17 +54,17 @@ namespace CapaDatos
             }
             return lista;
         }
-        public Boolean InsertarMetodoPago(entMetodoPago mp)
+        public Boolean InsertarMetodoPago(entFormaPago mp)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("InsertarMetodoPago", cn); // Use the correct stored procedure name
+                cmd = new SqlCommand("InsertarFormaPago", cn); // Use the correct stored procedure name
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Tipo", mp.Tipo);
-                cmd.Parameters.AddWithValue("@Descripcion", mp.Descripcion);
+                cmd.Parameters.AddWithValue("@NombreFp", mp.NombreFp);
+
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

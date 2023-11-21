@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace FrigoInca
 {
-    public partial class Mantenedor_MetodoPago : Form
+    public partial class Mantenedor_FormaPago : Form
     {
-        public Mantenedor_MetodoPago()
+        public Mantenedor_FormaPago()
         {
             InitializeComponent();
             ListarMetodoPago();
@@ -22,7 +22,7 @@ namespace FrigoInca
         }
         public void ListarMetodoPago()
         {
-            dgvMetodoPago.DataSource = logMetodoPago.Instancia.ListarMetodoPago();
+            dgvFormaPago.DataSource = logFormaPago.Instancia.ListarMetodoPago();
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -33,11 +33,10 @@ namespace FrigoInca
         {
             try
             {
-                entMetodoPago c = new entMetodoPago();
-                c.Tipo = txt_Metodo.Text.Trim();
-                c.Descripcion = txt_Descripcion.Text.Trim();
+                entFormaPago c = new entFormaPago();
+                c.NombreFp = txt_NombreFP.Text.Trim();
 
-                logMetodoPago.Instancia.InsertarMetodoPago(c);
+                logFormaPago.Instancia.InsertarMetodoPago(c);
             }
             catch (Exception ex)
             {
