@@ -38,13 +38,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnInhabilitar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtIdUbigeo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUbigeo)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 21);
+            this.label2.Location = new System.Drawing.Point(12, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 2;
@@ -53,7 +55,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 47);
+            this.label3.Location = new System.Drawing.Point(13, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 3;
@@ -62,7 +64,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 73);
+            this.label4.Location = new System.Drawing.Point(13, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 4;
@@ -70,21 +72,21 @@
             // 
             // txtDepartamento
             // 
-            this.txtDepartamento.Location = new System.Drawing.Point(111, 14);
+            this.txtDepartamento.Location = new System.Drawing.Point(110, 46);
             this.txtDepartamento.Name = "txtDepartamento";
             this.txtDepartamento.Size = new System.Drawing.Size(100, 20);
             this.txtDepartamento.TabIndex = 5;
             // 
             // txtProvincia
             // 
-            this.txtProvincia.Location = new System.Drawing.Point(111, 40);
+            this.txtProvincia.Location = new System.Drawing.Point(110, 72);
             this.txtProvincia.Name = "txtProvincia";
             this.txtProvincia.Size = new System.Drawing.Size(100, 20);
             this.txtProvincia.TabIndex = 6;
             // 
             // txtDistrito
             // 
-            this.txtDistrito.Location = new System.Drawing.Point(111, 66);
+            this.txtDistrito.Location = new System.Drawing.Point(110, 98);
             this.txtDistrito.Name = "txtDistrito";
             this.txtDistrito.Size = new System.Drawing.Size(100, 20);
             this.txtDistrito.TabIndex = 7;
@@ -92,14 +94,14 @@
             // dgvUbigeo
             // 
             this.dgvUbigeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUbigeo.Location = new System.Drawing.Point(17, 92);
+            this.dgvUbigeo.Location = new System.Drawing.Point(16, 124);
             this.dgvUbigeo.Name = "dgvUbigeo";
-            this.dgvUbigeo.Size = new System.Drawing.Size(631, 150);
+            this.dgvUbigeo.Size = new System.Drawing.Size(442, 150);
             this.dgvUbigeo.TabIndex = 8;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(661, 92);
+            this.button1.Location = new System.Drawing.Point(479, 124);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 9;
@@ -109,7 +111,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(661, 154);
+            this.btnModificar.Location = new System.Drawing.Point(479, 186);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 10;
@@ -119,7 +121,7 @@
             // 
             // btnInhabilitar
             // 
-            this.btnInhabilitar.Location = new System.Drawing.Point(661, 219);
+            this.btnInhabilitar.Location = new System.Drawing.Point(479, 251);
             this.btnInhabilitar.Name = "btnInhabilitar";
             this.btnInhabilitar.Size = new System.Drawing.Size(75, 23);
             this.btnInhabilitar.TabIndex = 11;
@@ -127,11 +129,29 @@
             this.btnInhabilitar.UseVisualStyleBackColor = true;
             this.btnInhabilitar.Click += new System.EventHandler(this.btnInhabilitar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Id Ubigeo:";
+            // 
+            // txtIdUbigeo
+            // 
+            this.txtIdUbigeo.Location = new System.Drawing.Point(110, 17);
+            this.txtIdUbigeo.Name = "txtIdUbigeo";
+            this.txtIdUbigeo.Size = new System.Drawing.Size(100, 20);
+            this.txtIdUbigeo.TabIndex = 13;
+            // 
             // Mantenedor_Ubigeo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 260);
+            this.ClientSize = new System.Drawing.Size(572, 337);
+            this.Controls.Add(this.txtIdUbigeo);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInhabilitar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.button1);
@@ -162,5 +182,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnInhabilitar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtIdUbigeo;
     }
 }

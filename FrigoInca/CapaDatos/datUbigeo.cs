@@ -43,7 +43,6 @@ namespace CapaDatos
                     ubigeo.Departamento = dr["Departamento"].ToString();
                     ubigeo.Provincia = dr["Provincia"].ToString();
                     ubigeo.Distrito = dr["Distrito"].ToString();
-                    ubigeo.EstadoUbigeo = Convert.ToBoolean(dr["EstadoUbigeo"]);
                     lista.Add(ubigeo);
                 }
             }
@@ -66,6 +65,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("InsertarUbigeo", cn); // Adjust with the correct stored procedure name
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdUbigeo", ubigeo.IdUbigeo);
                 cmd.Parameters.AddWithValue("@Departamento", ubigeo.Departamento);
                 cmd.Parameters.AddWithValue("@Provincia", ubigeo.Provincia);
                 cmd.Parameters.AddWithValue("@Distrito", ubigeo.Distrito);
@@ -78,6 +78,7 @@ namespace CapaDatos
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message); // O utiliza un sistema de registro adecuado
                 throw e;
             }
             finally { cmd.Connection.Close(); }
