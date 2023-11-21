@@ -44,6 +44,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="datAnimal.cs" />
     <Compile Include="datCliente.cs" />
+    <Compile Include="datDescuento.cs" />
     <Compile Include="datIngresaMateriaPrima.cs" />
     <Compile Include="datMetodoPago.cs" />
     <Compile Include="datProveedor.cs" />

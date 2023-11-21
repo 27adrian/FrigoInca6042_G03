@@ -170,7 +170,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(234, 145);
+            this.label3.Location = new System.Drawing.Point(301, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(219, 40);
             this.label3.TabIndex = 0;
@@ -299,9 +299,9 @@
             this.pictureBox9.BackgroundImage = global::FrigoInca.Properties.Resources.fondo1;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox9.Image = global::FrigoInca.Properties.Resources.banner5;
-            this.pictureBox9.Location = new System.Drawing.Point(1, 351);
+            this.pictureBox9.Location = new System.Drawing.Point(1, 347);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(688, 10);
+            this.pictureBox9.Size = new System.Drawing.Size(818, 14);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 29;
             this.pictureBox9.TabStop = false;
@@ -315,7 +315,7 @@
             this.pictureBox8.Image = global::FrigoInca.Properties.Resources.banner5;
             this.pictureBox8.Location = new System.Drawing.Point(-1, 188);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(688, 10);
+            this.pictureBox8.Size = new System.Drawing.Size(818, 10);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 28;
             this.pictureBox8.TabStop = false;
@@ -327,9 +327,9 @@
             this.pictureBox7.BackgroundImage = global::FrigoInca.Properties.Resources.fondo1;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox7.Image = global::FrigoInca.Properties.Resources.banner5;
-            this.pictureBox7.Location = new System.Drawing.Point(679, 188);
+            this.pictureBox7.Location = new System.Drawing.Point(804, 188);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(10, 173);
+            this.pictureBox7.Size = new System.Drawing.Size(15, 173);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 27;
             this.pictureBox7.TabStop = false;
@@ -357,7 +357,7 @@
             this.pictureBox1.Image = global::FrigoInca.Properties.Resources.banner3copia1;
             this.pictureBox1.Location = new System.Drawing.Point(-1, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(690, 198);
+            this.pictureBox1.Size = new System.Drawing.Size(820, 198);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
@@ -371,7 +371,7 @@
             this.pictureBox3.Image = global::FrigoInca.Properties.Resources.banner4;
             this.pictureBox3.Location = new System.Drawing.Point(-1, 171);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(690, 191);
+            this.pictureBox3.Size = new System.Drawing.Size(820, 191);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
@@ -385,7 +385,7 @@
             this.pictureBox2.Image = global::FrigoInca.Properties.Resources.banner3copia2;
             this.pictureBox2.Location = new System.Drawing.Point(-1, 351);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(690, 202);
+            this.pictureBox2.Size = new System.Drawing.Size(818, 202);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
@@ -394,7 +394,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 552);
+            this.ClientSize = new System.Drawing.Size(813, 552);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
