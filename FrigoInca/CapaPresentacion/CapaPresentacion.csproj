@@ -89,6 +89,12 @@
     <Compile Include="Mantenedor_Cliente.Designer.cs">
       <DependentUpon>Mantenedor_Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Corte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Corte.Designer.cs">
+      <DependentUpon>Form_Corte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenedor_Descuento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenedor_Cliente.resx">
       <DependentUpon>Mantenedor_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Corte.resx">
+      <DependentUpon>Form_Corte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenedor_Descuento.resx">
       <DependentUpon>Mantenedor_Descuento.cs</DependentUpon>

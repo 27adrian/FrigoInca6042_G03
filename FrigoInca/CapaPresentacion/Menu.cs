@@ -230,6 +230,14 @@ namespace CapaPresentacion
             this.Show();
         }
 
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Form_Corte fcp = new Form_Corte();
+            this.Hide();
+            fcp.ShowDialog();
+            this.Show();
+        }
+
         //private void button7_Click(object sender, EventArgs e)
         //{
         //    FormPedidoDeCarne mprov = new FormPedidoDeCarne();

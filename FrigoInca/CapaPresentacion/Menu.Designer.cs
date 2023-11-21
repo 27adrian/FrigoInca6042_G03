@@ -55,6 +55,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button12 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -212,7 +213,7 @@
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button8.Location = new System.Drawing.Point(581, 293);
+            this.button8.Location = new System.Drawing.Point(586, 297);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(96, 48);
             this.button8.TabIndex = 34;
@@ -223,7 +224,7 @@
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button9.Location = new System.Drawing.Point(581, 230);
+            this.button9.Location = new System.Drawing.Point(702, 230);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(96, 48);
             this.button9.TabIndex = 35;
@@ -390,11 +391,23 @@
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
             // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.button12.Location = new System.Drawing.Point(585, 230);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(96, 48);
+            this.button12.TabIndex = 39;
+            this.button12.Text = "Form Corte";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 552);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
@@ -467,5 +480,6 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button12;
     }
 }
