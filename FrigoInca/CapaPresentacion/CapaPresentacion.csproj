@@ -101,11 +101,11 @@
     <Compile Include="Mantenedor_Proveedor.Designer.cs">
       <DependentUpon>Mantenedor_Proveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenedor_RequerimientoCompraMP.cs">
+    <Compile Include="Mantenedor_RequerimientoCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenedor_RequerimientoCompraMP.Designer.cs">
-      <DependentUpon>Mantenedor_RequerimientoCompraMP.cs</DependentUpon>
+    <Compile Include="Mantenedor_RequerimientoCompra.Designer.cs">
+      <DependentUpon>Mantenedor_RequerimientoCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenedor_MetodoPago.cs">
       <SubType>Form</SubType>
@@ -185,8 +185,8 @@
     <EmbeddedResource Include="Mantenedor_Proveedor.resx">
       <DependentUpon>Mantenedor_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenedor_RequerimientoCompraMP.resx">
-      <DependentUpon>Mantenedor_RequerimientoCompraMP.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenedor_RequerimientoCompra.resx">
+      <DependentUpon>Mantenedor_RequerimientoCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenedor_TipoProducto.resx">
       <DependentUpon>Mantenedor_TipoProducto.cs</DependentUpon>

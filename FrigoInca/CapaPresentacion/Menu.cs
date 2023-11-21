@@ -147,7 +147,7 @@ namespace CapaPresentacion
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            Mantenedor_RequerimientoCompraMP mprov = new Mantenedor_RequerimientoCompraMP();
+            Mantenedor_RequerimientoCompra mprov = new Mantenedor_RequerimientoCompra();
             this.Hide();
             mprov.ShowDialog();
             this.Show();

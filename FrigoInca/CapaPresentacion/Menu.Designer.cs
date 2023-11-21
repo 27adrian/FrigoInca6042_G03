@@ -139,7 +139,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(88, 48);
             this.button4.TabIndex = 17;
-            this.button4.Text = "Mantenedor RequerimientosCompraMP";
+            this.button4.Text = "Mantenedor RequerimientosCompra";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 

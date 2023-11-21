@@ -45,6 +45,7 @@
     <Compile Include="entCliente.cs" />
     <Compile Include="entIngresaMateriaPrima.cs" />
     <Compile Include="entProveedor.cs" />
+    <Compile Include="entRequerimientocompra.cs" />
     <Compile Include="entUbigeo.cs" />
     <Compile Include="entMetodoPago.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
