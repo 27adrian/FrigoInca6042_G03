@@ -1,6 +1,6 @@
 ﻿namespace FrigoInca
 {
-    partial class Mantenedor_OrigenMP
+    partial class Mantenedor_Animal
     {
         /// <summary>
         /// Required designer variable.

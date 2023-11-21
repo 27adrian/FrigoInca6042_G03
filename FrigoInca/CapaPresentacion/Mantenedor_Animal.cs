@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace FrigoInca
 {
-    public partial class Mantenedor_OrigenMP : Form
+    public partial class Mantenedor_Animal : Form
     {
-        public Mantenedor_OrigenMP()
+        public Mantenedor_Animal()
         {
             InitializeComponent();
             ListarAnimal();
@@ -28,7 +28,7 @@ namespace FrigoInca
             try
             {
                 entAnimal c = new entAnimal();
-                c.Animal = txtAnimal.Text.Trim();
+                c.Nombreanimal = txtAnimal.Text.Trim();
 
                 logAnimal.Instancia.InsertarAnimal(c);
             }

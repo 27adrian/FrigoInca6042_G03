@@ -40,8 +40,7 @@ namespace CapaDatos
                 {
                     entAnimal animal = new entAnimal();
                     animal.IdAnimal = Convert.ToInt32(dr["IdAnimal"]);
-                    animal.Animal = dr["Animal"].ToString();
-                    animal.EstadoAnimal = Convert.ToBoolean(dr["EstadoAnimal"]);
+                    animal.Nombreanimal = dr["Nombreanimal"].ToString();
                     lista.Add(animal);
                 }
             }
@@ -64,7 +63,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("InsertarAnimal", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Animal", animal.Animal);
+                cmd.Parameters.AddWithValue("@Nombreanimal", animal.Nombreanimal);
 
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();

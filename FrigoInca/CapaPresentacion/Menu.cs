@@ -59,7 +59,7 @@ namespace CapaPresentacion
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Mantenedor_OrigenMP rLotes = new Mantenedor_OrigenMP();
+            Mantenedor_Animal rLotes = new Mantenedor_Animal();
             this.Hide();
             rLotes.ShowDialog();
             this.Show();

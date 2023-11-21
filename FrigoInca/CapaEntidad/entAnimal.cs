@@ -9,8 +9,7 @@ namespace CapaEntidad
     public class entAnimal
     {
         public int IdAnimal { get; set; }
-        public string Animal { get; set; }
-        public Boolean EstadoAnimal { get; set; }
+        public string Nombreanimal { get; set; }
 
     }
 }
