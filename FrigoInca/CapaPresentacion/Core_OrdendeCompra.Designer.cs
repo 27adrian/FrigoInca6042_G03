@@ -306,7 +306,7 @@
             // dgvMetodoPago
             // 
             this.dgvMetodoPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMetodoPago.Location = new System.Drawing.Point(1033, 39);
+            this.dgvMetodoPago.Location = new System.Drawing.Point(1017, 39);
             this.dgvMetodoPago.Name = "dgvMetodoPago";
             this.dgvMetodoPago.Size = new System.Drawing.Size(268, 204);
             this.dgvMetodoPago.TabIndex = 59;
@@ -314,7 +314,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(1030, 9);
+            this.label18.Location = new System.Drawing.Point(1014, 9);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(101, 13);
             this.label18.TabIndex = 60;
@@ -338,7 +338,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1382, 508);
+            this.ClientSize = new System.Drawing.Size(1293, 508);
             this.Controls.Add(this.txt_Cantidad);
             this.Controls.Add(this.txt_MetodoPago);
             this.Controls.Add(this.label18);
