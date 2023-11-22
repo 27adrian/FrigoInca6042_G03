@@ -50,6 +50,7 @@
     <Compile Include="datFormaPago.cs" />
     <Compile Include="datNombreproducto.cs" />
     <Compile Include="datOrdencompra.cs" />
+    <Compile Include="datOrdenVenta.cs" />
     <Compile Include="datProveedor.cs" />
     <Compile Include="datRequerimientocompra.cs" />
     <Compile Include="datUbigeo.cs" />

@@ -49,6 +49,7 @@
     <Compile Include="logFormaPago.cs" />
     <Compile Include="logNombreproducto.cs" />
     <Compile Include="logOrdencompra.cs" />
+    <Compile Include="logOrdenVenta.cs" />
     <Compile Include="logProveedor.cs" />
     <Compile Include="logRequerimientcompra.cs" />
     <Compile Include="logUbigeo.cs" />
