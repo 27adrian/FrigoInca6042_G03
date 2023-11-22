@@ -30,6 +30,7 @@
         {
             this.dgv_Proveedor = new System.Windows.Forms.DataGridView();
             this.gb_Proveedor = new System.Windows.Forms.GroupBox();
+            this.cbAnimal = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvUbigeo = new System.Windows.Forms.DataGridView();
@@ -63,9 +64,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtNumDoc = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cbAnimal = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedor)).BeginInit();
             this.gb_Proveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUbigeo)).BeginInit();
@@ -73,6 +71,7 @@
             // 
             // dgv_Proveedor
             // 
+            this.dgv_Proveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Proveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Proveedor.Location = new System.Drawing.Point(12, 12);
             this.dgv_Proveedor.Name = "dgv_Proveedor";
@@ -80,12 +79,11 @@
             this.dgv_Proveedor.RowHeadersWidth = 51;
             this.dgv_Proveedor.Size = new System.Drawing.Size(987, 252);
             this.dgv_Proveedor.TabIndex = 14;
+            this.dgv_Proveedor.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Proveedor_CellEnter);
             // 
             // gb_Proveedor
             // 
             this.gb_Proveedor.Controls.Add(this.cbAnimal);
-            this.gb_Proveedor.Controls.Add(this.label12);
-            this.gb_Proveedor.Controls.Add(this.label11);
             this.gb_Proveedor.Controls.Add(this.label10);
             this.gb_Proveedor.Controls.Add(this.label8);
             this.gb_Proveedor.Controls.Add(this.dgvUbigeo);
@@ -117,6 +115,14 @@
             this.gb_Proveedor.TabIndex = 13;
             this.gb_Proveedor.TabStop = false;
             this.gb_Proveedor.Text = "Informacion Proveedor";
+            // 
+            // cbAnimal
+            // 
+            this.cbAnimal.FormattingEnabled = true;
+            this.cbAnimal.Location = new System.Drawing.Point(172, 131);
+            this.cbAnimal.Name = "cbAnimal";
+            this.cbAnimal.Size = new System.Drawing.Size(199, 21);
+            this.cbAnimal.TabIndex = 37;
             // 
             // label10
             // 
@@ -226,6 +232,7 @@
             // 
             // cb_Tipodocumento
             // 
+            this.cb_Tipodocumento.Enabled = false;
             this.cb_Tipodocumento.Items.AddRange(new object[] {
             "DNI",
             "RUC"});
@@ -417,32 +424,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(87, 285);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(11, 13);
-            this.label11.TabIndex = 35;
-            this.label11.Text = "*";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(87, 131);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(11, 13);
-            this.label12.TabIndex = 36;
-            this.label12.Text = "*";
-            // 
-            // cbAnimal
-            // 
-            this.cbAnimal.FormattingEnabled = true;
-            this.cbAnimal.Location = new System.Drawing.Point(172, 131);
-            this.cbAnimal.Name = "cbAnimal";
-            this.cbAnimal.Size = new System.Drawing.Size(199, 21);
-            this.cbAnimal.TabIndex = 37;
-            // 
             // Mantenedor_Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -507,8 +488,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvUbigeo;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cbAnimal;
     }
 }

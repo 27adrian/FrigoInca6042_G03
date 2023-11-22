@@ -32,8 +32,8 @@
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.dgvRequerimientocompra = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cbIdAnimal = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequerimientocompra)).BeginInit();
@@ -73,24 +73,24 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnModificar
             // 
-            this.button2.Location = new System.Drawing.Point(93, 99);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnModificar.Location = new System.Drawing.Point(201, 99);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 11;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnDeshabilitar
             // 
-            this.button3.Location = new System.Drawing.Point(174, 99);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Deshabilitar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDeshabilitar.Location = new System.Drawing.Point(420, 99);
+            this.btnDeshabilitar.Name = "btnDeshabilitar";
+            this.btnDeshabilitar.Size = new System.Drawing.Size(75, 23);
+            this.btnDeshabilitar.TabIndex = 12;
+            this.btnDeshabilitar.Text = "Deshabilitar";
+            this.btnDeshabilitar.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -116,8 +116,8 @@
             this.ClientSize = new System.Drawing.Size(523, 296);
             this.Controls.Add(this.cbIdAnimal);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnDeshabilitar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvRequerimientocompra);
             this.Controls.Add(this.txtCantidad);
@@ -135,8 +135,8 @@
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.DataGridView dgvRequerimientocompra;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnDeshabilitar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbIdAnimal;
     }

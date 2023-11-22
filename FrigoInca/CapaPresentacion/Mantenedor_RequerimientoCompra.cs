@@ -19,8 +19,23 @@ namespace FrigoInca
             InitializeComponent();
             LlenarComboBoxAnimales();
             ListarRequerimientosCompra();
-        }
+            dgvRequerimientocompra.CellClick += dgvRequerimiento_CellClick;
 
+        }
+        private void dgvRequerimiento_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cbIdAnimal.Enabled = false;
+
+            // Verifica si el clic es en una fila válida
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvRequerimientocompra.Rows[e.RowIndex];
+
+                // Suponiendo que tienes las columnas 'IdUbigeo', 'Departamento', 'Provincia' y 'Distrito'
+                cbIdAnimal.Text = row.Cells["IdAnimal"].Value.ToString();
+                txtCantidad.Text = row.Cells["Cantidad"].Value.ToString();
+            }
+        }
         private void LlenarComboBoxAnimales()
         {
             List<entAnimal> listaAnimales = logAnimal.Instancia.ListarAnimal();
@@ -52,7 +67,18 @@ namespace FrigoInca
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                entRequerimientocompra c = new entRequerimientocompra();
+                c.IdAnimal = int.Parse(cbIdAnimal.Text.Trim());
+                c.Cantidad = int.Parse(txtCantidad.Text.Trim());
+                logRequerimientcompra.Instancia.EditarRequerimientoCompra(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            ListarRequerimientosCompra();
         }
     }
 }

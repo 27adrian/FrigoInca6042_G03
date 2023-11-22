@@ -27,6 +27,8 @@ namespace FrigoInca
         }
         private void dgvUbigeo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtIdUbigeo.Enabled = false;
+
             // Verifica si el clic es en una fila válida
             if (e.RowIndex >= 0)
             {

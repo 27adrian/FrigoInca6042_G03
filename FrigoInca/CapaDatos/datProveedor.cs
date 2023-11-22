@@ -111,13 +111,16 @@ namespace CapaDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Idproveedor", Prov.Idproveedor);
                 cmd.Parameters.AddWithValue("@Tipoproveedor", Prov.Tipoproveedor);
-                cmd.Parameters.AddWithValue("@Nombrecompleto", Prov.Nombrecompletoproveedor);
+                cmd.Parameters.AddWithValue("@Nombreproveedor", Prov.Nombrecompletoproveedor);
+                cmd.Parameters.AddWithValue("@IdAnimal", Convert.ToInt32(Prov.Animal));
                 cmd.Parameters.AddWithValue("@Tipodocumento", Prov.Tipodocumentoproveedor);
-                cmd.Parameters.AddWithValue("@Numerodocumento", Prov.Numerodocumentoproveedor);
+                //cmd.Parameters.AddWithValue("@Numerodocumento", Prov.Numerodocumentoproveedor);
+                cmd.Parameters.Add("@Numerodocumento", SqlDbType.BigInt).Value = Prov.Numerodocumentoproveedor;
                 cmd.Parameters.AddWithValue("@Correo", Prov.Correoproveedor);
-                cmd.Parameters.AddWithValue("@Telefonocontacto", Prov.Telefonocontactoproveedor);
-                cmd.Parameters.AddWithValue("@Estadoproveedor", Prov.Estadoproveedor);
+                cmd.Parameters.AddWithValue("@Telefono", Prov.Telefonocontactoproveedor);
+                cmd.Parameters.AddWithValue("@Estado", Prov.Estadoproveedor);
                 cmd.Parameters.AddWithValue("@Fecharegistroproveedor", Prov.Fecharegistroproveedor);
+                cmd.Parameters.AddWithValue("@IdUbigeo", Prov.IdUbigeo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -157,6 +160,8 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return delete;
         }
+
+
         public List<entProveedor> BuscarProveedor(entProveedor Prov)
         {
             SqlCommand cmd = null;
@@ -166,7 +171,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
                 cmd = new SqlCommand("BuscarProveedor", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@numDoc", Prov.Numerodocumentoproveedor);
+                cmd.Parameters.AddWithValue("@Numerodocumento", Prov.Numerodocumentoproveedor.ToString());
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
@@ -175,13 +180,15 @@ namespace CapaDatos
 
                     proveedor.Idproveedor = Convert.ToInt32(dr["Idproveedor"]);
                     proveedor.Tipoproveedor = dr["Tipoproveedor"].ToString();
-                    proveedor.Nombrecompletoproveedor = dr["Nombrecompleto"].ToString();
+                    proveedor.Nombrecompletoproveedor = dr["Nombreproveedor"].ToString();
+                    Prov.Animal = dr["idAnimal"].ToString();
                     proveedor.Tipodocumentoproveedor = dr["Tipodocumento"].ToString();
                     proveedor.Numerodocumentoproveedor = Convert.ToInt64(dr["Numerodocumento"]);
                     proveedor.Correoproveedor = dr["Correo"].ToString();
-                    proveedor.Telefonocontactoproveedor = Convert.ToInt32(dr["Telefonocontacto"]);
-                    proveedor.Estadoproveedor = Convert.ToBoolean(dr["Estadoproveedor"]);
+                    proveedor.Telefonocontactoproveedor = Convert.ToInt32(dr["Telefono"]);
+                    proveedor.Estadoproveedor = Convert.ToBoolean(dr["Estado"]);
                     proveedor.Fecharegistroproveedor = Convert.ToDateTime(dr["Fecharegistroproveedor"]);
+                    Prov.IdUbigeo = Convert.ToInt32(dr["IdUbigeo"]);
 
                     lista.Add(proveedor);
                 }

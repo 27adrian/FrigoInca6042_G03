@@ -18,7 +18,6 @@ namespace CapaPresentacion
         public Mantenedor_Proveedor()
         {
             InitializeComponent();
-            dgv_Proveedor.CellClick += new DataGridViewCellEventHandler(dgv_Proveedor_CellClick);
             dgvUbigeo.CellClick += new DataGridViewCellEventHandler(dgvUbigeo_CellClick);
             Listarproveedor();
             CargarAnimalesEnComboBox();
@@ -43,29 +42,6 @@ namespace CapaPresentacion
             }
         }
 
-        private void dgv_Proveedor_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (e.RowIndex >= 0)
-                {
-                    DataGridViewRow row = dgv_Proveedor.Rows[e.RowIndex];
-
-                    txt_Idproveedor.Text = row.Cells[0].Value?.ToString();
-                    cb_Tipoproveedor.Text = row.Cells[1].Value?.ToString();
-                    txt_Nombrecompleto.Text = row.Cells[2].Value?.ToString();
-                    cb_Tipodocumento.Text = row.Cells[3].Value?.ToString();
-                    txt_Numerodocumento.Text = row.Cells[4].Value?.ToString();
-                    txt_Correo.Text = row.Cells[5].Value?.ToString();
-                    txt_Telefonocontacto.Text = row.Cells[6].Value?.ToString();
-                    cb_Estadodelproveedor.Checked = Convert.ToBoolean(row.Cells[7].Value);
-                    dt_Fechaderegistroproveedor.Value = Convert.ToDateTime(row.Cells[8].Value);
-
-                }
-            }
-            catch { }
-
-        }
         private void CargarAnimalesEnComboBox()
         {
             List<entAnimal> listaAnimales = logAnimal.Instancia.ListarAnimal();
@@ -77,31 +53,52 @@ namespace CapaPresentacion
         public void Listarproveedor()
         {
             dgv_Proveedor.DataSource = logProveedor.Instancia.Listarproveedor();
+            nombresColumnas();
+        }
+        public void nombresColumnas()
+        {
+            dgv_Proveedor.Columns[0].HeaderText = "ID";
+            dgv_Proveedor.Columns[1].HeaderText = "Tipo";
+            dgv_Proveedor.Columns[2].HeaderText = "Nombre";
+            dgv_Proveedor.Columns[3].HeaderText = "Animal";
+            dgv_Proveedor.Columns[4].HeaderText = "Tipo Documento";
+            dgv_Proveedor.Columns[5].HeaderText = "Num Documento";
+            dgv_Proveedor.Columns[6].HeaderText = "Correo";
+            dgv_Proveedor.Columns[7].HeaderText = "Telefono";
+            dgv_Proveedor.Columns[8].HeaderText = "Estado";
+            dgv_Proveedor.Columns[9].HeaderText = "Fecha Registro";
+            dgv_Proveedor.Columns[10].HeaderText = "Ubigeo";
         }
         private void LimpiarVariables()
         {
-            cb_Tipoproveedor.Text = " ";
+            txt_Idproveedor.Text = " ";
             txt_Nombrecompleto.Text = " ";
-            cb_Tipodocumento.Text = " ";
             txt_Numerodocumento.Text = " ";
             txt_Correo.Text = " ";
             txt_Telefonocontacto.Text = " ";
+            txtIdUbigeo.Text = " ";
         }
+
         private void btn_Nuevo_Click(object sender, EventArgs e)
         {
+            BloqDesbloqBotones(false);
+            cb_Estadodelproveedor.Enabled = false;
             gb_Proveedor.Enabled = true;
             txtIdUbigeo.Enabled = false;
             btn_Agregar.Visible = true;
             LimpiarVariables();
             btn_Modificar.Visible = false;
+            dgv_Proveedor.CellEnter -= dgv_Proveedor_CellEnter;
         }
 
         private void Btn_Editar_Click(object sender, EventArgs e)
         {
+            BloqDesbloqBotones(false);
+            cb_Estadodelproveedor.Enabled = true;
             gb_Proveedor.Enabled = true;
             btn_Modificar.Visible = true;
             btn_Agregar.Visible = false;
-            cb_Estadodelproveedor.Enabled = false;
+            dgv_Proveedor.CellEnter -= dgv_Proveedor_CellEnter;
         }
 
         private void btn_Deshabilitar_Click(object sender, EventArgs e)
@@ -146,6 +143,8 @@ namespace CapaPresentacion
                 {
                     MessageBox.Show("Ingreso correcto de datos.", "CONFIRMACION INGRESO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                dgv_Proveedor.CellEnter += dgv_Proveedor_CellEnter;
+                BloqDesbloqBotones(true);
             }
             catch (Exception ex)
             {
@@ -154,6 +153,15 @@ namespace CapaPresentacion
             LimpiarVariables();
             gb_Proveedor.Enabled = false;
             Listarproveedor();
+        }
+
+        private void BloqDesbloqBotones(bool estado)
+        {
+            btn_Nuevo.Enabled = estado;
+            Btn_Editar.Enabled = estado;
+            btn_Deshabilitar.Enabled = estado;
+            txtNumDoc.Enabled = estado;
+            btnBuscar.Enabled = estado;
         }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
@@ -164,26 +172,32 @@ namespace CapaPresentacion
                 c.Idproveedor = int.Parse(txt_Idproveedor.Text.Trim());
                 c.Tipoproveedor = cb_Tipoproveedor.Text.Trim();
                 c.Nombrecompletoproveedor = txt_Nombrecompleto.Text.Trim();
+                c.Animal = cbAnimal.Text.Trim();
                 c.Tipodocumentoproveedor = cb_Tipodocumento.Text.Trim();
                 c.Numerodocumentoproveedor = long.Parse(txt_Numerodocumento.Text.Trim());
                 c.Correoproveedor = txt_Correo.Text.Trim();
                 c.Telefonocontactoproveedor = int.Parse(txt_Telefonocontacto.Text.Trim());
                 c.Estadoproveedor = cb_Estadodelproveedor.Checked;
                 c.Fecharegistroproveedor = dt_Fechaderegistroproveedor.Value;
+                c.IdUbigeo = int.Parse(txtIdUbigeo.Text.Trim());
                 logProveedor.Instancia.Editarproveedor(c);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error.." + ex);
             }
+            dgv_Proveedor.CellEnter += dgv_Proveedor_CellEnter;
             LimpiarVariables();
             gb_Proveedor.Enabled = false;
             Listarproveedor();
+            BloqDesbloqBotones(true);
         }
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             gb_Proveedor.Enabled = false;
+            dgv_Proveedor.CellEnter += dgv_Proveedor_CellEnter;
+            BloqDesbloqBotones(true);
         }
 
 
@@ -253,6 +267,48 @@ namespace CapaPresentacion
             this.Hide();
             fcp.ShowDialog();
             this.Show();
+        }
+
+        private void dgv_Proveedor_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = dgv_Proveedor.Rows[e.RowIndex];
+
+                    txt_Idproveedor.Text = row.Cells[0].Value?.ToString();
+                    cb_Tipoproveedor.Text = row.Cells[1].Value?.ToString();
+                    txt_Nombrecompleto.Text = row.Cells[2].Value?.ToString();
+                    cbAnimal.Text = row.Cells[3].Value?.ToString();
+                    cb_Tipodocumento.Text = row.Cells[4].Value?.ToString();
+                    txt_Numerodocumento.Text = row.Cells[5].Value?.ToString();
+                    txt_Correo.Text = row.Cells[6].Value?.ToString();
+                    txt_Telefonocontacto.Text = row.Cells[7].Value?.ToString();
+                    cb_Estadodelproveedor.Checked = Convert.ToBoolean(row.Cells[8].Value);
+                    dt_Fechaderegistroproveedor.Value = Convert.ToDateTime(row.Cells[9].Value);
+                    txtIdUbigeo.Text = row.Cells[10].Value?.ToString();
+                }
+            }
+            catch { }
+
+        }
+
+        private void cb_Tipoproveedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_Tipoproveedor.SelectedIndex == 0)
+            {
+                cb_Tipodocumento.SelectedIndex = 0;
+                txt_Numerodocumento.MaxLength = 11;
+                txt_Numerodocumento.Text = "";
+            }
+            else
+            {
+                cb_Tipodocumento.SelectedIndex = 1;
+                txt_Numerodocumento.MaxLength = 8;
+                txt_Numerodocumento.Text = "";
+            }
         }
     }
 }
