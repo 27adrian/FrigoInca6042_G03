@@ -47,18 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core_Producto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Core_Producto.Designer.cs">
-      <DependentUpon>Core_Producto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_CarneProcesada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_CarneProcesada.Designer.cs">
-      <DependentUpon>Form_CarneProcesada.cs</DependentUpon>
-    </Compile>
     <Compile Include="Core_IngresaMateriaPrima.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,11 +77,11 @@
     <Compile Include="Mantenedor_Cliente.Designer.cs">
       <DependentUpon>Mantenedor_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Corte.cs">
+    <Compile Include="Mantenedor_Corte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Corte.Designer.cs">
-      <DependentUpon>Form_Corte.cs</DependentUpon>
+    <Compile Include="Mantenedor_Corte.Designer.cs">
+      <DependentUpon>Mantenedor_Corte.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenedor_Descuento.cs">
       <SubType>Form</SubType>
@@ -124,12 +112,6 @@
     </Compile>
     <Compile Include="Mantenedor_Animal.Designer.cs">
       <DependentUpon>Mantenedor_Animal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenedor_TipoProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenedor_TipoProducto.Designer.cs">
-      <DependentUpon>Mantenedor_TipoProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenedor_Ubigeo.cs">
       <SubType>Form</SubType>
@@ -164,12 +146,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Core_Producto.resx">
-      <DependentUpon>Core_Producto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_CarneProcesada.resx">
-      <DependentUpon>Form_CarneProcesada.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Core_IngresaMateriaPrima.resx">
       <DependentUpon>Core_IngresaMateriaPrima.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,8 +161,8 @@
     <EmbeddedResource Include="Mantenedor_Cliente.resx">
       <DependentUpon>Mantenedor_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Corte.resx">
-      <DependentUpon>Form_Corte.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenedor_Corte.resx">
+      <DependentUpon>Mantenedor_Corte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenedor_Descuento.resx">
       <DependentUpon>Mantenedor_Descuento.cs</DependentUpon>
@@ -202,9 +178,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenedor_RequerimientoCompra.resx">
       <DependentUpon>Mantenedor_RequerimientoCompra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mantenedor_TipoProducto.resx">
-      <DependentUpon>Mantenedor_TipoProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenedor_Ubigeo.resx">
       <DependentUpon>Mantenedor_Ubigeo.cs</DependentUpon>

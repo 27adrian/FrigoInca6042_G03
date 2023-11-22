@@ -33,9 +33,9 @@ namespace CapaLogicaNegocio
         {
             datUbigeo.Instancia.EditarUbigeo(ubigeo);
         }
-        public void InhabilitarUbigeo(entUbigeo ubigeo)
+        public void Deshabilitar(entUbigeo ubigeo)
         {
-            datUbigeo.Instancia.InhabilitarUbigeo(ubigeo);
+            datUbigeo.Instancia.DeshabilitarUbigeo(ubigeo);
         }
     }
 }

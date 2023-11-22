@@ -163,18 +163,12 @@ namespace CapaPresentacion
 
         private void btnCP_Click(object sender, EventArgs e)
         {
-            Form_CarneProcesada fcp = new Form_CarneProcesada();
-            this.Hide();
-            fcp.ShowDialog();
-            this.Show();
+
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Core_Producto fcp = new Core_Producto();
-            this.Hide();
-            fcp.ShowDialog();
-            this.Show();
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -184,10 +178,7 @@ namespace CapaPresentacion
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            Mantenedor_TipoProducto fcp = new Mantenedor_TipoProducto();
-            this.Hide();
-            fcp.ShowDialog();
-            this.Show();
+
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -216,7 +207,7 @@ namespace CapaPresentacion
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Form_Lote fcp = new Form_Lote();
+            Form_NombreProducto fcp = new Form_NombreProducto();
             this.Hide();
             fcp.ShowDialog();
             this.Show();
@@ -224,15 +215,12 @@ namespace CapaPresentacion
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Form_CarneProcesada fcp = new Form_CarneProcesada();
-            this.Hide();
-            fcp.ShowDialog();
-            this.Show();
+
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            Form_Corte fcp = new Form_Corte();
+            Mantenedor_Corte fcp = new Mantenedor_Corte();
             this.Hide();
             fcp.ShowDialog();
             this.Show();
@@ -240,7 +228,7 @@ namespace CapaPresentacion
 
         private void button13_Click(object sender, EventArgs e)
         {
-            Form_NombreProducto fcp = new Form_NombreProducto();
+            Form_Lote fcp = new Form_Lote();
             this.Hide();
             fcp.ShowDialog();
             this.Show();

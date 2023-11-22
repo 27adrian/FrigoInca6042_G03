@@ -30,5 +30,9 @@ namespace CapaLogicaNegocio
         {
             datRequerimientocompra.Instancia.InsertarRequerimientoCompra(req);
         }
+        public void EditarRequerimientoCompra(entRequerimientocompra MP)
+        {
+            datRequerimientocompra.Instancia.EditarRequerimientoCompra(MP);
+        }
     }
 }

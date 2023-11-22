@@ -112,21 +112,22 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return edita;
         }
-        public Boolean InhabilitarUbigeo(entUbigeo ubigeo)
+        public Boolean DeshabilitarUbigeo(entUbigeo ubigeo)
         {
             SqlCommand cmd = null;
-            Boolean delete = false;
+            Boolean deshabilita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("InhabilitarUbigeo", cn); // Adjust with the correct stored procedure name
+                cmd = new SqlCommand("DeshabilitarUbigeo", cn); // Usa el nuevo procedimiento almacenado
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IdUbigeo", ubigeo.IdUbigeo);
+
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {
-                    delete = true;
+                    deshabilita = true;
                 }
             }
             catch (Exception e)
@@ -134,7 +135,7 @@ namespace CapaDatos
                 throw e;
             }
             finally { cmd.Connection.Close(); }
-            return delete;
+            return deshabilita;
         }
 
     }

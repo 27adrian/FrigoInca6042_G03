@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace FrigoInca
 {
-    public partial class Form_Corte : Form
+    public partial class Mantenedor_Corte : Form
     {
-        public Form_Corte()
+        public Mantenedor_Corte()
         {
             InitializeComponent();
             ListarCorte();
