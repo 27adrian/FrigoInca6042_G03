@@ -48,6 +48,7 @@
     <Compile Include="datDescuento.cs" />
     <Compile Include="datIngresaMateriaPrima.cs" />
     <Compile Include="datFormaPago.cs" />
+    <Compile Include="datLoteProducto.cs" />
     <Compile Include="datNombreproducto.cs" />
     <Compile Include="datOrdencompra.cs" />
     <Compile Include="datOrdenVenta.cs" />

@@ -47,6 +47,7 @@
     <Compile Include="logDescuento.cs" />
     <Compile Include="logIngresaMateriaPrima.cs" />
     <Compile Include="logFormaPago.cs" />
+    <Compile Include="logLoteProducto.cs" />
     <Compile Include="logNombreproducto.cs" />
     <Compile Include="logOrdencompra.cs" />
     <Compile Include="logOrdenVenta.cs" />

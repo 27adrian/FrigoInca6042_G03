@@ -68,10 +68,5 @@ namespace CapaPresentacion
                 e.Handled = true;
             }
         }
-
-        private void txtProcentaje_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

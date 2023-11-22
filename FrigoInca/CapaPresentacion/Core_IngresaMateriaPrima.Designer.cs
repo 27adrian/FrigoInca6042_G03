@@ -31,7 +31,6 @@
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,70 +50,68 @@
             // 
             // dtFecha
             // 
-            this.dtFecha.Location = new System.Drawing.Point(186, 117);
+            this.dtFecha.Location = new System.Drawing.Point(248, 144);
+            this.dtFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(194, 20);
+            this.dtFecha.Size = new System.Drawing.Size(257, 22);
             this.dtFecha.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 124);
+            this.label4.Location = new System.Drawing.Point(16, 153);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(48, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Fecha:";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(15, 152);
+            this.btnAgregar.Location = new System.Drawing.Point(20, 187);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 26);
+            this.btnAgregar.Size = new System.Drawing.Size(100, 32);
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(305, 147);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 31);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Deshabilitar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 70);
+            this.label3.Location = new System.Drawing.Point(16, 86);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.Size = new System.Drawing.Size(42, 16);
             this.label3.TabIndex = 18;
             this.label3.Text = "Peso:";
             // 
             // txtPeso
             // 
-            this.txtPeso.Location = new System.Drawing.Point(186, 63);
+            this.txtPeso.Location = new System.Drawing.Point(248, 78);
+            this.txtPeso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(194, 20);
+            this.txtPeso.Size = new System.Drawing.Size(257, 22);
             this.txtPeso.TabIndex = 19;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 44);
+            this.label5.Location = new System.Drawing.Point(16, 54);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 13);
+            this.label5.Size = new System.Drawing.Size(107, 16);
             this.label5.TabIndex = 20;
             this.label5.Text = "Id Ordencompra:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 97);
+            this.label9.Location = new System.Drawing.Point(16, 119);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 13);
+            this.label9.Size = new System.Drawing.Size(57, 16);
             this.label9.TabIndex = 26;
             this.label9.Text = "Calidad:";
             // 
@@ -125,18 +122,21 @@
             "A",
             "B",
             "C"});
-            this.cbCalidad.Location = new System.Drawing.Point(186, 89);
+            this.cbCalidad.Location = new System.Drawing.Point(248, 110);
+            this.cbCalidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbCalidad.Name = "cbCalidad";
-            this.cbCalidad.Size = new System.Drawing.Size(194, 21);
+            this.cbCalidad.Size = new System.Drawing.Size(257, 24);
             this.cbCalidad.TabIndex = 27;
             // 
             // dgvMP
             // 
             this.dgvMP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMP.Location = new System.Drawing.Point(15, 209);
+            this.dgvMP.Location = new System.Drawing.Point(20, 257);
+            this.dgvMP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvMP.Name = "dgvMP";
-            this.dgvMP.Size = new System.Drawing.Size(576, 159);
+            this.dgvMP.RowHeadersWidth = 51;
+            this.dgvMP.Size = new System.Drawing.Size(768, 196);
             this.dgvMP.TabIndex = 28;
             this.dgvMP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -147,9 +147,10 @@
             "A",
             "B",
             "C"});
-            this.cbIdOrdencompra.Location = new System.Drawing.Point(186, 36);
+            this.cbIdOrdencompra.Location = new System.Drawing.Point(248, 44);
+            this.cbIdOrdencompra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbIdOrdencompra.Name = "cbIdOrdencompra";
-            this.cbIdOrdencompra.Size = new System.Drawing.Size(194, 21);
+            this.cbIdOrdencompra.Size = new System.Drawing.Size(257, 24);
             this.cbIdOrdencompra.TabIndex = 29;
             // 
             // groupBox1
@@ -157,9 +158,11 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtNumDoc1);
             this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Location = new System.Drawing.Point(411, 36);
+            this.groupBox1.Location = new System.Drawing.Point(548, 44);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 167);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(267, 206);
             this.groupBox1.TabIndex = 54;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
@@ -167,25 +170,28 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 25);
+            this.label7.Location = new System.Drawing.Point(8, 31);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 13);
+            this.label7.Size = new System.Drawing.Size(146, 16);
             this.label7.TabIndex = 23;
             this.label7.Text = "IdIngresaMateriaPrima:";
             // 
             // txtNumDoc1
             // 
-            this.txtNumDoc1.Location = new System.Drawing.Point(27, 51);
+            this.txtNumDoc1.Location = new System.Drawing.Point(36, 63);
+            this.txtNumDoc1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNumDoc1.MaxLength = 8;
             this.txtNumDoc1.Name = "txtNumDoc1";
-            this.txtNumDoc1.Size = new System.Drawing.Size(154, 20);
+            this.txtNumDoc1.Size = new System.Drawing.Size(204, 22);
             this.txtNumDoc1.TabIndex = 23;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(55, 99);
+            this.btnBuscar.Location = new System.Drawing.Point(73, 122);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(94, 38);
+            this.btnBuscar.Size = new System.Drawing.Size(125, 47);
             this.btnBuscar.TabIndex = 23;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -193,25 +199,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Location = new System.Drawing.Point(16, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 13);
+            this.label1.Size = new System.Drawing.Size(149, 16);
             this.label1.TabIndex = 55;
             this.label1.Text = "Id IngresaMateriaPrima:";
             // 
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(186, 10);
+            this.textBox1.Location = new System.Drawing.Point(248, 12);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 20);
+            this.textBox1.Size = new System.Drawing.Size(257, 22);
             this.textBox1.TabIndex = 56;
             // 
             // Core_IngresaMateriaPrima
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 394);
+            this.ClientSize = new System.Drawing.Size(827, 485);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -222,10 +230,10 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dtFecha);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Core_IngresaMateriaPrima";
             this.Text = "Core_IngresaMateriaPrima";
             this.Load += new System.EventHandler(this.Core_IngresaMateriaPrima_Load);
@@ -241,7 +249,6 @@
         private System.Windows.Forms.DateTimePicker dtFecha;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.Label label5;

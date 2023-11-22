@@ -71,12 +71,12 @@ namespace CapaPresentacion
         }
         private void LimpiarVariables()
         {
-            txt_Idproveedor.Text = " ";
-            txt_Nombrecompleto.Text = " ";
-            txt_Numerodocumento.Text = " ";
-            txt_Correo.Text = " ";
-            txt_Telefonocontacto.Text = " ";
-            txtIdUbigeo.Text = " ";
+            txt_Idproveedor.Text = "";
+            txt_Nombrecompleto.Text = "";
+            txt_Numerodocumento.Text = "";
+            txt_Correo.Text = "";
+            txt_Telefonocontacto.Text = "";
+            txtIdUbigeo.Text = "";
         }
 
         private void btn_Nuevo_Click(object sender, EventArgs e)

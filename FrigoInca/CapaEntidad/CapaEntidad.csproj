@@ -43,9 +43,12 @@
   <ItemGroup>
     <Compile Include="entAnimal.cs" />
     <Compile Include="entCliente.cs" />
+    <Compile Include="entCombo1.cs" />
+    <Compile Include="entCombo2.cs" />
     <Compile Include="entCorte.cs" />
     <Compile Include="entDescuento.cs" />
     <Compile Include="entIngresaMateriaPrima.cs" />
+    <Compile Include="entLoteProducto.cs" />
     <Compile Include="entNombreproducto.cs" />
     <Compile Include="entOrdencompra.cs" />
     <Compile Include="entOrdenVenta.cs" />
