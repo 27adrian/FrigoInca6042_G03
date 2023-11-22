@@ -39,12 +39,11 @@ namespace CapaDatos
                 while (dr.Read())
                 {
                     entIngresaMateriaPrima mp = new entIngresaMateriaPrima();
-                    mp.IdIngresaMateriaPrima = Convert.ToInt32(dr["IdIngresaMateriaPrima"]);
-                    mp.IdOrdenCompra = Convert.ToInt32(dr["IdOrdenCompra"]);
-                    mp.Proveedor = dr["Proveedor"].ToString();
-                    mp.MateriaPrima = dr["MateriaPrima"].ToString();
-                    mp.Peso = dr["Peso"].ToString();
-                    mp.RegistroIngresoMP = Convert.ToDateTime(dr["RegistroIngresoMP"]);
+                    mp.IdIngresomateriaprima = Convert.ToInt32(dr["IdIngresomateriaprima"]);
+                    mp.IdOrdencompra = Convert.ToInt32(dr["IdOrdencompra"]);
+                    mp.Peso = Convert.ToDecimal(dr["Peso"].ToString());
+                    mp.Calidad = dr["Calidad"].ToString();
+                    mp.Fecha = Convert.ToDateTime(dr["Fecha"]);
                     lista.Add(mp);
                 }
             }
@@ -57,6 +56,36 @@ namespace CapaDatos
                 cmd.Connection.Close();
             }
             return lista;
+        }
+        public Boolean InsertarMateriaprima(entIngresaMateriaPrima animal)
+        {
+            SqlCommand cmd = null;
+            Boolean insertado = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("InsertarMateriaprima", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdOrdencompra", animal.IdOrdencompra);
+                cmd.Parameters.AddWithValue("@Peso", animal.Peso);
+                cmd.Parameters.AddWithValue("@Calidad", animal.Calidad);
+                cmd.Parameters.AddWithValue("@Fecha", animal.Fecha);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    insertado = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return insertado;
         }
     }
 }

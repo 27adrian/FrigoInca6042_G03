@@ -28,5 +28,9 @@ namespace CapaLogicaNegocio
         {
             return datIngresaMateriaPrima.Instancia.ListarMateriaPrima();
         }
+        public void InsertarMateriaprima(entIngresaMateriaPrima animal)
+        {
+            datIngresaMateriaPrima.Instancia.InsertarMateriaprima(animal);
+        }
     }
 }
