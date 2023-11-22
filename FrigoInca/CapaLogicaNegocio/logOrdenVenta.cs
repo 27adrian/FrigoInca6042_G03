@@ -33,5 +33,9 @@ namespace CapaLogicaNegocio
         {
             datOrdenVenta.Instancia.InsertarOrdenVenta(animal);
         }
+        public void DeshabilitarOrdenVenta(entOrdenVenta Cli)
+        {
+            datOrdenVenta.Instancia.DeshabilitarOrdenVenta(Cli);
+        }
     }
 }

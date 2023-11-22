@@ -90,5 +90,29 @@ namespace CapaDatos
             }
             return insertado;
         }
+        public Boolean DeshabilitarOrdenVenta(entOrdenVenta Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean delete = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("DeshabilitarOrdenVenta", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdOrdendeventa", Cli.IdOrdendeventa);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    delete = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return delete;
+        }
     }
 }

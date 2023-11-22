@@ -21,9 +21,27 @@ namespace FrigoInca
             LlenarCliente();
             LlenarDescuento();
             LlenarFormapago();
+            dgvOrdenventa.CellClick += dgvOrdenventa_CellClick;
             cbEstadoventa.Checked = true;
             txtIdOrdendeventa.Enabled = false;
 
+        }
+        private void dgvOrdenventa_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica si el clic es en una fila válida
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvOrdenventa.Rows[e.RowIndex];
+
+                // Suponiendo que tienes las columnas 'IdUbigeo', 'Departamento', 'Provincia' y 'Distrito'
+                txtIdOrdendeventa.Text = row.Cells["IdOrdendeventa"].Value.ToString();
+                cbIdloteproducto.Text = row.Cells["Idloteproducto"].Value.ToString();
+                cbCliente.Text = row.Cells["IdCliente"].Value.ToString();
+                cbDescuento.Text = row.Cells["IdDescuento"].Value.ToString();
+                cbIdFormapago.Text = row.Cells["IdFormapago"].Value.ToString();
+                cbEstadoventa.Checked = Convert.ToBoolean(row.Cells["Estadoventa"].Value);
+                dtFechaventa.Value = Convert.ToDateTime(row.Cells["Fechaventa"].Value);
+            }
         }
         private void LlenarCliente()
         {
@@ -69,6 +87,21 @@ namespace FrigoInca
                 MessageBox.Show("Error.." + ex);
             }
 
+            ListarOrdenVenta();
+        }
+
+        private void btnDeshabilitar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entOrdenVenta c = new entOrdenVenta();
+                c.IdOrdendeventa = int.Parse(txtIdOrdendeventa.Text.Trim());
+                logOrdenVenta.Instancia.DeshabilitarOrdenVenta(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
             ListarOrdenVenta();
         }
     }
