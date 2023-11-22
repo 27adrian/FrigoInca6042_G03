@@ -92,10 +92,11 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("EditarRequerimientoCompra", cn); // Adjust with the correct stored procedure name
+                cmd = new SqlCommand("ModificarCantidadRequerimientoCompra", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdAnimal", MP.IdAnimal);
-                cmd.Parameters.AddWithValue("@Cantidad", MP.Cantidad);
+                cmd.Parameters.AddWithValue("@IdRequerimientocompra", MP.IdRequerimientocompra); // Asegúrate de tener esta propiedad en tu entidad
+                cmd.Parameters.AddWithValue("@NuevaCantidad", MP.Cantidad);
+
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -107,8 +108,12 @@ namespace CapaDatos
             {
                 throw e;
             }
-            finally { cmd.Connection.Close(); }
+            finally
+            {
+                cmd.Connection.Close();
+            }
             return edita;
         }
+
     }
 }

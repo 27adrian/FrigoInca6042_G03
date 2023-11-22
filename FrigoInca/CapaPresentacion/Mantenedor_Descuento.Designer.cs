@@ -52,6 +52,7 @@
             this.txtProcentaje.Name = "txtProcentaje";
             this.txtProcentaje.Size = new System.Drawing.Size(100, 20);
             this.txtProcentaje.TabIndex = 6;
+            this.txtProcentaje.TextChanged += new System.EventHandler(this.txtProcentaje_TextChanged);
             // 
             // dgvDescuento
             // 

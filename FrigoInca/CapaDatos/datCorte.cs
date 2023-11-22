@@ -56,5 +56,33 @@ namespace CapaDatos
             }
             return lista;
         }
+        public Boolean InsertarCorte(entCorte corte)
+        {
+            SqlCommand cmd = null;
+            Boolean insertado = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("InsertarCorte", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Nombrecorte", corte.NombreCorte);
+                cmd.Parameters.AddWithValue("@Preciocorte", corte.Preciocorte);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    insertado = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return insertado;
+        }
     }
 }

@@ -20,11 +20,13 @@ namespace FrigoInca
             LlenarComboBoxAnimales();
             ListarRequerimientosCompra();
             dgvRequerimientocompra.CellClick += dgvRequerimiento_CellClick;
+            cbIdAnimal.DropDownStyle = ComboBoxStyle.DropDownList;
 
         }
         private void dgvRequerimiento_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             cbIdAnimal.Enabled = false;
+            txtIdRequerimientocompra.Enabled = false;
 
             // Verifica si el clic es en una fila válida
             if (e.RowIndex >= 0)
@@ -32,6 +34,7 @@ namespace FrigoInca
                 DataGridViewRow row = dgvRequerimientocompra.Rows[e.RowIndex];
 
                 // Suponiendo que tienes las columnas 'IdUbigeo', 'Departamento', 'Provincia' y 'Distrito'
+                txtIdRequerimientocompra.Text = row.Cells["IdRequerimientocompra"].Value.ToString();
                 cbIdAnimal.Text = row.Cells["IdAnimal"].Value.ToString();
                 txtCantidad.Text = row.Cells["Cantidad"].Value.ToString();
             }
@@ -70,8 +73,12 @@ namespace FrigoInca
             try
             {
                 entRequerimientocompra c = new entRequerimientocompra();
-                c.IdAnimal = int.Parse(cbIdAnimal.Text.Trim());
+
+                // Obtener el IdRequerimientocompra del control de texto
+                c.IdRequerimientocompra = int.Parse(txtIdRequerimientocompra.Text); // Usar .Text para obtener el valor
+                c.IdAnimal = int.Parse(cbIdAnimal.SelectedValue.ToString()); // Asegúrate de que este valor es numérico
                 c.Cantidad = int.Parse(txtCantidad.Text.Trim());
+
                 logRequerimientcompra.Instancia.EditarRequerimientoCompra(c);
             }
             catch (Exception ex)
@@ -79,6 +86,12 @@ namespace FrigoInca
                 MessageBox.Show("Error.." + ex);
             }
             ListarRequerimientosCompra();
+        }
+
+
+        private void cbIdAnimal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

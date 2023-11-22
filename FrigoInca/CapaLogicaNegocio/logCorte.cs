@@ -24,5 +24,9 @@ namespace CapaLogicaNegocio
         {
             return datCorte.Instancia.ListarCorte();
         }
+        public void InsertarCorte(entCorte corte)
+        {
+            datCorte.Instancia.InsertarCorte(corte);
+        }
     }
 }

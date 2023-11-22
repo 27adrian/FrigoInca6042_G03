@@ -18,6 +18,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             ListarDescuento();
+            txtProcentaje.KeyPress += txtProcentaje_KeyPress;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -39,6 +40,26 @@ namespace CapaPresentacion
         public void ListarDescuento()
         {
             dgvDescuento.DataSource = logDescuento.Instancia.ListarDescuento();
+        }
+        private void txtProcentaje_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo números, punto decimal y teclas de control
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Solo permite un punto decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtProcentaje_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
