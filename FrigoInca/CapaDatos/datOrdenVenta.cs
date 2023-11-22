@@ -114,5 +114,40 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return delete;
         }
+        public entOrdenVenta BuscarOrdenVenta(int IdOrdendeventa)
+        {
+            SqlCommand cmd = null;
+            entOrdenVenta ordenVenta = null;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("BuscarOrdenVentaPorID", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdOrdendeventa", IdOrdendeventa);
+
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    ordenVenta = new entOrdenVenta();
+                    ordenVenta.IdOrdendeventa = Convert.ToInt32(dr["IdOrdendeventa"]);
+                    ordenVenta.Idloteproducto = Convert.ToInt32(dr["Idloteproducto"]);
+                    ordenVenta.Idloteproducto = Convert.ToInt32(dr["IdCliente"]);
+                    ordenVenta.Idloteproducto = Convert.ToInt32(dr["IdDescuento"]);
+                    ordenVenta.Idloteproducto = Convert.ToInt32(dr["IdFormapago"]);
+                    ordenVenta.Idloteproducto = Convert.ToInt32(dr["Estadoventa"]);
+                    ordenVenta.Idloteproducto = Convert.ToInt32(dr["Fechaventa"]);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return ordenVenta;
+        }
     }
 }

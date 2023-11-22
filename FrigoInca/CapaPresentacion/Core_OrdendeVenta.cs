@@ -104,5 +104,34 @@ namespace FrigoInca
             }
             ListarOrdenVenta();
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int IdOrdendeventa = int.Parse(txtNumDoc1.Text.Trim()); // Asumiendo que txtIdBusqueda es tu TextBox para la entrada del ID
+                entOrdenVenta resultado = logOrdenVenta.Instancia.BuscarOrdenVenta(IdOrdendeventa);
+
+                if (resultado != null)
+                {
+                    // Si se encuentra la orden de venta, puedes mostrar sus detalles
+                    // Por ejemplo, podrías cargar los detalles en los controles del formulario o en un DataGridView
+                    txtIdOrdendeventa.Text = resultado.IdOrdendeventa.ToString();
+                    // ... establecer el resto de los controles ...
+                }
+                else
+                {
+                    MessageBox.Show("Orden de venta no encontrada.");
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Por favor, ingrese un ID válido.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
     }
 }

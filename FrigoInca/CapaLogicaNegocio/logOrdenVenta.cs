@@ -37,5 +37,10 @@ namespace CapaLogicaNegocio
         {
             datOrdenVenta.Instancia.DeshabilitarOrdenVenta(Cli);
         }
+        public entOrdenVenta BuscarOrdenVenta(int IdOrdendeventa)
+        {
+            return datOrdenVenta.Instancia.BuscarOrdenVenta(IdOrdendeventa);
+        }
+
     }
 }
