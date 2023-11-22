@@ -45,21 +45,26 @@ namespace CapaPresentacion
 
         private void dgv_Proveedor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) 
+            try
             {
-                DataGridViewRow row = dgv_Proveedor.Rows[e.RowIndex];
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = dgv_Proveedor.Rows[e.RowIndex];
 
-                txt_Idproveedor.Text = row.Cells[0].Value?.ToString();
-                cb_Tipoproveedor.Text = row.Cells[1].Value?.ToString();
-                txt_Nombrecompleto.Text = row.Cells[2].Value?.ToString();
-                cb_Tipodocumento.Text = row.Cells[3].Value?.ToString();
-                txt_Numerodocumento.Text = row.Cells[4].Value?.ToString();
-                txt_Correo.Text = row.Cells[5].Value?.ToString();
-                txt_Telefonocontacto.Text = row.Cells[6].Value?.ToString();
-                cb_Estadodelproveedor.Checked = Convert.ToBoolean(row.Cells[7].Value);
-                dt_Fechaderegistroproveedor.Value = Convert.ToDateTime(row.Cells[8].Value);
+                    txt_Idproveedor.Text = row.Cells[0].Value?.ToString();
+                    cb_Tipoproveedor.Text = row.Cells[1].Value?.ToString();
+                    txt_Nombrecompleto.Text = row.Cells[2].Value?.ToString();
+                    cb_Tipodocumento.Text = row.Cells[3].Value?.ToString();
+                    txt_Numerodocumento.Text = row.Cells[4].Value?.ToString();
+                    txt_Correo.Text = row.Cells[5].Value?.ToString();
+                    txt_Telefonocontacto.Text = row.Cells[6].Value?.ToString();
+                    cb_Estadodelproveedor.Checked = Convert.ToBoolean(row.Cells[7].Value);
+                    dt_Fechaderegistroproveedor.Value = Convert.ToDateTime(row.Cells[8].Value);
 
+                }
             }
+            catch { }
+
         }
         private void CargarAnimalesEnComboBox()
         {
@@ -136,7 +141,11 @@ namespace CapaPresentacion
                 c.Estadoproveedor = cb_Estadodelproveedor.Checked;
                 c.Fecharegistroproveedor = dt_Fechaderegistroproveedor.Value;
                 c.IdUbigeo = int.Parse(txtIdUbigeo.Text.Trim());
-                logProveedor.Instancia.Insertarproveedor(c);
+                //logProveedor.Instancia.Insertarproveedor(c);
+                if (logProveedor.Instancia.Insertarproveedor(c))
+                {
+                    MessageBox.Show("Ingreso correcto de datos.", "CONFIRMACION INGRESO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
@@ -177,7 +186,7 @@ namespace CapaPresentacion
             gb_Proveedor.Enabled = false;
         }
 
-       
+
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {

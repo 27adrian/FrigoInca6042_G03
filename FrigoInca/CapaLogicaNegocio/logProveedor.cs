@@ -27,9 +27,9 @@ namespace CapaLogicaNegocio
             return datProveedor.Instancia.Listarproveedor();
         }
         ///inserta
-        public void Insertarproveedor(entProveedor Prov)
+        public bool Insertarproveedor(entProveedor Prov)
         {
-            datProveedor.Instancia.Insertarproveedor(Prov);
+            return datProveedor.Instancia.Insertarproveedor(Prov);
         }
         //edita
         public void Editarproveedor(entProveedor Prov)

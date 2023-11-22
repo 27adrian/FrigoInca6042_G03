@@ -34,7 +34,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("Listarproveedor", cn);
+                cmd = new SqlCommand("ListarProveedor", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -43,13 +43,13 @@ namespace CapaDatos
                     entProveedor Prov = new entProveedor();
                     Prov.Idproveedor = Convert.ToInt32(dr["Idproveedor"]);
                     Prov.Tipoproveedor = dr["Tipoproveedor"].ToString();
-                    Prov.Nombrecompletoproveedor = dr["Nombrecompleto"].ToString();
-                    Prov.Animal = dr["Animal"].ToString();
+                    Prov.Nombrecompletoproveedor = dr["Nombreproveedor"].ToString();
+                    Prov.Animal = dr["idAnimal"].ToString();
                     Prov.Tipodocumentoproveedor = dr["Tipodocumento"].ToString();
                     Prov.Numerodocumentoproveedor = Convert.ToInt64(dr["Numerodocumento"]);
                     Prov.Correoproveedor = dr["Correo"].ToString();
-                    Prov.Telefonocontactoproveedor = Convert.ToInt32(dr["Telefonocontacto"]);
-                    Prov.Estadoproveedor = Convert.ToBoolean(dr["Estadoproveedor"]);
+                    Prov.Telefonocontactoproveedor = Convert.ToInt32(dr["Telefono"]);
+                    Prov.Estadoproveedor = Convert.ToBoolean(dr["Estado"]);
                     Prov.Fecharegistroproveedor = Convert.ToDateTime(dr["Fecharegistroproveedor"]);
                     Prov.IdUbigeo = Convert.ToInt32(dr["IdUbigeo"]);
                     lista.Add(Prov);
@@ -76,13 +76,13 @@ namespace CapaDatos
                 cmd = new SqlCommand("Insertarproveedor", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Tipoproveedor", Prov.Tipoproveedor);
-                cmd.Parameters.AddWithValue("@Nombrecompleto", Prov.Nombrecompletoproveedor);
-                cmd.Parameters.AddWithValue("@Animal", Prov.Nombrecompletoproveedor);
+                cmd.Parameters.AddWithValue("@Nombreproveedor", Prov.Nombrecompletoproveedor);
+                cmd.Parameters.AddWithValue("@IdAnimal", Prov.Animal);
                 cmd.Parameters.AddWithValue("@Tipodocumento", Prov.Tipodocumentoproveedor);
                 cmd.Parameters.AddWithValue("@Numerodocumento", Prov.Numerodocumentoproveedor);
                 cmd.Parameters.AddWithValue("@Correo", Prov.Correoproveedor);
-                cmd.Parameters.AddWithValue("@Telefonocontacto", Prov.Telefonocontactoproveedor);
-                cmd.Parameters.AddWithValue("@Estadoproveedor", Prov.Estadoproveedor);
+                cmd.Parameters.AddWithValue("@Telefono", Prov.Telefonocontactoproveedor);
+                cmd.Parameters.AddWithValue("@Estado", Prov.Estadoproveedor);
                 cmd.Parameters.AddWithValue("@Fecharegistroproveedor", Prov.Fecharegistroproveedor);
                 cmd.Parameters.AddWithValue("@IdUbigeo", Prov.IdUbigeo);
                 cn.Open();
