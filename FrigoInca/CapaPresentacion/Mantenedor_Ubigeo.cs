@@ -19,6 +19,16 @@ namespace FrigoInca
             InitializeComponent();
             ListarUbigeo();
             dgvUbigeo.CellClick += dgvUbigeo_CellClick;
+            txtDepartamento.KeyPress += txtDepartamento_KeyPress;
+
+        }
+        private void txtDepartamento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo letras y teclas de control
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void Mantenedor_Ubigeo_Load(object sender, EventArgs e)
@@ -104,6 +114,11 @@ namespace FrigoInca
         public void ListarUbigeo()
         {
             dgvUbigeo.DataSource = logUbigeo.Instancia.ListarUbigeo();
+        }
+
+        private void txtDepartamento_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

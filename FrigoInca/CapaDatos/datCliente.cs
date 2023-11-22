@@ -43,12 +43,12 @@ namespace CapaDatos
                     entCliente Cli = new entCliente();
                     Cli.Idcliente = Convert.ToInt32(dr["Idcliente"]);
                     Cli.Tipocliente = dr["Tipocliente"].ToString();
-                    Cli.Nombrecompletocliente = dr["Nombrecompleto"].ToString();
+                    Cli.Nombrecompletocliente = dr["Nombrecliente"].ToString();
                     Cli.Tipodocumentocliente = dr["Tipodocumento"].ToString();
                     Cli.Numerodocumentocliente = Convert.ToInt64(dr["Numerodocumento"]);
                     Cli.Correocliente = dr["Correo"].ToString();
-                    Cli.Telefonocontactocliente = Convert.ToInt32(dr["Telefonocontacto"]);
-                    Cli.Estadocliente = Convert.ToBoolean(dr["Estadocliente"]);
+                    Cli.Telefonocontactocliente = Convert.ToInt32(dr["Telefono"]);
+                    Cli.Estadocliente = Convert.ToBoolean(dr["Estado"]);
                     Cli.Fecharegistrocliente = Convert.ToDateTime(dr["Fecharegistrocliente"]);
                     Cli.IdUbigeo = Convert.ToInt32(dr["IdUbigeo"]);
                     lista.Add(Cli);
@@ -75,12 +75,12 @@ namespace CapaDatos
                 cmd = new SqlCommand("Insertarcliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Tipocliente", Cli.Tipocliente);
-                cmd.Parameters.AddWithValue("@Nombrecompleto", Cli.Nombrecompletocliente);
+                cmd.Parameters.AddWithValue("@Nombrecliente", Cli.Nombrecompletocliente);
                 cmd.Parameters.AddWithValue("@Tipodocumento", Cli.Tipodocumentocliente);
                 cmd.Parameters.AddWithValue("@Numerodocumento", Cli.Numerodocumentocliente);
                 cmd.Parameters.AddWithValue("@Correo", Cli.Correocliente);
-                cmd.Parameters.AddWithValue("@Telefonocontacto", Cli.Telefonocontactocliente);
-                cmd.Parameters.AddWithValue("@Estadocliente", Cli.Estadocliente);
+                cmd.Parameters.AddWithValue("@Telefono", Cli.Telefonocontactocliente);
+                cmd.Parameters.AddWithValue("@Estado", Cli.Estadocliente);
                 cmd.Parameters.AddWithValue("@Fecharegistrocliente", Cli.Fecharegistrocliente);
                 cmd.Parameters.AddWithValue("@IdUbigeo", Cli.IdUbigeo);
 
@@ -110,13 +110,14 @@ namespace CapaDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Idcliente", Cli.Idcliente);
                 cmd.Parameters.AddWithValue("@Tipocliente", Cli.Tipocliente);
-                cmd.Parameters.AddWithValue("@Nombrecompleto", Cli.Nombrecompletocliente);
+                cmd.Parameters.AddWithValue("@Nombrecliente", Cli.Nombrecompletocliente);
                 cmd.Parameters.AddWithValue("@Tipodocumento", Cli.Tipodocumentocliente);
                 cmd.Parameters.AddWithValue("@Numerodocumento", Cli.Numerodocumentocliente);
                 cmd.Parameters.AddWithValue("@Correo", Cli.Correocliente);
-                cmd.Parameters.AddWithValue("@Telefonocontacto", Cli.Telefonocontactocliente);
-                cmd.Parameters.AddWithValue("@Estadocliente", Cli.Estadocliente);
+                cmd.Parameters.AddWithValue("@Telefono", Cli.Telefonocontactocliente);
+                cmd.Parameters.AddWithValue("@Estado", Cli.Estadocliente);
                 cmd.Parameters.AddWithValue("@Fecharegistrocliente", Cli.Fecharegistrocliente);
+                cmd.Parameters.AddWithValue("@IdUbigeo", Cli.IdUbigeo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -166,7 +167,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
                 cmd = new SqlCommand("BuscarCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@numDoc", Cli.Numerodocumentocliente);
+                cmd.Parameters.AddWithValue("Numerodocumento", Cli.Numerodocumentocliente);
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
@@ -175,13 +176,14 @@ namespace CapaDatos
 
                     Cliente.Idcliente = Convert.ToInt32(dr["Idcliente"]);
                     Cliente.Tipocliente = dr["Tipocliente"].ToString();
-                    Cliente.Nombrecompletocliente = dr["Nombrecompleto"].ToString();
+                    Cliente.Nombrecompletocliente = dr["Nombrecliente"].ToString();
                     Cliente.Tipodocumentocliente = dr["Tipodocumento"].ToString();
                     Cliente.Numerodocumentocliente = Convert.ToInt64(dr["Numerodocumento"]);
                     Cliente.Correocliente = dr["Correo"].ToString();
-                    Cliente.Telefonocontactocliente = Convert.ToInt32(dr["Telefonocontacto"]);
-                    Cliente.Estadocliente = Convert.ToBoolean(dr["Estadocliente"]);
+                    Cliente.Telefonocontactocliente = Convert.ToInt32(dr["Telefono"]);
+                    Cliente.Estadocliente = Convert.ToBoolean(dr["Estado"]);
                     Cliente.Fecharegistrocliente = Convert.ToDateTime(dr["Fecharegistrocliente"]);
+                    Cliente.IdUbigeo = Convert.ToInt32(dr["IdUbigeo"]);
                     lista.Add(Cliente);
                 }
             }

@@ -144,6 +144,7 @@
             // 
             // dgvUbigeo
             // 
+            this.dgvUbigeo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUbigeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUbigeo.Location = new System.Drawing.Point(15, 351);
             this.dgvUbigeo.Name = "dgvUbigeo";
@@ -234,8 +235,8 @@
             // 
             this.cb_Tipodocumento.Enabled = false;
             this.cb_Tipodocumento.Items.AddRange(new object[] {
-            "DNI",
-            "RUC"});
+            "RUC",
+            "DNI"});
             this.cb_Tipodocumento.Location = new System.Drawing.Point(172, 163);
             this.cb_Tipodocumento.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Tipodocumento.Name = "cb_Tipodocumento";
@@ -254,6 +255,7 @@
             // 
             // cb_Tipoproveedor
             // 
+            this.cb_Tipoproveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Tipoproveedor.Items.AddRange(new object[] {
             "Empresa",
             "Independiente"});
@@ -262,7 +264,7 @@
             this.cb_Tipoproveedor.Name = "cb_Tipoproveedor";
             this.cb_Tipoproveedor.Size = new System.Drawing.Size(199, 21);
             this.cb_Tipoproveedor.TabIndex = 15;
-            this.cb_Tipoproveedor.Text = "--Seleccionar tipo de proveedor--";
+            this.cb_Tipoproveedor.SelectedIndexChanged += new System.EventHandler(this.cb_Tipoproveedor_SelectedIndexChanged_1);
             // 
             // btn_Agregar
             // 

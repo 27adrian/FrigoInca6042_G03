@@ -76,6 +76,7 @@
             this.txtDepartamento.Name = "txtDepartamento";
             this.txtDepartamento.Size = new System.Drawing.Size(100, 20);
             this.txtDepartamento.TabIndex = 5;
+            this.txtDepartamento.TextChanged += new System.EventHandler(this.txtDepartamento_TextChanged);
             // 
             // txtProvincia
             // 
@@ -93,9 +94,11 @@
             // 
             // dgvUbigeo
             // 
+            this.dgvUbigeo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUbigeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUbigeo.Location = new System.Drawing.Point(12, 165);
             this.dgvUbigeo.Name = "dgvUbigeo";
+            this.dgvUbigeo.ReadOnly = true;
             this.dgvUbigeo.Size = new System.Drawing.Size(442, 150);
             this.dgvUbigeo.TabIndex = 8;
             // 

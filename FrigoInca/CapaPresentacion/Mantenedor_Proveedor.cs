@@ -295,7 +295,9 @@ namespace CapaPresentacion
 
         }
 
-        private void cb_Tipoproveedor_SelectedIndexChanged(object sender, EventArgs e)
+        
+
+        private void cb_Tipoproveedor_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (cb_Tipoproveedor.SelectedIndex == 0)
             {

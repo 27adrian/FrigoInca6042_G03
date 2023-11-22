@@ -27,9 +27,9 @@ namespace CapaLogicaNegocio
             return datCliente.Instancia.Listarcliente();
         }
         ///inserta
-        public void Insertarcliente(entCliente Cli)
+        public bool Insertarcliente(entCliente Cli)
         {
-            datCliente.Instancia.Insertarcliente(Cli);
+            return datCliente.Instancia.Insertarcliente(Cli);
         }
         //edita
         public void Editarcliente(entCliente Cli)

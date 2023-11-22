@@ -38,6 +38,10 @@
             this.txt_Numerodocumento = new System.Windows.Forms.TextBox();
             this.txt_Correo = new System.Windows.Forms.TextBox();
             this.gb_Cliente = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dgvUbigeo = new System.Windows.Forms.DataGridView();
+            this.txtIdUbigeo = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txt_Idcliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,14 +62,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtNumDoc1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dgvUbigeo = new System.Windows.Forms.DataGridView();
-            this.txtIdUbigeo = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.gb_Cliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUbigeo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Cliente)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUbigeo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTipoCliente
@@ -173,7 +173,42 @@
             this.gb_Cliente.TabIndex = 11;
             this.gb_Cliente.TabStop = false;
             this.gb_Cliente.Text = "Informacion cliente";
-            this.gb_Cliente.Enter += new System.EventHandler(this.gb_Cliente_Enter);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(18, 277);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "UBIGEO:";
+            // 
+            // dgvUbigeo
+            // 
+            this.dgvUbigeo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUbigeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUbigeo.Location = new System.Drawing.Point(21, 302);
+            this.dgvUbigeo.Name = "dgvUbigeo";
+            this.dgvUbigeo.ReadOnly = true;
+            this.dgvUbigeo.RowHeadersWidth = 51;
+            this.dgvUbigeo.Size = new System.Drawing.Size(699, 132);
+            this.dgvUbigeo.TabIndex = 35;
+            // 
+            // txtIdUbigeo
+            // 
+            this.txtIdUbigeo.Location = new System.Drawing.Point(178, 236);
+            this.txtIdUbigeo.Name = "txtIdUbigeo";
+            this.txtIdUbigeo.Size = new System.Drawing.Size(199, 20);
+            this.txtIdUbigeo.TabIndex = 34;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(18, 236);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Id Ubigeo:";
             // 
             // txt_Idcliente
             // 
@@ -219,9 +254,10 @@
             // 
             // cb_Tipodocumento
             // 
+            this.cb_Tipodocumento.Enabled = false;
             this.cb_Tipodocumento.Items.AddRange(new object[] {
-            "DNI",
-            "RUC"});
+            "RUC",
+            "DNI"});
             this.cb_Tipodocumento.Location = new System.Drawing.Point(176, 121);
             this.cb_Tipodocumento.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Tipodocumento.Name = "cb_Tipodocumento";
@@ -240,6 +276,7 @@
             // 
             // cb_Tipocliente
             // 
+            this.cb_Tipocliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Tipocliente.Items.AddRange(new object[] {
             "Empresa",
             "Independiente"});
@@ -248,7 +285,7 @@
             this.cb_Tipocliente.Name = "cb_Tipocliente";
             this.cb_Tipocliente.Size = new System.Drawing.Size(199, 21);
             this.cb_Tipocliente.TabIndex = 15;
-            this.cb_Tipocliente.Text = "--Seleccionar tipo de cliente--";
+            this.cb_Tipocliente.SelectedIndexChanged += new System.EventHandler(this.cb_Tipocliente_SelectedIndexChanged_1);
             // 
             // btn_Cancelar
             // 
@@ -292,6 +329,7 @@
             // 
             // dgv_Cliente
             // 
+            this.dgv_Cliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Cliente.Location = new System.Drawing.Point(12, 12);
             this.dgv_Cliente.Name = "dgv_Cliente";
@@ -299,6 +337,7 @@
             this.dgv_Cliente.RowHeadersWidth = 51;
             this.dgv_Cliente.Size = new System.Drawing.Size(966, 256);
             this.dgv_Cliente.TabIndex = 12;
+            this.dgv_Cliente.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Cliente_CellEnter_1);
             // 
             // btn_Nuevo
             // 
@@ -373,41 +412,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 277);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "UBIGEO:";
-            // 
-            // dgvUbigeo
-            // 
-            this.dgvUbigeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUbigeo.Location = new System.Drawing.Point(21, 302);
-            this.dgvUbigeo.Name = "dgvUbigeo";
-            this.dgvUbigeo.ReadOnly = true;
-            this.dgvUbigeo.RowHeadersWidth = 51;
-            this.dgvUbigeo.Size = new System.Drawing.Size(699, 132);
-            this.dgvUbigeo.TabIndex = 35;
-            // 
-            // txtIdUbigeo
-            // 
-            this.txtIdUbigeo.Location = new System.Drawing.Point(178, 236);
-            this.txtIdUbigeo.Name = "txtIdUbigeo";
-            this.txtIdUbigeo.Size = new System.Drawing.Size(199, 20);
-            this.txtIdUbigeo.TabIndex = 34;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(18, 236);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "Id Ubigeo:";
-            // 
             // Mantenedor_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -422,13 +426,12 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Mantenedor_Cliente";
             this.Text = "Mantenedor_Cliente";
-            this.Load += new System.EventHandler(this.MantenedorCliente_Load);
             this.gb_Cliente.ResumeLayout(false);
             this.gb_Cliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUbigeo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Cliente)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUbigeo)).EndInit();
             this.ResumeLayout(false);
 
         }
