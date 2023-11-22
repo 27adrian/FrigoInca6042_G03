@@ -28,5 +28,9 @@ namespace CapaLogicaNegocio
         {
             datCorte.Instancia.InsertarCorte(corte);
         }
+        public void EditarCorte(entCorte MP)
+        {
+            datCorte.Instancia.EditarCorte(MP);
+        }
     }
 }

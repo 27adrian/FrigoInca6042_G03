@@ -37,13 +37,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombrecorte = new System.Windows.Forms.TextBox();
             this.txtPreciocorte = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtIdCorte = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCorte)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvCorte
             // 
             this.dgvCorte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCorte.Location = new System.Drawing.Point(16, 124);
+            this.dgvCorte.Location = new System.Drawing.Point(16, 151);
             this.dgvCorte.Name = "dgvCorte";
             this.dgvCorte.Size = new System.Drawing.Size(464, 150);
             this.dgvCorte.TabIndex = 0;
@@ -60,7 +62,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(16, 92);
+            this.button1.Location = new System.Drawing.Point(16, 119);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -70,16 +72,17 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(138, 95);
+            this.button2.Location = new System.Drawing.Point(138, 122);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
             this.button2.Text = "Modificar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(263, 95);
+            this.button3.Location = new System.Drawing.Point(263, 122);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 4;
@@ -89,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 35);
+            this.label2.Location = new System.Drawing.Point(13, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 5;
@@ -98,7 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 64);
+            this.label3.Location = new System.Drawing.Point(13, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 6;
@@ -106,23 +109,41 @@
             // 
             // txtNombrecorte
             // 
-            this.txtNombrecorte.Location = new System.Drawing.Point(107, 27);
+            this.txtNombrecorte.Location = new System.Drawing.Point(107, 54);
             this.txtNombrecorte.Name = "txtNombrecorte";
             this.txtNombrecorte.Size = new System.Drawing.Size(100, 20);
             this.txtNombrecorte.TabIndex = 7;
             // 
             // txtPreciocorte
             // 
-            this.txtPreciocorte.Location = new System.Drawing.Point(107, 61);
+            this.txtPreciocorte.Location = new System.Drawing.Point(107, 88);
             this.txtPreciocorte.Name = "txtPreciocorte";
             this.txtPreciocorte.Size = new System.Drawing.Size(100, 20);
             this.txtPreciocorte.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "IdCorte:";
+            // 
+            // txtIdCorte
+            // 
+            this.txtIdCorte.Location = new System.Drawing.Point(107, 28);
+            this.txtIdCorte.Name = "txtIdCorte";
+            this.txtIdCorte.Size = new System.Drawing.Size(100, 20);
+            this.txtIdCorte.TabIndex = 10;
             // 
             // Mantenedor_Corte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 298);
+            this.ClientSize = new System.Drawing.Size(498, 344);
+            this.Controls.Add(this.txtIdCorte);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPreciocorte);
             this.Controls.Add(this.txtNombrecorte);
             this.Controls.Add(this.label3);
@@ -152,5 +173,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNombrecorte;
         private System.Windows.Forms.TextBox txtPreciocorte;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtIdCorte;
     }
 }

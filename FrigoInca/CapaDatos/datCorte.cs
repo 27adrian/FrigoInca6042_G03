@@ -84,5 +84,35 @@ namespace CapaDatos
             }
             return insertado;
         }
+        public Boolean EditarCorte(entCorte MP)
+        {
+            SqlCommand cmd = null;
+            Boolean edita = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("EditarCorte", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdCorte", MP.IdCorte); // Asegúrate de tener esta propiedad en tu entidad
+                cmd.Parameters.AddWithValue("@NuevoNombrecorte", MP.NombreCorte);
+                cmd.Parameters.AddWithValue("@NuevoPreciocorte", MP.Preciocorte);
+
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    edita = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return edita;
+        }
     }
 }

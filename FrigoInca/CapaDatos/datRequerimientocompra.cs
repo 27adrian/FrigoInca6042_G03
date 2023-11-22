@@ -114,6 +114,5 @@ namespace CapaDatos
             }
             return edita;
         }
-
     }
 }

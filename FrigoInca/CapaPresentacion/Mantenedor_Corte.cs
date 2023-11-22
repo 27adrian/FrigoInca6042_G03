@@ -20,8 +20,23 @@ namespace FrigoInca
             ListarCorte();
             txtNombrecorte.KeyPress += txtNombrecorte_KeyPress;
             txtPreciocorte.KeyPress += txtPreciocorte_KeyPress;
-        }
+            dgvCorte.CellClick += dgvCorte_CellClick;
 
+        }
+        private void dgvCorte_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIdCorte.Enabled = false;
+            // Verifica si el clic es en una fila válida
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvCorte.Rows[e.RowIndex];
+
+                // Suponiendo que tienes las columnas 'IdUbigeo', 'Departamento', 'Provincia' y 'Distrito'
+                txtIdCorte.Text = row.Cells["IdCorte"].Value.ToString();
+                txtNombrecorte.Text = row.Cells["Nombrecorte"].Value.ToString();
+                txtPreciocorte.Text = row.Cells["Preciocorte"].Value.ToString();
+            }
+        }
         private void Mantenedor_Corte_Load(object sender, EventArgs e)
         {
 
@@ -73,6 +88,25 @@ namespace FrigoInca
             }
 
             ListarCorte();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entCorte c = new entCorte();
+                c.IdCorte = int.Parse(txtIdCorte.Text);
+                c.NombreCorte = txtNombrecorte.Text; // No es necesario .ToString() ya que es un string
+                c.Preciocorte = Decimal.Parse(txtPreciocorte.Text.Trim()); // Cambiado a Decimal.Parse
+
+                logCorte.Instancia.EditarCorte(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            ListarCorte();
+
         }
     }
 }
