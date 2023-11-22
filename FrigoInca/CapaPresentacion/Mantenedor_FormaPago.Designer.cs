@@ -39,6 +39,7 @@
             // 
             // dgvFormaPago
             // 
+            this.dgvFormaPago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFormaPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFormaPago.Location = new System.Drawing.Point(15, 50);
             this.dgvFormaPago.Name = "dgvFormaPago";

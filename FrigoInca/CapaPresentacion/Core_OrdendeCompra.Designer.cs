@@ -54,6 +54,7 @@
             // 
             // dgv_Compras
             // 
+            this.dgv_Compras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Compras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Compras.Location = new System.Drawing.Point(15, 114);
             this.dgv_Compras.Name = "dgv_Compras";

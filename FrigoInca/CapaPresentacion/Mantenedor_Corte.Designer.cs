@@ -44,6 +44,7 @@
             // 
             // dgvCorte
             // 
+            this.dgvCorte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCorte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCorte.Location = new System.Drawing.Point(16, 151);
             this.dgvCorte.Name = "dgvCorte";

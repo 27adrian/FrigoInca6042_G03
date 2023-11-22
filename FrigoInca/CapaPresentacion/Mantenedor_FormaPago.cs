@@ -18,7 +18,19 @@ namespace FrigoInca
         {
             InitializeComponent();
             ListarMetodoPago();
+            dgvFormaPago.CellClick += dgvFormaPago_CellClick;
 
+        }
+        private void dgvFormaPago_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica si el clic es en una fila válida
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvFormaPago.Rows[e.RowIndex];
+
+                // Suponiendo que tienes las columnas 'IdUbigeo', 'Departamento', 'Provincia' y 'Distrito'
+                txt_NombreFP.Text = row.Cells["NombreFp"].Value.ToString();
+            }
         }
         public void ListarMetodoPago()
         {

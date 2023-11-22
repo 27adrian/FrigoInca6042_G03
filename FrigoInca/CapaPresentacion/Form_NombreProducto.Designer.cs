@@ -35,8 +35,9 @@
             // 
             // dgvNombreproducto
             // 
+            this.dgvNombreproducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNombreproducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNombreproducto.Location = new System.Drawing.Point(12, 39);
+            this.dgvNombreproducto.Location = new System.Drawing.Point(16, 107);
             this.dgvNombreproducto.Name = "dgvNombreproducto";
             this.dgvNombreproducto.Size = new System.Drawing.Size(410, 150);
             this.dgvNombreproducto.TabIndex = 0;
@@ -51,14 +52,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "NOMBRE PRODUCTO:";
             // 
-            // NombreProducto
+            // Form_NombreProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 217);
+            this.ClientSize = new System.Drawing.Size(463, 286);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvNombreproducto);
-            this.Name = "NombreProducto";
+            this.Name = "Form_NombreProducto";
             this.Text = "NombreProducto";
             ((System.ComponentModel.ISupportInitialize)(this.dgvNombreproducto)).EndInit();
             this.ResumeLayout(false);

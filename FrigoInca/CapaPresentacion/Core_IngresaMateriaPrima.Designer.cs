@@ -60,7 +60,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(383, 12);
+            this.btnAgregar.Location = new System.Drawing.Point(513, 12);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 56);
             this.btnAgregar.TabIndex = 12;
@@ -70,7 +70,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(383, 75);
+            this.button2.Location = new System.Drawing.Point(513, 75);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 66);
             this.button2.TabIndex = 13;
@@ -125,10 +125,11 @@
             // 
             // dgvMP
             // 
+            this.dgvMP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMP.Location = new System.Drawing.Point(12, 147);
             this.dgvMP.Name = "dgvMP";
-            this.dgvMP.Size = new System.Drawing.Size(446, 159);
+            this.dgvMP.Size = new System.Drawing.Size(576, 159);
             this.dgvMP.TabIndex = 28;
             this.dgvMP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -148,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 322);
+            this.ClientSize = new System.Drawing.Size(620, 322);
             this.Controls.Add(this.cbIdOrdencompra);
             this.Controls.Add(this.dgvMP);
             this.Controls.Add(this.cbCalidad);

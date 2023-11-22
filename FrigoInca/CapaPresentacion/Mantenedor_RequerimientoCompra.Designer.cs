@@ -59,6 +59,7 @@
             // 
             // dgvRequerimientocompra
             // 
+            this.dgvRequerimientocompra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRequerimientocompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRequerimientocompra.Location = new System.Drawing.Point(19, 186);
             this.dgvRequerimientocompra.Name = "dgvRequerimientocompra";

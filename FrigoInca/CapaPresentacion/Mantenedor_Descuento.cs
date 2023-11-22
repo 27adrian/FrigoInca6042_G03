@@ -19,8 +19,20 @@ namespace CapaPresentacion
             InitializeComponent();
             ListarDescuento();
             txtProcentaje.KeyPress += txtProcentaje_KeyPress;
-        }
+            dgvDescuento.CellClick += dgvDescuento_CellClick;
 
+        }
+        private void dgvDescuento_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica si el clic es en una fila válida
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvDescuento.Rows[e.RowIndex];
+
+                // Suponiendo que tienes las columnas 'IdUbigeo', 'Departamento', 'Provincia' y 'Distrito'
+                txtProcentaje.Text = row.Cells["Porcentaje"].Value.ToString();
+            }
+        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try

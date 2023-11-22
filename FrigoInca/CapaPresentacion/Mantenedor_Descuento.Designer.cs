@@ -56,6 +56,7 @@
             // 
             // dgvDescuento
             // 
+            this.dgvDescuento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDescuento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDescuento.Location = new System.Drawing.Point(17, 89);
             this.dgvDescuento.Name = "dgvDescuento";

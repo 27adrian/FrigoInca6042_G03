@@ -53,6 +53,7 @@
             // 
             // dgvAnimal
             // 
+            this.dgvAnimal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAnimal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAnimal.Location = new System.Drawing.Point(12, 53);
             this.dgvAnimal.Name = "dgvAnimal";
@@ -69,7 +70,7 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // Mantenedor_OrigenMP
+            // Mantenedor_Animal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -78,7 +79,7 @@
             this.Controls.Add(this.dgvAnimal);
             this.Controls.Add(this.txtAnimal);
             this.Controls.Add(this.label1);
-            this.Name = "Mantenedor_OrigenMP";
+            this.Name = "Mantenedor_Animal";
             this.Text = "Mantenedor_OrigenMP";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnimal)).EndInit();
             this.ResumeLayout(false);

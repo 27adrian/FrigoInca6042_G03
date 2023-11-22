@@ -18,6 +18,19 @@ namespace FrigoInca
         {
             InitializeComponent();
             ListarAnimal();
+            dgvAnimal.CellClick += dgvAnimal_CellClick;
+
+        }
+        private void dgvAnimal_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica si el clic es en una fila válida
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvAnimal.Rows[e.RowIndex];
+
+                // Suponiendo que tienes las columnas 'IdUbigeo', 'Departamento', 'Provincia' y 'Distrito'
+                txtAnimal.Text = row.Cells["Nombreanimal"].Value.ToString();
+            }
         }
         public void ListarAnimal()
         {
