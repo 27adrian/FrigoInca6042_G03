@@ -55,5 +55,32 @@ namespace CapaDatos
             }
             return lista;
         }
+        public Boolean InsertarNombreproducto(entNombreproducto ubigeo)
+        {
+            SqlCommand cmd = null;
+            Boolean inserta = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("InsertarNombreproducto", cn); // Adjust with the correct stored procedure name
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Nombreproducto", ubigeo.Nombreproducto);
+                cmd.Parameters.AddWithValue("@Precio", ubigeo.Precio);
+
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    inserta = true;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message); // O utiliza un sistema de registro adecuado
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return inserta;
+        }
     }
 }

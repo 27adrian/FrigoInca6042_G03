@@ -24,5 +24,9 @@ namespace CapaLogicaNegocio
         {
             return datNombreproducto.Instancia.ListarNombreproducto();
         }
+        public void InsertarNombreproducto(entNombreproducto ubigeo)
+        {
+            datNombreproducto.Instancia.InsertarNombreproducto(ubigeo);
+        }
     }
 }
